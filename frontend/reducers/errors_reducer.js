@@ -1,7 +1,20 @@
 // reducer to keep track of error messages
-import { combineReducers } from 'redux';
-import session from './session_errors_reducer';
+import {
+    RECEIVE_CURRENT_USER,
+    RECEIVE_ERRORS
+  } from '../actions/session_actions';
 
-export default combineReducers({
-  session
-});
+const errorsReducer = (state=[], action) => {
+  Object.freeze(state);
+
+  switch (action.type) {
+    case RECEIVE_CURRENT_USER:
+      return [];
+    case RECEIVE_ERRORS:
+      return Object.assign([], action.errors);
+    default:
+      return state;
+  }
+};
+
+export default errorsReducer;
