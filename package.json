@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/laujonat/clickr/issues"
   },
-  "homepage": "https://github.com/laujonat/clickr#readme"
+  "homepage": "https://github.com/laujonat/clickr#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11"
+  }
 }
