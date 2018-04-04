@@ -7,18 +7,16 @@ import {
   HashRouter
 } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
-import DashboardContainer from './session/dashboard_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/sign_up_container';
+import Splash from './splash/splash_container';
 
 const App = () => (
-  <div>
-    <div>
-      <Route path="/" component={DashboardContainer} />
-    </div>
+  <div className="app-container">
       <Switch>
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
+        <Route path="/" component={Splash} />
         <Redirect to='/login' />
       </Switch>
   </div>
@@ -27,7 +25,7 @@ const App = () => (
 export default App;
 
 
-// MainPage:
+// DashboardContainer:
 
 // < NavBarContainer />
 // < Switch />

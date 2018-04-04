@@ -1,3 +1,5 @@
+// REMOVE FILE, REPLACED WITH NAVBAR
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 

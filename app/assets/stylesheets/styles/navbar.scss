@@ -1,0 +1,56 @@
+.global-nav-bar {
+  min-width: 800px;
+  background: rgba(0,0,0,.4);
+  height: 64px;
+  text-align: left;
+  padding: 0 24px!important;
+
+}
+
+.login-btn {
+  color: #fff;
+}
+
+.signup-btn {
+  color: #000;
+  background-color: #fff;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  height: 32px;
+  line-height: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right-btn-list {
+  float: right;
+  list-style: none;
+}
+
+.left-btn-list {
+  float: left;
+  list-style: none;
+}
+
+.right-btn-list li {
+   display: inline-block;
+   margin-left: 20px;
+   margin-top: 16px;
+}
+
+.left-btn-list li {
+   display: inline-block;
+   margin-left: 20px;
+   margin-top: 14px;
+}
+
+.logo-img {
+  color: #fff;
+  font-size: 35px;
+  letter-spacing: -0.7px;
+  font-weight: bolder;
+}
