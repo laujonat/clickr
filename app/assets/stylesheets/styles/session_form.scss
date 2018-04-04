@@ -1,13 +1,15 @@
+/********* LOG IN FORM ********/
 h1 {
   font-weight: 800 bolder;
   font-size: 150px;
 }
-
+html {
+  background-color: #f9f9fa;
+}
 .session-box-body {
   text-align: center;
   margin-left: 200px;
 }
-
 .session-box {
   box-sizing: border-box;
   background-color: #fff;
@@ -19,7 +21,6 @@ h1 {
   border-top: 1px solid #f1f1f5;
   position: relative;
 }
-
 .session-box h2 {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -27,12 +28,9 @@ h1 {
   letter-spacing: normal;
   display: block;
 }
-
 .session-box h2 p {
   font-weight: 400;
 }
-
-
 .login-logo {
   display: block;
   margin: auto;
@@ -41,13 +39,11 @@ h1 {
   width: 116px;
   text-align: center;
 }
-
 .login-form-challenge {
   margin-bottom: 1em;
   max-width: 300px;
   margin: 0 auto;
 }
-
 // box footer
 .row-sign-up {
   position: absolute;
@@ -63,7 +59,6 @@ h1 {
   color: #188fff;
   display: inline;
 }
-
 // button elements
 .signInButton {
   margin: 30px 0;
@@ -82,7 +77,6 @@ h1 {
   color: #fff;
   background: #188fff;
 }
-
 // input field elements
 .login-input-field-box {
   position: relative;
@@ -101,6 +95,7 @@ h1 {
   border: 0;
   border-radius: 0;
   font-size: .94118em;
+  font-weight: 100;
   text-align: start;
   text-indent: 0px;
   border-bottom: 1px solid #cfd2d5;
@@ -118,6 +113,7 @@ h1 {
   border: 0;
   border-radius: 0;
   font-size: .94118em;
+  font-weight: 100;
   text-align: start;
   text-indent: 0px;
   border-bottom: 1px solid #cfd2d5;
@@ -128,9 +124,7 @@ h1 {
   width: 100%;
 }
 
-// ***********************************************
-// sign up form
-
+/********* SIGN UP FORM ********/
 // fname lname outer level 3
 .f-l-name-container {
   padding: 0;
@@ -148,7 +142,6 @@ h1 {
   font-size: 16px;
   font-weight: 100;
 }
-
 .row-1-2-contain {
   width: 44.5%;
   margin-left: 9px;
@@ -168,12 +161,9 @@ h1 {
   text-align: start;
   border-bottom: 1px solid #d8dade;
 }
-
 #row-1-input:focus {
   border-bottom: 2px solid #188fff;
 }
-
-
 // email input
 .row-email-contain {
   width: 92%;
@@ -185,7 +175,6 @@ h1 {
   display: block;
   font-size: 16px;
 }
-
 #row-2-input {
   height: 32px;
   padding: 0 8px;
@@ -196,7 +185,6 @@ h1 {
 #row-2-input:focus {
   border-bottom: 2px solid #188fff;
 }
-
 .row-username-contain {
   width: 92%;
   margin: auto;
@@ -207,7 +195,6 @@ h1 {
   display: block;
   font-size: 16px;
 }
-
 #row-3-input {
   height: 32px;
   padding: 0 8px;
@@ -228,7 +215,6 @@ h1 {
   display: block;
   font-size: 16px;
 }
-
 #row-4-input {
   height: 32px;
   padding: 0 8px;
@@ -256,7 +242,6 @@ h1 {
    color: #fff;
    background: #188fff;
  }
-
 .policy-contain {
   margin-top: 40px;
   text-align: center;
@@ -271,7 +256,6 @@ h1 {
   margin: 0 auto;
   color: #979ba7;
 }
-
 // signup footer
 .row-sign-in {
   position: absolute;
@@ -286,3 +270,5 @@ h1 {
   color: #188fff;
   display: inline;
 }
+
+/********* SESSION HEADER ********/

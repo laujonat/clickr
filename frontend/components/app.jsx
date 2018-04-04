@@ -13,13 +13,25 @@ import SignupFormContainer from './session/sign_up_container';
 
 const App = () => (
   <div>
-    <h1>clickr</h1>
+    <div>
+      <Route path="/" component={DashboardContainer} />
+    </div>
       <Switch>
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <Route exact path="/" component={DashboardContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <Redirect to='/login' />
       </Switch>
   </div>
 );
 
 export default App;
+
+
+// MainPage:
+
+// < NavBarContainer />
+// < Switch />
+//    < Route path='/photos' components={PhotoIndexContainer} />
+//    < Route path='/groups' component={GroupIndexContainer} />
+//    < Redirect to='/notfound' />
+// < /Switch >
