@@ -1,0 +1,147 @@
+h1 {
+  font-weight: 800 bolder;
+  font-size: 150px;
+}
+
+.session-box-body {
+  text-align: center;
+}
+
+.session-box {
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
+  width: 360px;
+  right: 10px;
+  min-height: 550px;
+  padding: 0 5px;
+  border-top: 1px solid #f1f1f5;
+  position: relative;
+}
+
+.session-box h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 1.05882em;
+  letter-spacing: normal;
+  display: block;
+}
+
+.session-box h2 p {
+  font-weight: 400;
+}
+
+
+.login-logo {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  height: 50px;
+  width: 116px;
+  text-align: center;
+}
+
+.login-form-challenge {
+  margin-bottom: 1em;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+// box footer
+.row-sign-up {
+  position: absolute;
+  margin: 30px 5px;
+  padding: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: .82353em;
+}
+// link text s
+.row-sign-up #sign-up-link {
+  color: #188fff;
+  display: inline;
+}
+
+// button elements
+.signInButton {
+  margin: 30px 0;
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: .25em;
+  box-sizing: border-box;
+  display: inline-block;
+  text-overflow: ellipsis;
+  height: 42px;
+  vertical-align: middle;
+  line-height: 1;
+}
+#login-sigin {
+  font-size: .94118em;
+  color: #fff;
+  background: #188fff;
+}
+
+// input field elements
+.login-input-field-box {
+  position: relative;
+  margin-top: 30px;
+  display: block;
+  line-height: 1.6;
+}
+.login-input-field-box:focus {
+  border-bottom: 2px solid #188fff;
+}
+#login-email-input {
+  display: block;
+  margin: 0;
+  padding: 6px 10px;
+  height: 40px;
+  border: 0;
+  border-radius: 0;
+  font-size: .94118em;
+  text-align: start;
+  text-indent: 0px;
+  border-bottom: 1px solid #cfd2d5;
+  width: 100%;
+}
+#login-email-input:focus {
+  border-bottom: 2px solid #188fff;
+  width: 100%;
+}
+#login-password-input {
+  display: block;
+  margin: 0;
+  padding: 6px 10px;
+  height: 40px;
+  border: 0;
+  border-radius: 0;
+  font-size: .94118em;
+  text-align: start;
+  text-indent: 0px;
+  border-bottom: 1px solid #cfd2d5;
+  width: 100%;
+}
+#login-password-input:focus {
+  border-bottom: 2px solid #188fff;
+  width: 100%;
+}
+
+// ***********************************************
+// sign up form
+
+
+// signup footer
+.row-sign-in {
+  position: absolute;
+  margin: 30px 5px;
+  padding: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: .82353em;
+}
+.row-sign-in #log-in-link {
+  color: #188fff;
+  display: inline;
+}
