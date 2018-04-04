@@ -33,10 +33,10 @@ class LoginForm extends React.Component {
         </header>
         <div className="login-position-container">
           <div className="session-box-body">
-          <div className="session-box">
-            <img className="login-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
-            <h2><p>Sign in</p></h2>
-            <form className="login-form-challenge" onSubmit={this.handleSubmit}>
+            <div className="session-box">
+              <img className="login-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
+              <h2><p>Sign in</p></h2>
+              <form className="login-form-challenge" onSubmit={this.handleSubmit}>
               <div className="login-input-field-box">
                 <input
                   id="login-email-input"
@@ -55,11 +55,11 @@ class LoginForm extends React.Component {
                   onChange={this.handleChange('password')}
                 />
               </div>
-            <input className="signInButton" id="login-sigin" type="submit" name="signin" value="Sign in"/>
-            <div className="row-sign-up">Don't have an acccount? <Link to="/signup"><p id="sign-up-link">Sign up</p></Link></div>
+              <input className="signInButton" id="login-sigin" type="submit" name="signin" value="Sign in"/>
+              <div className="row-sign-up">Don't have an acccount? <Link to="/signup"><p id="sign-up-link">Sign up</p></Link></div>
             </form>
+            </div>
           </div>
-        </div>
         </div>
         <footer className="login-footer"></footer>
       </div>
