@@ -6,9 +6,22 @@ h1 {
 html {
   background-color: #f9f9fa;
 }
+.signup-position-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.login-position-container {
+  margin-top: 55px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 220px;
+  position: relative;
+
+}
 .session-box-body {
   text-align: center;
-  margin-left: 200px;
+  // margin: auto;
 }
 .session-box {
   box-sizing: border-box;
@@ -272,3 +285,33 @@ html {
 }
 
 /********* SESSION HEADER ********/
+.session-new-header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 61px;
+  background-color: white;
+  position: fixed!important;
+  clear: both;
+}
+.header-logo-contain {
+  position: absolute;
+  float: left;
+  margin-left: 6em;
+  padding-top: 14px;
+}
+.top-logo {
+  margin: auto;
+  height: 40px;
+  width: 125px !important;
+  background-size: 250px 32px !important;
+}
+
+.login-footer {
+  height: 28px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
