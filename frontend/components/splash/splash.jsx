@@ -7,6 +7,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 import NavBar from './nav_bar';
+import Welcome from './welcome';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -17,7 +18,8 @@ class Splash extends React.Component {
     return (
       <div className="splash-container">
           <NavBar />
-          {/* switch router will go here! */}
+          <Welcome />
+          {/* switch router will go here!*/}
       </div>
     );
   }
