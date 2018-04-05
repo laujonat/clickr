@@ -12,6 +12,7 @@ class Welcome extends React.Component {
           This is some great text.
         </h3>
         <div className="welcome-btn"><Link to="/signup">Sign up</Link></div>
+    
       </div>
     );
   }

@@ -12,6 +12,8 @@ class SignupForm extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLoginCredentials = {username: "Demo User", email: "demo@clickr.com", fname: "Demo", lname: "Human", password: "democlickr123"};
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleChange(field) {
@@ -24,6 +26,12 @@ class SignupForm extends React.Component {
     e.preventDefault();
     this.props.signup(this.state)
       .then(() => this.props.history.push('/'));
+  }
+
+  demoLogin() {
+    this.setState(this.demoLoginCredentials,
+      () => this.props.signup(this.state)
+    );
   }
 
   render() {
@@ -90,6 +98,7 @@ class SignupForm extends React.Component {
                     <p className="policy-item">By clicking "Continue", you agree to the Terms and Privacy Policy</p>
                   </div>
                  <input className="signUpButton" id="signup" type="submit" value="Sign Up"/>
+                 <div className="demo-sign-up" onClick={this.demoLogin}>Demo Login</div>
                  <div className="row-sign-in">Already have an acccount? <Link to="/login"><p id="log-in-link">Sign in</p></Link></div>
                 </form>
               </div>

@@ -7,8 +7,11 @@ class NavBar extends React.Component {
   }
 
   handleButtonLayout() {
-    if(this.props.currentUser) {
-      {/* if current use is available, render an avatar */}
+    if(this.props.user.currentUser) {
+      console.log("we have a user");
+      return (
+        <button onClick={this.props.user.logout}>Log Out</button>
+      );
     } else {
       return(
         <ul className="right-btn-list">
@@ -18,7 +21,6 @@ class NavBar extends React.Component {
      );
     }
   }
-
 
   render() {
     return (
