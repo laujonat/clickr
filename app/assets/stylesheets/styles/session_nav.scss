@@ -32,19 +32,25 @@
 .session-right-btn-list {
   float: right;
   list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 
 .session-right-btn-list li {
-  display: inline-block;
+  display: list-item;
   margin-left: 20px;
-  margin-top: 5px;
 }
 
+.session-avatar {
+  background-color: inherit;
+  width: 30px;
+  height: 30px;
+  padding-top: 10px;
+}
 
-// TODO: REMOVE THIS
 .tempLogOutButton {
   color: white;
   font-size: 16px;
   font-weight: 100;
-  margin-top: 14px;
+  padding-top: 14px;
 }
