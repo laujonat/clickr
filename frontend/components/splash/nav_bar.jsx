@@ -7,10 +7,10 @@ class NavBar extends React.Component {
   }
 
   handleButtonLayout() {
-    if(this.props.user.currentUser) {
+    if(this.props.currentUser) {
       console.log("we have a user");
       return (
-        <button onClick={this.props.user.logout}>Log Out</button>
+        <button className="tempLogOutButton" onClick={this.props.logout}>Log Out</button>
       );
     } else {
       return(
