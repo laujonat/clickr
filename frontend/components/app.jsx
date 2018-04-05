@@ -10,6 +10,7 @@ import { AuthRoute } from '../util/route_util';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/sign_up_container';
 import Splash from './splash/splash_container';
+import DashBoardContainer from './session/dashboard_container';
 
 const App = () => (
   <div className="app-container">
