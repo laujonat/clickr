@@ -24,13 +24,3 @@ const App = () => (
 );
 
 export default App;
-
-
-// DashboardContainer:
-
-// < NavBarContainer />
-// < Switch />
-//    < Route path='/photos' components={PhotoIndexContainer} />
-//    < Route path='/groups' component={GroupIndexContainer} />
-//    < Redirect to='/notfound' />
-// < /Switch >

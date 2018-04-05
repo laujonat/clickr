@@ -17,7 +17,11 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="splash-container">
-          <NavBar user={this.props}/>
+          <NavBar
+            currentUser={this.props.currentUser}
+            logout={this.props.logout}
+          />
+
           <Welcome />
           {/* switch router will go here!*/}
       </div>

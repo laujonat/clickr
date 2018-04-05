@@ -23,3 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('content');
   ReactDOM.render(<Root store={ store }/>, root);
 });
+
+
+/*
+  TODO:
+  - By 4/4/18
+    - Push up to heroku and tag AJ into the github issues
+    - See if you can meet up with him one on one
+
+  - Read up on the css questions
+  - Understand what is going on with React Router
+  - Get started with the photo container and how you would be distributing the site
+
+
+
+*/
