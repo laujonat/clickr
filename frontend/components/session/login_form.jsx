@@ -9,12 +9,20 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLoginCredentials = {email: "demo@clickr.com", password: "democlickr123"};
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleChange(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  demoLogin() {
+    this.setState(this.demoLoginCredentials,
+      () => this.props.login(this.state)
+    );
   }
 
   handleSubmit(e) {
@@ -56,6 +64,7 @@ class LoginForm extends React.Component {
                 />
               </div>
               <input className="signInButton" id="login-sigin" type="submit" name="signin" value="Sign in"/>
+              <div className="demo-sign-up" onClick={this.demoLogin}>Demo Login</div>
               <div className="row-sign-up">Don't have an acccount? <Link to="/signup"><p id="sign-up-link">Sign up</p></Link></div>
             </form>
             </div>

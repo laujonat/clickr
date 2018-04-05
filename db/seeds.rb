@@ -25,3 +25,6 @@ usernames.length.times do |i|
     lname: lnames[i],
   )
 end
+
+# add demo user
+User.create(username: "Demo User", password: "democlickr123", email: "demo@clickr.com", fname:'Demo', lname: "Human")
