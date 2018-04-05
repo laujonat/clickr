@@ -15,6 +15,7 @@ class SessionNavBar extends React.Component {
           </ul>
           <ul className="session-right-btn-list">
             <button className="tempLogOutButton" onClick={this.props.logout}>Log Out</button>
+            <li><img className="session-avatar" src={this.props.currentUser.image_url}/></li>
           </ul>
         </div>
       </div>

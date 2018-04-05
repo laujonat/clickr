@@ -1,4 +1,4 @@
-.splash-container {
+.no-session-container {
   background-image: url(asset_path("love.jpg"));
   background-repeat: no-repeat;
   background-size: contain;
@@ -11,6 +11,8 @@
   width: 100%;
   height: 100vh;
   background-color: #f3f5f6;
+  background-image: none;
+  background-size: cover;
 }
 
 .welcome-text {
