@@ -3,7 +3,6 @@ import Splash from './splash';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
-  console.log(state.session.currentUser);
   const currentUser = state.session.currentUser;
   return { currentUser };
 };
