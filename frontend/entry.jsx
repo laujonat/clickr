@@ -7,12 +7,6 @@ import Root from './components/root';
 // import * as PHOTOUtil from './util/photo_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // window.signup = signup;
-  // window.login = login;
-  // window.logout = logout;
-  // window.fetchAllPhotos = PHOTOUtil.fetchAllPhotos;
-  // window.createPhoto = PHOTOUtil.createPhoto;
-  // window.fetchAllPhotos = fetchAllPhotos;
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
