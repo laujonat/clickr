@@ -1,0 +1,3 @@
+export const RECEIEVE_PHOTO = "RECEIVE_PHOTO";
+export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
+export const REMOVE_PHOTO = "REMOVE_PHOTO";
