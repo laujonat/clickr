@@ -14,7 +14,7 @@ const Auth = ({ loggedIn, path, component: Component }) => (
       )}
   />
 );
-
+// routes can only be accessible if user is logged in 
 const Protected = ({ loggedIn, path, component: Component }) => (
     <Route
       path={path}

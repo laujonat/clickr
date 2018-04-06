@@ -6,26 +6,29 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/sign_up_container';
 import Splash from './splash/splash_container';
-import NavBarContainer from './nav_bar_container';
+import NavBarContainer from './splash/nav_bar_container';
+import FeedContainer from './feed/feed_container';
+import UploadPhotoContainer from './photos/upload_photo_container';
+import UploadNavContainer from './photos/upload_nav_container';
 
 const App = () => (
   <div className="app-container">
     <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
-      // upload
+      <AuthRoute path="/upload" component={UploadNavContainer} />
       <Route path="/" component={NavBarContainer} />
     </Switch>
 
 
     <Switch>
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute path="/login" component={LoginFormContainer} />
-      <Route path="/" component={Splash} />
+      <ProtectedRoute path="/feed" component={FeedContainer} />
+      <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
+
     </Switch>
   </div>
 );
