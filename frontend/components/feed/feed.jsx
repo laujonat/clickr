@@ -19,11 +19,9 @@ class Feed extends React.Component {
   }
 
   render() {
-    console.log(this.props.photos);
     return (
       <React.Fragment>
         <FeedNav />
-
       </React.Fragment>
     );
   }
