@@ -14,7 +14,7 @@ class NavBar extends React.Component {
         <div className="session-global-nav-bar">
           <div className="session-inner-container">
             <ul className="session-left-btn-list">
-              <li className="session-logo-img">clickr</li>
+              <li className="session-logo-img"><Link to="/">clickr</Link></li>
             </ul>
 
             <ul className="session-right-btn-list">
