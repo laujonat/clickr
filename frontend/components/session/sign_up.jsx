@@ -59,7 +59,7 @@ class SignupForm extends React.Component {
                     </div>
                     <div className="row-1-2-contain">
                       <input
-                        id="row-1-input"
+                        id="row-1-input row2"
                         type="text"
                         placeholder="Last name"
                         value={this.state.lname}

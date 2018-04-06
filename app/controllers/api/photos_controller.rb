@@ -11,7 +11,7 @@ class Api::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-    @photo.user_id = current_user.id
+    # @photo.user_id = current_user.id
 
     if @photo.save
       render :show

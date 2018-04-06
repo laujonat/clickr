@@ -1,0 +1,26 @@
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  // padding: 12px;
+  min-height: 20px;
+  // max-height: 258px;
+  box-sizing: border-box;
+  z-index: 999;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.3), 0 1px 4px 0 rgba(0,0,0,.2);
+  background-color: #fff;
+  // left: 1365.09px;
+  margin-top: 20px;
+  left: 85%;
+}
+
+.dropdown--active .dropdown__content {
+    display: block;
+    text-align: center;
+}

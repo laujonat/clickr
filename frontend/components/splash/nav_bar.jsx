@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Welcome from './welcome';
+import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -16,10 +17,19 @@ class NavBar extends React.Component {
               <ul className="session-left-btn-list">
                 <li className="session-logo-img">clickr</li>
               </ul>
-              <ul className="session-right-btn-list">
-                <button className="tempLogOutButton" onClick={this.props.logout}>Log Out</button>
-                <li><img className="session-avatar" src={this.props.currentUser.image_url}/></li>
-              </ul>
+
+              <Dropdown className="session-right-btn-list">
+                <DropdownTrigger>
+                  <img className="session-avatar" src={this.props.currentUser.image_url}/>
+                </DropdownTrigger>
+                <DropdownContent>
+                  <ul>
+                    <li>
+                      <a href="/#" onClick={this.props.logout}>Log Out</a>
+                    </li>
+                  </ul>
+                </DropdownContent>
+              </Dropdown>
             </div>
           </div>
         </div>
@@ -52,3 +62,13 @@ class NavBar extends React.Component {
 }
 
 export default NavBar;
+
+/*
+<ul className="session-left-btn-list">
+  <li className="session-logo-img">clickr</li>
+</ul>
+<ul className="session-right-btn-list">
+  <button className="tempLogOutButton" onClick={this.props.logout}>Log Out</button>
+  <li><img className="session-avatar" src={this.props.currentUser.image_url}/></li>
+</ul>
+*/
