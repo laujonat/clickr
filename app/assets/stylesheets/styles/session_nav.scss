@@ -37,8 +37,7 @@
 }
 
 .session-right-btn-list li {
-  display: list-item;
-  margin-left: 20px;
+  position:inherit;
 }
 
 .session-avatar {
@@ -48,9 +47,9 @@
   padding-top: 10px;
 }
 
-.tempLogOutButton {
-  color: white;
-  font-size: 16px;
-  font-weight: 100;
-  padding-top: 14px;
-}
+// .tempLogOutButton {
+//   color: white;
+//   font-size: 16px;
+//   font-weight: 100;
+//   padding-top: 14px;
+// }

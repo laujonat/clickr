@@ -1,28 +1,32 @@
 import React from 'react';
 import FeedNav from './feed_nav';
 import PhotoIndexContainer from '../photos/photo_index_container';
-// import UserIndexContainer from '../users/container';
+import {
+  Route,
+  Switch,
+  Link
+} from 'react-router-dom';
 
 class Feed extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.getPhotos();
+  }
+
   render() {
+    console.log(this.props.photos);
     return (
       <div>
         <FeedNav />
-        <Switch>
-          <ProtectedRoute path="/feed" component={PhotoIndexContainer} />
-        </Switch>
       </div>
     );
   }
 }
 
 export default Feed;
-
-
 // switch
 
 // /feed => render photo index

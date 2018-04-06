@@ -25,15 +25,17 @@
   justify-content: flex-end;
 }
 
+.left-btn-list {
+  float: left;
+  list-style: none;
+}
+
 .right-btn-list {
   float: right;
   list-style: none;
 }
 
-.left-btn-list {
-  float: left;
-  list-style: none;
-}
+
 
 .right-btn-list li {
    display: inline-block;
