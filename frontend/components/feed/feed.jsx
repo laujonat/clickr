@@ -6,6 +6,8 @@ import {
   Switch,
   Link
 } from 'react-router-dom';
+import UploadPhotoContainer from '../photos/upload_photo_container';
+import { AuthRoute } from '../../util/route_util';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -19,17 +21,12 @@ class Feed extends React.Component {
   render() {
     console.log(this.props.photos);
     return (
-      <div>
+      <React.Fragment>
         <FeedNav />
-      </div>
+
+      </React.Fragment>
     );
   }
 }
 
 export default Feed;
-// switch
-
-// /feed => render photo index
-// /upload => upload form
-// /people => get list of people with most recent photo or default photo
-  // get people randomly

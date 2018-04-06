@@ -8,6 +8,7 @@ import NavBarContainer from './nav_bar_container';
 import Welcome from './welcome';
 import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 import FeedContainer from '../feed/feed_container';
+import UploadPhotoContainer from '../photos/upload_photo_container';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class Splash extends React.Component {
       <div className="splash-container">
         <NavBarContainer />
         <Switch>
-          <ProtectedRoute path="/feed" component={FeedContainer} />
+          <Route path="/feed" component={FeedContainer} />
+          <Route path="/upload" component={UploadPhotoContainer} />
         </Switch>
       </div>
     );

@@ -11,43 +11,48 @@ class NavBar extends React.Component {
   renderDash() {
     if(this.props.currentUser) {
       return (
-        <div className="session-container">
-          <div className="session-global-nav-bar">
-            <div className="session-inner-container">
-              <ul className="session-left-btn-list">
-                <li className="session-logo-img">clickr</li>
-              </ul>
+        <div className="session-global-nav-bar">
+          <div className="session-inner-container">
+            <ul className="session-left-btn-list">
+              <li className="session-logo-img">clickr</li>
+            </ul>
 
-              <Dropdown className="session-right-btn-list">
-                <DropdownTrigger>
-                  <img className="session-avatar" src={this.props.currentUser.image_url}/>
-                </DropdownTrigger>
-                <DropdownContent>
-                  <ul>
-                    <li>
-                      <a href="/#" onClick={this.props.logout}>Log Out</a>
-                    </li>
-                  </ul>
-                </DropdownContent>
-              </Dropdown>
-            </div>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="no-session-container">
-          <div className="global-nav-bar">
-            <ul className="left-btn-list">
-              <li className="logo-img">clickr</li>
-            </ul>
-            <ul className="right-btn-list">
-              <li className="login-btn"><Link to='/login'>Log In</Link></li>
-              <li className="signup-btn"><Link to='/signup'>Sign Up</Link></li>
+            <ul className="session-right-btn-list">
+              <div className="uploadIcon">
+                <Link to='/upload'>Upload</Link>
+              </div>
+              <li>
+                <Dropdown>
+                  <DropdownTrigger>
+                    <img className="session-avatar" src={this.props.currentUser.image_url}/>
+                  </DropdownTrigger>
+                  <DropdownContent>
+                    <ul>
+                      <li>
+                        <a href="/#" onClick={this.props.logout}>Log Out</a>
+                      </li>
+                    </ul>
+                  </DropdownContent>
+                </Dropdown>
+              </li>
             </ul>
           </div>
-          <Welcome />
         </div>
+    );
+  } else {
+    return (
+      <div className="no-session-container">
+        <div className="global-nav-bar">
+          <ul className="left-btn-list">
+            <li className="logo-img">clickr</li>
+          </ul>
+          <ul className="right-btn-list">
+            <li className="login-btn"><Link to='/login'>Log In</Link></li>
+            <li className="signup-btn"><Link to='/signup'>Sign Up</Link></li>
+          </ul>
+        </div>
+        <Welcome />
+      </div>
       );
     }
   }
