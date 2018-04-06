@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_attached_file :avatar,  default_url: "default_avatar.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
+  has_many :photos
+
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end

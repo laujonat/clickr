@@ -5,9 +5,9 @@ import Root from './components/root';
 import { signup, login, logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.signup = signup;
-  window.login = login;
-  window.logout = logout;
+  // window.signup = signup;
+  // window.login = login;
+  // window.logout = logout;
   let store;
   // console.log(window.currentUser);
   if (window.currentUser) {
