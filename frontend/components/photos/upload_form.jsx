@@ -11,6 +11,7 @@ class UploadForm extends React.Component {
    };
    this.handleSubmit = this.handleSubmit.bind(this);
    this.updateFile = this.updateFile.bind(this);
+   this.filename = null;
 
   }
 
@@ -26,6 +27,8 @@ class UploadForm extends React.Component {
 
   updateFile(e) {
     const file = e.currentTarget.files[0];
+    this.filename = file.name;
+    // console.log(`uploaded image file ${file.name}`);
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
       return this.setState({imageUrl: fileReader.result, image: file});
@@ -39,7 +42,7 @@ class UploadForm extends React.Component {
       <React.Fragment>
         <form className="upload-form-box">
           <h3>Upload a photo:</h3>
-          <h5>{this.state.imageUrl}</h5>
+          <h5>{this.filename}</h5>
           <input
             type="text"
             onChange={this.updateInput("description")}
