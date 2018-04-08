@@ -40,6 +40,8 @@
     .username-content {
       display: inline-block;
       font-size: 16px;
+      line-height: 18px;
+      font-weight: lighter;
     }
   }
 }
@@ -68,5 +70,5 @@
   line-height: 1em;
   margin: 21px 20px 13px 0;
   display: inline-block;
-  font-weight: 100px;
+  font-weight: lighter;
 }
