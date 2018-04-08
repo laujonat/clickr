@@ -1,16 +1,14 @@
 import { connect } from 'react-redux';
 import UserShow from './user_show';
 import { fetchAllPhotos } from '../../actions/photo_actions';
-import { userPhotosSelector } from '../../selectors/photo_selector';
+import { photoSelector } from '../../selectors/photo_selector';
 
 const mapStateToProps = (state) => ({
-  currentUser: state.session.currentUser
-  // const userPhotos = userPhotosSelector(state.entities, currentUser.id);
-  // need selector for array of photoId's that belong to user
+  currentUser: state.session.currentUser,
+  userPhotos: photoSelector(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  // create method to change avatar later
   getPhotos: () => dispatch(fetchAllPhotos())
 });
 
