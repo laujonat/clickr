@@ -1,0 +1,31 @@
+.photostream-list-container {
+  min-width: 800px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 130px;
+  padding-right: 130px;
+  background-color: red;
+  display: block;
+  height: 1000px;
+
+  .magic-tools-bar {
+
+    height: 50px;
+    width: 100%;
+    position: relative;
+    background-color: green;
+  }
+}
+
+.photostream-list {
+  display: inline-block;
+  position: absolute;
+
+  .photostream-photo-card {
+
+    width: 507px;
+    height: 338px;
+    // position: absolute;
+  }
+}

@@ -29,7 +29,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path="/feed" component={FeedContainer} />
       <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
-      <ProtectedRoute path="/user/:id" component={UserProfileContainer} />
+      <ProtectedRoute path="/user/:user_id" component={UserProfileContainer} />
       <ProtectedRoute path="/" component={FeedContainer} />
     </Switch>
   </div>

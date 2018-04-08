@@ -11,7 +11,7 @@ const PhotoIndexItem = ({photo}) => {
               <img className="photo-index-avatar" src={`${photo.user_avatar}`} />
             </li>
             <li>
-              <Link to="/feed">{photo.user_fname} {photo.user_lname}</Link>
+              <Link className="link-user-prof" to={`/user/${photo.user_id}`}>{photo.user_fname} {photo.user_lname}</Link>
             </li>
           </ul>
         </div>

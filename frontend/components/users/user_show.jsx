@@ -1,6 +1,7 @@
 import React from 'react';
 import UserProfileHeader from './user_profile_header';
 import UserProfileNav from './user_profile_nav';
+import UserPhotostream from './user_photostream';
 
 class UserShow extends React.Component {
   constructor(props) {
@@ -13,18 +14,17 @@ class UserShow extends React.Component {
 
   componentDidMount() {
     // fetch photos here
-    // this.props.getPhotos();
+    this.props.getPhotos();
   }
 
   render() {
+    console.log(this.props.userPhotos);
     return (
-      <div>
-        <UserProfileHeader
-          user={this.props.currentUser}
-        />
+      <React.Fragment>
+        <UserProfileHeader user={this.props.currentUser} />
         <UserProfileNav />
-
-      </div>
+        <UserPhotostream photos={this.props.userPhotos}/>
+      </React.Fragment>
     );
   }
 }

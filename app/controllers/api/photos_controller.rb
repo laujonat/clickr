@@ -31,14 +31,14 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
-    # @photos = (
-    #   if params[:user_id]
-    #     Photo.where(author_id: params[:user_id])
-    #   else
-    #     Photo.all
-    #   end
-    # )
+    # @photos = Photo.all
+    @photos = (
+      if params[:user_id]
+        Photo.where(id: params[:user_id])
+      else
+        Photo.all
+      end
+    )
   end
 
   def update
