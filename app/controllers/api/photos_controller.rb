@@ -11,12 +11,12 @@ class Api::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-    # @photo.user_id = current_user.id
+    @photo.user_id = current_user.id
 
     if @photo.save
       render :show
     else
-      render json: @photo.errors.full_messages, status: 422
+      render json: ["Upload photo error"], status: 422
     end
   end
 

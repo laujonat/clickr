@@ -1,0 +1,11 @@
+.photo-index-item {
+  width: 200px;
+  height: 200px;
+}
+
+.photo-index-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

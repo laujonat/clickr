@@ -17,10 +17,12 @@ export const updatePhoto = photo => (
   })
 );
 
-export const createPhoto = photo => (
+export const createPhoto = formData => (
   $.ajax('api/photos', {
     method: "post",
-    data: { photo }
+    processData: false,
+    contentType: false,
+    data: formData,
   })
 );
 
