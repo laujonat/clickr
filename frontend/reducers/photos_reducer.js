@@ -21,7 +21,7 @@ const photoReducer = (state = {}, action) => {
         delete newState[action.photoId];
         return newState;
       case RECEIEVE_ERRORS: // set error to action's errors
-        return action.errors;
+        return Object.assign([], action.errors);
       default:
         return state;
     }
