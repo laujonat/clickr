@@ -24,7 +24,7 @@ class NavBar extends React.Component {
               <li>
                 <Dropdown>
                   <DropdownTrigger>
-                    <img className="session-avatar" src={this.props.currentUser.image_url}/>
+                    <img className="session-avatar" src={this.props.currentUser.user_profile_img}/>
                   </DropdownTrigger>
                   <DropdownContent>
                     <ul>

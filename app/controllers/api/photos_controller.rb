@@ -32,7 +32,13 @@ class Api::PhotosController < ApplicationController
 
   def index
     @photos = Photo.all
-    render :index
+    # @photos = (
+    #   if params[:user_id]
+    #     Photo.where(author_id: params[:user_id])
+    #   else
+    #     Photo.all
+    #   end
+    # )
   end
 
   def update
