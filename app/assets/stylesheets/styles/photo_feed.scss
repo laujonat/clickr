@@ -1,11 +1,41 @@
-.photo-index-item {
-  width: 200px;
-  height: 200px;
+.feed-container {
+  width: 1680px;
+  position: relative;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  padding-top: 120px;
+  height: 100%;
+  margin: auto;
+  color: #212124;
+  overflow-y: scroll;
+  z-index: -1;
+
+  .photo-index-container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+
+    .feed-activity-card {
+      float: left;
+      left: 0px;
+      top: 120px;
+      background: #fff;
+      width: 480px;
+      margin-top: 0;
+      margin-bottom: 120px;
+      transition: box-shadow .2s;
+      border-radius: 4px;
+
+      .photo-index-item {
+        width: 480px;
+      }
+    }
+  }
 }
 
-.photo-index-container {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.feed-activity-card:hover {
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,.1);
+
 }
