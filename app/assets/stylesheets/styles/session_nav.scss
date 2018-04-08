@@ -1,6 +1,8 @@
+$nav-color: #fff;
+
 .session-global-nav-bar {
   width: 100%;
-  padding-left: 130px;
+  padding-left: 160px;
   // padding-right: 130px;
   height: 50px;
   background-color:  #212124;
@@ -23,10 +25,21 @@
   display: inline-block;
   margin-left: 30px;
   margin-top: 5px;
+  color: $nav-color;
+}
+
+.nav-you-link {
+  font-size: 15px;
+
+}
+
+.nav-you-link a:hover {
+  opacity: .7;
+  cursor: pointer;
 }
 
 .session-logo-img {
-  color: #fff;
+  color: $nav-color;
   font-size: 32px;
   letter-spacing: -0.7px;
   font-weight: bolder;
@@ -48,6 +61,7 @@
   width: 30px;
   height: 30px;
   padding-top: 10px;
+  border-radius: 50%;
 }
 
 // .tempLogOutButton {

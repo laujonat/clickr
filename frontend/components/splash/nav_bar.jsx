@@ -15,6 +15,7 @@ class NavBar extends React.Component {
           <div className="session-inner-container">
             <ul className="session-left-btn-list">
               <li className="session-logo-img"><Link to="/feed">clickr</Link></li>
+              <li className="nav-you-link"><Link to="/feed">You</Link></li>
             </ul>
             <ul className="session-right-btn-list">
               <Link to='/upload'>

@@ -12,7 +12,6 @@ const PhotoIndexItem = ({photo}) => {
             </li>
             <li>
               <Link to="/feed">{photo.user_fname} {photo.user_lname}</Link>
-
             </li>
           </ul>
         </div>
