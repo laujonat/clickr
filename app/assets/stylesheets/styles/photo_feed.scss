@@ -9,15 +9,20 @@
   color: #212124;
   overflow-y: scroll;
   z-index: -1;
+  display: flex;
 
   .photo-index-container {
+    // flex: 1;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     position: absolute;
+    align-content: flex-start;
+
 
     .feed-activity-card {
+      // flex: 1;
       float: left;
       left: 0px;
       top: 120px;
