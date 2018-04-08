@@ -9,11 +9,12 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/sign_up_container';
-// import Splash from './splash/splash_container';
 import NavBarContainer from './splash/nav_bar_container';
 import FeedContainer from './feed/feed_container';
 import UploadPhotoContainer from './photos/upload_photo_container';
 import UploadNavContainer from './photos/upload_nav_container';
+import UserProfileContainer from './users/user_profile_container';
+// import FeedNav from './feed/feed_nav';
 
 const App = () => (
   <div className="app-container">
@@ -28,6 +29,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path="/feed" component={FeedContainer} />
       <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
+      <ProtectedRoute path="/user/:id" component={UserProfileContainer} />
       <ProtectedRoute path="/" component={FeedContainer} />
     </Switch>
   </div>
