@@ -1,15 +1,18 @@
 .session-global-nav-bar {
   width: 100%;
   padding-left: 130px;
-  padding-right: 130px;
+  // padding-right: 130px;
   height: 50px;
   background-color:  #212124;
+  margin: auto;
 }
 
 .session-inner-container {
   min-width: 800px;
   max-width: 80%;
   text-align: left;
+  // margin-right: 100px;
+  // margin: 0 auto;
 }
 
 .session-left-btn-list {
@@ -18,13 +21,13 @@
 
 .session-left-btn-list li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-top: 5px;
 }
 
 .session-logo-img {
   color: #fff;
-  font-size: 35px;
+  font-size: 32px;
   letter-spacing: -0.7px;
   font-weight: bolder;
 }

@@ -15,11 +15,10 @@ class Feed extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.getPhotos();
+
   }
 
   render() {
-    
     return (
       <React.Fragment>
         <FeedNav />

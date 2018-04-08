@@ -44,7 +44,6 @@ class UploadForm extends React.Component {
     }
   }
   render() {
-    console.log(this.state);
     return (
       <React.Fragment>
         <form ref={this.myForm} className="upload-form-box">

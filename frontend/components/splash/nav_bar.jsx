@@ -16,11 +16,10 @@ class NavBar extends React.Component {
             <ul className="session-left-btn-list">
               <li className="session-logo-img"><Link to="/feed">clickr</Link></li>
             </ul>
-
             <ul className="session-right-btn-list">
-              <div className="uploadIcon">
-                <Link to='/upload'>Upload</Link>
-              </div>
+              <Link to='/upload'>
+                <div className="icon-upload"></div>
+              </Link>
               <li>
                 <Dropdown>
                   <DropdownTrigger>
@@ -67,13 +66,3 @@ class NavBar extends React.Component {
 }
 
 export default NavBar;
-
-/*
-<ul className="session-left-btn-list">
-  <li className="session-logo-img">clickr</li>
-</ul>
-<ul className="session-right-btn-list">
-  <button className="tempLogOutButton" onClick={this.props.logout}>Log Out</button>
-  <li><img className="session-avatar" src={this.props.currentUser.image_url}/></li>
-</ul>
-*/

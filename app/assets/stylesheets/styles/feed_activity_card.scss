@@ -1,0 +1,72 @@
+.photo-index-avatar {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin: 0;
+  margin-right: 16px;
+  border-radius: 100%;
+}
+
+.photo-index-header {
+  background-color: #fff;
+  width: 480px;
+  height: 62px;
+  margin-top: 0;
+  border-radius: 4px 4px 0 0;
+  transition: box-shadow .2s;
+  letter-spacing: .03em;
+  box-sizing: border-box;
+}
+
+.photo-index-header-content {
+  height: 32px;
+  padding: 16px;
+}
+
+.photo-index-header-content li:last-child {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  float: left;
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.photo-index-footer {
+  box-sizing: border-box;
+  letter-spacing: .03em;
+  color: #212124;
+  padding: 0;
+  width: 480px;
+  height: 48px;
+}
+
+.photo-index-footer p {
+  height: 48px;
+  line-height: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+.photo-index-stats {
+  height: 48px;
+  border-top: 1px solid rgba(0,0,0,.15);
+  border-radius: 0 0 4px 4px;
+}
+
+.photo-index-stats span {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 20px;
+}

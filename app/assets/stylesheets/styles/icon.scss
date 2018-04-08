@@ -1,0 +1,23 @@
+[class*="icon-"] {
+  display: inline-block;
+  background-image: url(asset_path("upload_icon_white.png"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  overflow: hidden;
+  width: 35px;
+  height: 25px;
+  margin-top: 12px;
+  margin-right: 20px;
+}
+
+.icon-upload {
+  color: white;
+}
+
+// .icon-upload:hover {
+//   background-image: url(asset_path("upload_icon_active.png"));
+//   background-position: 15 -15px;
+//   width: 40px;
+//   height: 30px;
+// }

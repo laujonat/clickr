@@ -20,7 +20,7 @@ class PhotoIndex extends React.Component {
       );
     });
     return (
-      <div>
+      <div className="feed-container">
         <ul className="photo-index-container">
           {photoIndexItem}
         </ul>
