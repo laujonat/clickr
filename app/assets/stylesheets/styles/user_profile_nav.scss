@@ -1,0 +1,36 @@
+.user-profile-nav {
+  position: fixed;
+  top: 300px;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  box-shadow: inset 0 -2px transparent;
+  border-bottom: 1px solid hsla(0,0%,54%,.3);
+  margin-bottom: 0;
+}
+
+.user-profile-nav-link {
+  color: #212124;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 190px;
+  width: 321px;
+  font-size: 16px;
+}
+
+.user-profile-nav-link li {
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 14px;
+}
+
+.prof-link:hover {
+  font-weight: 400;
+  border-bottom: 3px solid #0091dc;
+}

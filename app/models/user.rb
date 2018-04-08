@@ -7,8 +7,9 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_attached_file :cover_photo,  default_url: "default_cover.png"
   has_attached_file :avatar,  default_url: "default_avatar.png"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :avatar, :cover_photo, content_type: /\Aimage\/.*\z/
 
   has_many :photos
 

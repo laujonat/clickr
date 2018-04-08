@@ -12,7 +12,7 @@
   display: flex;
 
   .photo-index-container {
-    // flex: 1;
+    flex: 1;
     margin: auto;
     display: flex;
     flex-flow: row wrap;
@@ -22,7 +22,6 @@
 
 
     .feed-activity-card {
-      // flex: 1;
       float: left;
       left: 0px;
       top: 120px;
