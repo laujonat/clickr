@@ -26,21 +26,22 @@ class UserPhotostream extends React.Component {
     console.log("clicked");
   }
 
-
   render () {
     const columns = this.divideCol(this.props.photos);
     const column1 = columns[0].map(photo => {
       return (
         <div className="layout-panel">
+        <Link to={`/photos/${photo.id}`}>
           <div className="panel-content">
             <img className="panel-content-img aa" src={`${photo.photo_url}`} />
               <div className="panel-content-hover-display aa">
                 <div className="interaction-bar aa">
-                  <Link to={`/user/${photo.user_id}`}>{photo.title}</Link>
-                  <a>asdasda</a>
+                  <span>{photo.title}</span>
+                  <span>by {photo.user_fname} {photo.user_lname}</span>
                 </div>
               </div>
           </div>
+        </Link>
         </div>
       );
     });
@@ -48,15 +49,17 @@ class UserPhotostream extends React.Component {
     const column2 = columns[1].map(photo => {
       return (
         <div className="layout-panel">
+        <Link to={`/photos/${photo.id}`}>
           <div className="panel-content">
             <img className="panel-content-img ab" src={`${photo.photo_url}`} />
               <div onClick={this.clickMe} className="panel-content-hover-display ab">
                 <div className="interaction-bar ab">
-                  <Link to={`/user/${photo.user_id}`}>{photo.title}</Link>
-                  <a>asdasda</a>
+                  <span>{photo.title}</span>
+                  <span>by {photo.user_fname} {photo.user_lname}</span>
                 </div>
               </div>
           </div>
+        </Link>
         </div>
       );
     });
@@ -64,15 +67,17 @@ class UserPhotostream extends React.Component {
     const column3 = columns[2].map(photo => {
       return (
         <div className="layout-panel">
+        <Link to={`/photos/${photo.id}`}>
           <div className="panel-content">
             <img className="panel-content-img ac" src={`${photo.photo_url}`} />
               <div className="panel-content-hover-display ac">
                 <div className="interaction-bar ac">
-                  <Link to={`/user/${photo.user_id}`}>{photo.title}</Link>
-                  <a>asdasda</a>
+                  <span>{photo.title}</span>
+                  <span>by {photo.user_fname} {photo.user_lname}</span>
                 </div>
               </div>
           </div>
+        </Link>
         </div>
       );
     });

@@ -14,6 +14,7 @@ import FeedContainer from './feed/feed_container';
 import UploadPhotoContainer from './photos/upload_photo_container';
 import UploadNavContainer from './photos/upload_nav_container';
 import UserProfileContainer from './users/user_profile_container';
+import PhotoShowContainer from './photos/photo_show_container';
 // import FeedNav from './feed/feed_nav';
 
 const App = () => (
@@ -29,7 +30,8 @@ const App = () => (
     <Switch>
       <ProtectedRoute path="/feed" component={FeedContainer} />
       <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
-      <ProtectedRoute path="/user/:user_id" component={UserProfileContainer} />
+      <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
+      <Route path="/photos/:photoId" component={PhotoShowContainer} />
       <ProtectedRoute path="/" component={FeedContainer} />
     </Switch>
   </div>
