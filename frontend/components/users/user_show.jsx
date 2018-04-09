@@ -15,7 +15,7 @@ class UserShow extends React.Component {
   }
 
   render() {
-    console.log(this.props.userPhotos);
+    // console.log(this.props.userPhotos);
     return (
       <React.Fragment>
         <UserProfileHeader

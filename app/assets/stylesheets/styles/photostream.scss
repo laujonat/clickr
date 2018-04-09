@@ -87,13 +87,14 @@
   color: white;
 }
 
-.panel-content:hover .panel-content-hover-display .interaction-bar a {
+.panel-content:hover .panel-content-hover-display .interaction-bar span {
   display: block;
 }
 
-.panel-content:hover .panel-content-hover-display .interaction-bar a:last-child {
+.panel-content:hover .panel-content-hover-display .interaction-bar span:last-child {
   color: hsla(0,0%,100%,.7);
   font-size: 11px;
+  font-weight: 100;
 }
 
 
