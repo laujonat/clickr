@@ -13,7 +13,6 @@ class UserShow extends React.Component {
 
 
   componentDidMount() {
-    // fetch photos here
     this.props.getPhotos();
   }
 
