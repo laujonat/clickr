@@ -1,5 +1,7 @@
 import React from 'react';
 import PhotoStreamItem from './user_photostream_item';
+import UserProfileNav from './user_profile_nav';
+import { Link } from 'react-router-dom';
 
 class UserPhotostream extends React.Component {
   constructor(props) {
@@ -20,6 +22,10 @@ class UserPhotostream extends React.Component {
     );
   }
 
+  clickMe() {
+    console.log("clicked");
+  }
+
 
   render () {
     const columns = this.divideCol(this.props.photos);
@@ -27,7 +33,13 @@ class UserPhotostream extends React.Component {
       return (
         <div className="layout-panel">
           <div className="panel-content">
-            <img src={`${photo.photo_url}`} />
+            <img className="panel-content-img aa" src={`${photo.photo_url}`} />
+              <div className="panel-content-hover-display aa">
+                <div className="interaction-bar aa">
+                  <Link to={`/user/${photo.user_id}`}>{photo.title}</Link>
+                  <a>asdasda</a>
+                </div>
+              </div>
           </div>
         </div>
       );
@@ -37,7 +49,13 @@ class UserPhotostream extends React.Component {
       return (
         <div className="layout-panel">
           <div className="panel-content">
-            <img src={`${photo.photo_url}`} />
+            <img className="panel-content-img ab" src={`${photo.photo_url}`} />
+              <div onClick={this.clickMe} className="panel-content-hover-display ab">
+                <div className="interaction-bar ab">
+                  <Link to={`/user/${photo.user_id}`}>{photo.title}</Link>
+                  <a>asdasda</a>
+                </div>
+              </div>
           </div>
         </div>
       );
@@ -46,7 +64,15 @@ class UserPhotostream extends React.Component {
     const column3 = columns[2].map(photo => {
       return (
         <div className="layout-panel">
-          <img className="panel-content" src={`${photo.photo_url}`} />
+          <div className="panel-content">
+            <img className="panel-content-img ac" src={`${photo.photo_url}`} />
+              <div className="panel-content-hover-display ac">
+                <div className="interaction-bar ac">
+                  <Link to={`/user/${photo.user_id}`}>{photo.title}</Link>
+                  <a>asdasda</a>
+                </div>
+              </div>
+          </div>
         </div>
       );
     });
