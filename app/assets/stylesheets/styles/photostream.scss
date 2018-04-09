@@ -14,7 +14,6 @@
   flex-direction: row;
   padding: 0;
   min-height: 0;
-  flex-shrink: 0;
   align-items: flex-start;
 
 }
@@ -23,6 +22,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  // flex: 1 1 auto;
 }
 
 .layout-panel {
@@ -32,9 +32,70 @@
 
 .panel-content {
   max-width: 100%;
-  align-self: center;
-  flex-flow: 1;
+  // align-self: center;
+
+  // hidden hover effect style
+  backface-visibility: hidden;
+  position: relative;
+
+  .panel-content-img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+
+  }
 }
+
+.panel-content-hover-display {
+  cursor: pointer;
+  background-image: linear-gradient(transparent 65%,rgba(0,0,0,.35));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  // text-align: center;
+}
+
+.panel-content:hover .panel-content-hover-display {
+  opacity: 1;
+  outline-width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-content-hover-display  .interaction-bar {
+  display: none;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  min-height: 17px;
+}
+
+
+.panel-content:hover .panel-content-hover-display .interaction-bar {
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px 4px;
+  position: absolute;
+  z-index: 5;
+  color: white;
+}
+
+.panel-content:hover .panel-content-hover-display .interaction-bar a {
+  display: block;
+}
+
+.panel-content:hover .panel-content-hover-display .interaction-bar a:last-child {
+  color: hsla(0,0%,100%,.7);
+  font-size: 11px;
+}
+
 
 
 .magic-tools-bar {

@@ -6,9 +6,7 @@ import UserPhotostream from './user_photostream';
 class UserShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   photos: []
-    // };
+
   }
 
 
