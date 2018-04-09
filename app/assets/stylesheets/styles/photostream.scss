@@ -1,31 +1,40 @@
-.photostream-list-container {
+.photostream-layout {
+  box-sizing: border-box;
   min-width: 800px;
   max-width: 80%;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 130px;
   padding-right: 130px;
   background-color: red;
-  display: block;
   height: 1000px;
 
-  .magic-tools-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
 
-    height: 50px;
-    width: 100%;
-    position: relative;
-    background-color: green;
-  }
 }
 
-.photostream-list {
-  display: inline-block;
+.photostream-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.layout-panel {
+
+  background-color: purple;
+  display: flex;
+  margin: 5px;
+}
+
+
+.magic-tools-bar {
+  display: block;
+  margin-top: 50px;
+  height: 50px;
+  width: 100%;
   position: absolute;
-
-  .photostream-photo-card {
-
-    width: 507px;
-    height: 338px;
-    // position: absolute;
-  }
+  background-color: green;
 }

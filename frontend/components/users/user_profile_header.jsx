@@ -1,6 +1,6 @@
 import React from 'react';
 
-const userProfileHeader = ({ user }) => {
+const userProfileHeader = ({ user, photoCount }) => {
   console.log(user);
   return (
     <div className="cover-photo-gradient">
@@ -14,7 +14,7 @@ const userProfileHeader = ({ user }) => {
             <p>{user.username}</p>
           </div>
           <p className="spacer"></p>
-          <p className="photo-count">219 Photos</p>
+          <p className="photo-count">{photoCount} Photos</p>
         </div>
       </div>
     </div>
