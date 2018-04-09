@@ -1,0 +1,43 @@
+.photo-view-modal-container {
+  display: block;
+  position: relative;
+  margin: auto;
+  background: #212124;
+  height: 80vh;
+  min-height: 796px;
+
+
+
+  .main-image-wrapper {
+    padding: 50px 0;
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+    .main-show-image {
+      position: absolute;
+      display: block;
+      max-width: 100%;
+      top: 50px;
+      bottom: 0;
+      width: auto;
+      max-height: 720px;
+      // height: 577px;
+    }
+  }
+}
+
+.photo-view-actions-container {
+  font-size: .8em;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  // background-color: red;
+}

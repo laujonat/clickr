@@ -34,7 +34,7 @@ class Api::PhotosController < ApplicationController
     # @photos = Photo.all
     @photos = (
       if params[:user_id]
-        Photo.where(id: params[:user_id])
+        Photo.where(user_id: params[:user_id])
       else
         Photo.all
       end

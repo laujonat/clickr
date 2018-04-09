@@ -25,8 +25,8 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const fetchAllPhotos = () => dispatch => (
-  APIPhoto.fetchAllPhotos()
+export const fetchAllPhotos = id => dispatch => (
+  APIPhoto.fetchAllPhotos(id)
     .then(photos => (dispatch(receiveAllPhotos(photos))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
