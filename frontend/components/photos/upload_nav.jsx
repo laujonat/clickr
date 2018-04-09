@@ -12,7 +12,7 @@ class UploadNav extends React.Component {
     return (
       <div className="upload-nav">
         <ul className="left-upload-content">
-          <li className="logo-img-upload"><Link to="/">clickr</Link></li>
+          <li className="logo-img-upload"><Link to="/feed">clickr</Link></li>
           <li><Link to={`/user/${this.props.currentUser.id}`}>Your Photostream</Link></li>
         </ul>
         <ul className="right-upload-content">

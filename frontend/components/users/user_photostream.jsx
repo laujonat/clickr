@@ -28,6 +28,7 @@ class UserPhotostream extends React.Component {
 
   render () {
     const columns = this.divideCol(this.props.photos);
+    console.log(columns);
     const column1 = columns[0].map(photo => {
       return (
         <div className="layout-panel">

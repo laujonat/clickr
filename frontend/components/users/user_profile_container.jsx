@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import UserShow from './user_show';
+import UserProfile from './user_profile';
 import { fetchAllPhotos } from '../../actions/photo_actions';
 import { photoSelector } from '../../selectors/photo_selector';
 
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserShow);
+)(UserProfile);

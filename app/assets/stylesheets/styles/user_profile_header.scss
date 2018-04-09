@@ -8,30 +8,33 @@
 
 .cover-photo-gradient {
   width: 100%;
-  height: 120px;
+  height: 250px;
   background-color:  #fff;
   background-position: 50% 40%;
   background-image: url(asset_path("dflt_cover.png"));
-  padding-top: 130px;
-  display: block;
-  position: relative;
+  // position: relative;
 }
 
 .cover-content-container {
+
   min-width: 800px;
-  max-width: 80%;
+  max-width: 90%;
+  padding-top: 120px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 130px;
-  padding-right: 130px;
-  height: 120px;
-  position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 100px;
+  // position: absolute;
+  // background-color: blue;
+  justify-content: center;
 
   .title-block-content {
     display: inline-block;
     color: #fff;
     width: calc(100% - 100px - 15px);
     height: 89px;
+
     .title {
       display: flex;
       justify-content: flex-start;
@@ -60,7 +63,7 @@
   flex: 1 0 75px;
   margin: 0;
   max-width: inherit;
-  width: 500px;
+  // width: 500px;
   display: inline-block;
 }
 
