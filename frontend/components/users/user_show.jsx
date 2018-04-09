@@ -11,11 +11,11 @@ class UserShow extends React.Component {
 
 
   componentDidMount() {
-    this.props.getPhotos();
+    // debugger
+    this.props.getPhotos(this.props.match.params.userId);
   }
 
   render() {
-    // console.log(this.props.userPhotos);
     return (
       <React.Fragment>
         <UserProfileHeader
