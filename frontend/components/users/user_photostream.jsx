@@ -46,25 +46,25 @@ class UserPhotostream extends React.Component {
     const column3 = columns[2].map(photo => {
       return (
         <div className="layout-panel">
-          <div className="panel-content">
-            <img src={`${photo.photo_url}`} />
-          </div>
+          <img className="panel-content" src={`${photo.photo_url}`} />
         </div>
       );
     });
 
     return (
-      <div className="photostream-layout">
-        <div className="photostream-column">
-          {column1}
+      <React.Fragment>
+        <div className="photostream-layout">
+          <div className="photostream-column one">
+            {column1}
+          </div>
+          <div className="photostream-column two">
+            {column2}
+          </div>
+          <div className="photostream-column three">
+            {column3}
+          </div>
         </div>
-        <div className="photostream-column">
-          {column2}
-        </div>
-        <div className="photostream-column">
-          {column3}
-        </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

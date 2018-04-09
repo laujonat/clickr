@@ -5,28 +5,35 @@
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: auto;
   padding-left: 130px;
   padding-right: 130px;
-  background-color: red;
-  height: 1000px;
-
+  height: inherit;
+  overflow-y: scroll;
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: 0;
+  min-height: 0;
+  flex-shrink: 0;
+  align-items: flex-start;
 
 }
 
 .photostream-column {
+  box-sizing: border-box;
   display: flex;
-  flex: 1;
   flex-direction: column;
 }
 
 .layout-panel {
-
-  background-color: purple;
   display: flex;
-  margin: 5px;
+  margin: 2px;
+}
+
+.panel-content {
+  max-width: 100%;
+  align-self: center;
+  flex-flow: 1;
 }
 
 
@@ -36,5 +43,4 @@
   height: 50px;
   width: 100%;
   position: absolute;
-  background-color: green;
 }
