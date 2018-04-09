@@ -21,8 +21,12 @@ class UserShow extends React.Component {
     console.log(this.props.userPhotos);
     return (
       <React.Fragment>
-        <UserProfileHeader user={this.props.currentUser} />
+        <UserProfileHeader
+          user={this.props.currentUser}
+          photoCount={this.props.userPhotos.length}
+        />
         <UserProfileNav />
+        <div className="magic-tools-bar"></div>
         <UserPhotostream photos={this.props.userPhotos}/>
       </React.Fragment>
     );
