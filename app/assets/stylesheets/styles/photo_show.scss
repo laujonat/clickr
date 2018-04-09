@@ -6,8 +6,6 @@
   height: 80vh;
   min-height: 796px;
 
-
-
   .main-image-wrapper {
     padding: 50px 0;
     display: flex;
@@ -39,5 +37,44 @@
   right: 0;
   bottom: 0;
   height: 50px;
-  // background-color: red;
+  background-color: orange;
+}
+
+.sub-photo-view-container {
+  width: 100%;
+  // background-color: #f3f5f6;
+
+  .sub-photo-center-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: purple;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    .sub-left-view {
+      height: 400px;
+      width: 500px;
+      background-color: green;
+    }
+
+    .sub-right-view {
+      height: 400px;
+      width: 500px;
+      background-color: pink;
+    }
+  }
+}
+
+.show-page-wrap {
+  position: relative;
+  // padding-bottom: 100px;
+  box-sizing: border-box;
+  height: 100%;
+  margin: auto;
+  overflow-y: scroll;
+  z-index: -1;
 }

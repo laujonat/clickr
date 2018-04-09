@@ -1,9 +1,9 @@
 import React from 'react';
+import PhotoShowNav from './photo_show_nav';
 
 class PhotoShow extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
@@ -13,7 +13,7 @@ class PhotoShow extends React.Component {
   render() {
     console.log(this.props.photo.user_id);
     return(
-      <React.Fragment>
+      <div className="show-page-wrap">
       <div className="photo-view-modal-container">
         <div className="main-image-wrapper">
           <img className="main-show-image" src={`${this.props.photo.photo_url}`} />
@@ -21,8 +21,17 @@ class PhotoShow extends React.Component {
         <div className="photo-view-actions-container">
         </div>
       </div>
+      <div className="sub-photo-view-container">
+        <div className="sub-photo-center-content">
+          <div className="sub-left-view">
 
-    </React.Fragment>
+          </div>
+          <div className="sub-right-view">
+
+          </div>
+        </div>
+      </div>
+    </div>
     );
   }
 }
