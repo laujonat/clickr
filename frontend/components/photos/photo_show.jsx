@@ -4,14 +4,17 @@ import CommentListContainer from '../comments/comment_list_container';
 class PhotoShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loading: true
+    };
   }
 
   componentDidMount() {
-    this.props.getPhoto(this.props.match.params.photoId);
+    this.props.getPhoto(this.props.match.params.photoId)
+      .then( () => this.setState({loading: false}));
   }
 
   render() {
-    // const dataForm = this.props.photo.created_at;
     const date = new Date(this.props.photo.created_at);
     const month = date.getMonth();
     const day = date.getDate();
@@ -20,8 +23,10 @@ class PhotoShow extends React.Component {
       "July", "August", "September", "October", "November", "December"
     ];
 
-    console.log(date);
     return(
+      this.state.loading ?
+        <div>Loading...</div>
+      :
         <div className="show-page-wrap">
         <div className="photo-view-modal-container">
           <div className="main-image-wrapper">

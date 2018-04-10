@@ -23,10 +23,7 @@ class CommentForm extends React.Component {
       user_id: this.props.currentUser.id,
       photo_id: this.props.photoId
     };
-
     this.props.createComment(comment);
-
-    // HOW TO SHOW COMMENT AND REFRESH PAGE
   }
 
   renderForm() {
@@ -41,7 +38,7 @@ class CommentForm extends React.Component {
               placeholder="Add a comment"
               onChange={this.updateInput("body")}
             />
-          <button className="comment-button" onClick={this.handleSubmit}>Comment</button>
+          <button className="comment-button" onClick={this.handleSubmit}>Comment</button>r
           </div>
         </form>
       );
