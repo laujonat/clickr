@@ -11,8 +11,6 @@ class CommentList extends React.Component {
     };
   }
 
-
-
   componentDidMount() {
     this.props.fetchComments(this.props.photoId)
       .then(() => this.setState({loading: false}));
