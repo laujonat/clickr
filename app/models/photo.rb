@@ -8,4 +8,10 @@ class Photo < ApplicationRecord
   primary_key: :id,
   foreign_key: :user_id,
   class_name: :User
+
+  has_many :comments,
+  primary_key: :id,
+  foreign_key: :comment_id,
+  class_name: :Comment
+
 end

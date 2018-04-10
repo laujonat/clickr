@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, :cover_photo, content_type: /\Aimage\/.*\z/
 
   has_many :photos
+  has_many :comments
 
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
