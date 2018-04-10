@@ -23,7 +23,8 @@ class CommentForm extends React.Component {
       user_id: this.props.currentUser.id,
       photo_id: this.props.photoId
     };
-    this.props.createComment(comment);
+    this.props.createComment(comment)
+      .then(() => this.setState({body: ""}));
   }
 
   renderForm() {
@@ -38,7 +39,7 @@ class CommentForm extends React.Component {
               placeholder="Add a comment"
               onChange={this.updateInput("body")}
             />
-          <button className="comment-button" onClick={this.handleSubmit}>Comment</button>r
+          <button className="comment-button" onClick={this.handleSubmit}>Comment</button>
           </div>
         </form>
       );
