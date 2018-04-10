@@ -33,11 +33,22 @@ class PhotoShow extends React.Component {
               <div className="photo-attribution">
                 <img className="photo-credit-avatar" src={`${this.props.photo.user_avatar}`} />
                 <div className="attribution-info">
+                  <a>{this.props.photo.photo_artist_fname} {this.props.photo.photo_artist_lname}</a>
+                  <a>{this.props.photo.title}</a>
                 </div>
               </div>
             </div>
             <div className="sub-right-view">
-
+              <div className="sub-right-view-row1">
+                <div className="left-stats-view-container">
+                  <span>Stats here stats here</span>
+                </div>
+                <div className="right-stats-view-container">
+                  <span>Taken on October 9, 2020</span>
+                  <span>Stats here!</span>
+        
+                </div>
+              </div>
             </div>
           </div>
         </div>
