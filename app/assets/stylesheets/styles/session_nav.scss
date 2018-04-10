@@ -19,6 +19,8 @@ $nav-color: #fff;
 
 .session-left-btn-list {
   float: left;
+  display: flex;
+  flex-direction: row;
 }
 
 .session-left-btn-list li {
@@ -30,7 +32,8 @@ $nav-color: #fff;
 
 .nav-you-link {
   font-size: 15px;
-
+  padding-top: 12px;
+  margin-left: 30px;
 }
 
 .nav-you-link a:hover {
