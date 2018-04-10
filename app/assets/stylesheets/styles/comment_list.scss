@@ -9,7 +9,7 @@
     clear: both;
     border-top: 1px solid transparent;
     margin-bottom: 20px;
-    background-color: purple;
+    // background-color: purple;
     height: 700px;
     width: 100%;
 
@@ -19,12 +19,12 @@
 .comment-container {
   margin: 5px 0 0;
   padding: 5px 0 5px 40px;
-  min-height: 32px;
+  min-height: 50px;
   position: relative;
-  background-color: pink;
+  // background-color: pink;
   width: 100%;
   transition: background-color .15s ease-in-out;
-  overflow: hidden;
+  overflow: auto;
 
 
   .comment-circle-icon {
