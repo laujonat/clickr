@@ -13,6 +13,7 @@ class User < ApplicationRecord
 
   has_many :photos
   has_many :comments
+  has_many :albums
 
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
