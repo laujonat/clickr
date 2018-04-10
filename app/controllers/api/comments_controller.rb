@@ -13,7 +13,7 @@ class Api::CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      render :show
+      render json: ["Upload success"], status: 200
     else
       render json: ["Upload comment error"], status: 422
     end
@@ -35,7 +35,7 @@ class Api::CommentsController < ApplicationController
       @comment.destroy
       render :show
     else
-      render json: ["Invalid comment id"], status: 404 
+      render json: ["Invalid comment id"], status: 404
     end
 
   end

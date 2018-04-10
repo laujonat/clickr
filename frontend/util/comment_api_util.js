@@ -11,12 +11,12 @@ export const fetchAllPhotoComments = id => (
   })
 );
 
-export const createComment = formData => (
+export const createComment = comment => (
   $.ajax('api/comments', {
     method: "post",
     // processData: false,
     // contentType: false,
-    data: formData,
+    data: { comment },
   })
 );
 
