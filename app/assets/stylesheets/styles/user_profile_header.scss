@@ -18,10 +18,10 @@
 .cover-content-container {
 
   min-width: 800px;
-  max-width: 90%;
+  max-width: 95%;
   padding-top: 120px;
   margin-left: auto;
-  margin-right: auto;
+  // margin-right: auto;
   padding-left: 100px;
   padding-right: 100px;
   margin-bottom: 100px;
@@ -49,10 +49,23 @@
   }
 }
 
-.photo-count {
+.inline-secondary-info {
   float: right;
+
+}
+
+.photo-count {
   display: inline-block;
   margin: 0 30px 0 0;
+  line-height: 18px;
+  max-width: 250px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.year-joined {
+  display: inline-block;
+  // margin: 0 30px 0 0;
   line-height: 18px;
   max-width: 250px;
   font-weight: 300;

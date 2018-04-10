@@ -3,6 +3,7 @@ import React from 'react';
 class userProfileHeader extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props.user.created_at.slice(0, 4));
   }
 
   render() {
@@ -17,8 +18,10 @@ class userProfileHeader extends React.Component {
             <div className="username-content">
               <p>{this.props.user.username}</p>
             </div>
-            <p className="spacer"></p>
-            <p className="photo-count">{this.props.userPhotos.length} Photos</p>
+            <div className="inline-secondary-info">
+              <p className="photo-count">{this.props.userPhotos.length} Photos</p>
+              <p className="year-joined">Joined {this.props.user.created_at.slice(0, 4)}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -14,12 +14,12 @@ const Auth = ({ loggedIn, path, component: Component }) => (
       )}
   />
 );
-// routes can only be accessible if user is logged in 
+// routes can only be accessible if user is logged in
 const Protected = ({ loggedIn, path, component: Component }) => (
     <Route
       path={path}
       render={props => (
-        loggedIn ? <Component {...props} /> : <Redirect to ="/login" />
+        loggedIn ? <Component {...props} /> : <Redirect to ="/" />
       )}
     />
 );

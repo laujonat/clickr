@@ -4,9 +4,6 @@ import PhotoShowNav from './photo_show_nav';
 class PhotoShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   loading: true
-    // };
   }
 
   componentWillMount() {
@@ -41,12 +38,12 @@ class PhotoShow extends React.Component {
             <div className="sub-right-view">
               <div className="sub-right-view-row1">
                 <div className="left-stats-view-container">
-                  <span>Stats here stats here</span>
+                  <span>All stolen photos</span>
                 </div>
                 <div className="right-stats-view-container">
                   <span>Taken on October 9, 2020</span>
-                  <span>Stats here!</span>
-        
+                  <span>No rights reserved.</span>
+
                 </div>
               </div>
             </div>
