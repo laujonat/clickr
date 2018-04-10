@@ -59,7 +59,7 @@
       width: 500px;
       height: 400px;
       float: left;
-      // background-color: green;
+      background-color: orange;
 
       .photo-attribution {
         // background-color: blue;
@@ -72,7 +72,7 @@
     }
 
     .sub-right-view {
-      height: 400px;
+      height: auto;
       width: 500px;
       margin-top: 1em;
       margin-bottom: 120px;
@@ -100,6 +100,7 @@
   border-radius: 100%;
 }
 
+// photo title description block
 .attribution-info {
   margin-top: 30px;
   margin-left: 13px;
@@ -108,7 +109,28 @@
   flex-direction: column;
 
   padding: 0 0 10px;
-  border-bottom: 1px solid #cfd6d9;
+  // border-bottom: 1px solid #cfd6d9;
+  // description
+  .field-photo-desc {
+    clear: both;
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 18px;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    word-wrap: break-word;
+    border-bottom: 1px solid #cfd6d9;
+    background-color: green;
+  }
+
+  .likes-count-section {
+    float: left;
+    background-color: yellow;
+    height: 80px;
+    border-bottom: 1px solid #cfd6d9;
+  }
 }
 
 .attribution-info a {
@@ -122,6 +144,11 @@
   max-width: 250px;
   width: auto;
 }
+.attribution-info .attr-info-title {
+  font-size: 16px;
+  padding-top: 10px;
+}
+
 
 // views, likes, comments, date added
 .sub-right-view-row1 {
