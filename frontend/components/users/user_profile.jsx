@@ -7,23 +7,32 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      loading: true
+    };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.getPhotos(this.props.match.params.userId);
+    this.props.getUser(this.props.match.params.userId)
+      .then(() => this.setState({loading: false}));
   }
 
   render() {
     return (
-      <div className="user-profile-wrapper">
-        <UserProfileHeader
-          user={this.props.currentUser}
-          userPhotos={this.props.userPhotos}
-        />
-        <UserProfileNav />
+      this.state.loading ?
+        <div>Loading ....</div>
+      :
+        <div className="user-profile-wrapper">
+          <UserProfileHeader
+            currentUser={this.props.currentUser}
+            userPhotos={this.props.userPhotos}
+            user={this.props.user}
+          />
+          <UserProfileNav />
 
-        <UserPhotostream photos={this.props.userPhotos}/>
-      </div>
+          <UserPhotostream photos={this.props.userPhotos}/>
+        </div>
     );
   }
 }

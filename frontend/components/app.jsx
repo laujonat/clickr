@@ -28,14 +28,14 @@ const App = () => (
       <Route path="/" component={NavBarContainer} />
     </Switch>
 
-      <Switch>
-        <ProtectedRoute path="/feed" component={FeedContainer} />
-        <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
-        <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
-        <Route path="/photos/:photoId" component={PhotoShowContainer} />
-        <ProtectedRoute path="/" component={FeedContainer} />
-      </Switch>
-    
+    <Switch>
+      <ProtectedRoute path="/feed" component={FeedContainer} />
+      <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
+      <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
+      <Route path="/photos/:photoId" component={PhotoShowContainer} />
+      <ProtectedRoute path="/" component={FeedContainer} />
+    </Switch>
+
   </div>
   </React.Fragment>
 );
