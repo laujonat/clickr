@@ -1,6 +1,13 @@
 class Api::AlbumsController < ApplicationController
+
   def index
-    @albums Album.all
+    @albums = (
+      if params[:user_id]
+        Album.where(user_id: params[:user_id]).order(created_at: :desc)
+      else
+        Album.all.order(created_at: :desc)
+      end
+    )
   end
 
   def show
@@ -14,9 +21,13 @@ class Api::AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
-    @album.user_id = current_user.id
+    # @album.user_id = current_user.id
 
     if @album.save
+      # params[[:photoIds].each do |id|
+      #   AlbumPhotos.new(album_id: @album.id, photo_id: id )
+
+
       render :show
     else
       render json: ["Creating album error"], status: 422
@@ -33,6 +44,7 @@ class Api::AlbumsController < ApplicationController
     end
 
   end
+
   private
   def album_params
     params.require(:album).permit(:user_id, :description, :name, :cover_photo)
