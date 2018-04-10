@@ -33,15 +33,17 @@ class Api::PhotosController < ApplicationController
   def index
     @photos = (
       if params[:user_id]
-        Photo.where(user_id: params[:user_id])
+        Photo.where(user_id: params[:user_id]).order(created_at: :desc)
+
       else
-        Photo.all
+        Photo.all.order(created_at: :desc)
       end
     )
   end
 
   def update
     @photo = Photo.find_by(id: params[:id])
+
     if @photo
       @photo.update(photo_params)
       render :show

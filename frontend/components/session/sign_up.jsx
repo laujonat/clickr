@@ -98,7 +98,7 @@ class SignupForm extends React.Component {
                     <p className="policy-item">By clicking "Continue", you agree to the Terms and Privacy Policy</p>
                   </div>
                  <input className="signUpButton" id="signup" type="submit" value="Sign Up"/>
-                 <div className="demo-sign-up" onClick={this.demoLogin}>Demo Sign Up</div>
+                 <div className="demo-sign-up" ></div>
                  <div className="row-sign-in">Already have an acccount? <Link to="/login"><p id="log-in-link">Sign in</p></Link></div>
                 </form>
               </div>

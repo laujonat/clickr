@@ -157,7 +157,7 @@
   min-height: 64px;
 
   .left-stats-view-container {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     line-height: 18px;
     margin-right: 30px;
@@ -168,10 +168,16 @@
 
   .right-stats-view-container {
     float: left;
+    font-weight: 300;
     min-height: 42px;
     display: flex;
     flex-direction: column;
   }
+}
+
+.right-stats-view-container span{
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 
 .comments-form {

@@ -11,6 +11,16 @@ class PhotoShow extends React.Component {
   }
 
   render() {
+    // const dataForm = this.props.photo.created_at;
+    const date = new Date(this.props.photo.created_at);
+    const month = date.getMonth();
+    const day = date.getDate();
+    const year = date.getFullYear();
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    console.log(date);
     return(
         <div className="show-page-wrap">
         <div className="photo-view-modal-container">
@@ -45,7 +55,7 @@ class PhotoShow extends React.Component {
                   <span>All stolen photos</span>
                 </div>
                 <div className="right-stats-view-container">
-                  <span>Taken on October 9, 2020</span>
+                  <span>Taken on {monthNames[month]} {day}, {year}</span>
                   <span>No rights reserved.</span>
                 </div>
               </div>
