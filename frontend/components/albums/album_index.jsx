@@ -29,7 +29,9 @@ class AlbumIndex extends React.Component {
         <div>Loading...</div>
       :
         <React.Fragment>
-          <div className="albums-list-toolbar"></div>
+          <div className="albums-list-toolbar">
+            <a>New Album</a>
+          </div>
           <ul className="album-layout">
             {albumIndexItem}
           </ul>

@@ -5,7 +5,7 @@
   margin-right: auto;
   padding-left: 130px;
   padding-right: 130px;
-  background-color: purple;
+  // background-color: purple;
   height: 50px;
   position: relative;
 
@@ -94,4 +94,15 @@
 .row-wrap {
   justify-content: center;
   padding: 20px;
+}
+
+.albums-list-toolbar a {
+  float: right;
+  position: absolute;
+  right: 70px;
+  color: #737b80;
+  text-decoration: none;
+  height: 50px;
+  box-sizing: border-box;
+  padding-top: 20px;
 }
