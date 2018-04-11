@@ -9,9 +9,9 @@ class AlbumCreate extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      active: false,
       photoIds: []
     };
+    this.clickImage = this.clickImage.bind(this);
   }
 
   componentDidMount() {
@@ -19,11 +19,20 @@ class AlbumCreate extends React.Component {
       .then(() => this.setState({loading: false}));
   }
 
-  clickImage() {
-    // this.setState((prevState) => {
-    //   return { active: !prevState.active };
-    // });
-    console.log("clickedme");
+  clickImage(event, id) {
+    const newPhotoIds = this.state.photoIds;
+
+    if(this.state.photoIds.includes(id)) {
+      event.target.classList.remove('album-selected-border');
+      const index = newPhotoIds.indexOf(id);
+      newPhotoIds.splice(index,1);
+    } else {
+      event.target.classList.add('album-selected-border');
+      newPhotoIds.push(id);
+    }
+    this.setState({photoIds: newPhotoIds});
+    // console.log(event.target);
+    console.log(this.state);
   }
 
   render() {
@@ -33,8 +42,8 @@ class AlbumCreate extends React.Component {
     if(!this.state.loading) {
       userPhotoItems = this.props.photos.map(photo => {
           return (
-          <li className="album-row-wrap">
-            <img onClick={this.clickImage} className="album-photo-item" src={`${photo.photo_url}`} />
+          <li key={photo.id} className="album-row-wrap">
+            <img onClick={(e) => this.clickImage(e, photo.id)} className="album-photo-item" src={`${photo.photo_url}`} />
           </li>
           );
         });
