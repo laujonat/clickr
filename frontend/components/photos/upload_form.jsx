@@ -24,7 +24,7 @@ class UploadForm extends React.Component {
     formData.append("photo[photo_url]", this.state.photo);
     formData.append("photo[user_id]", this.state.user_id);
     this.props.upload(formData)
-      .then(() => this.props.history.push('/feed'));
+      .then(() => this.props.history.push(`/user/${this.state.user_id}`));
   }
 
   updateInput(field) {

@@ -1,0 +1,24 @@
+.album-photo-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .album-photo-item {
+    width: 110px;
+    height: 110px;
+    transform: translate(0px, 8px);
+    transition: opacity 1s linear;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0 0 20px rgba(0,0,0,.08);
+  }
+}
+
+
+
+.album-row-wrap {
+  justify-content: flex-start;
+  padding: 20px;
+}
