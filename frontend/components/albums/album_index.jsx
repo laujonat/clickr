@@ -1,6 +1,6 @@
 import React from 'react';
 import AlbumIndexItem from './album_index_item';
-
+import { Link } from 'react-router-dom';
 
 class AlbumIndex extends React.Component {
 
@@ -22,7 +22,6 @@ class AlbumIndex extends React.Component {
         <AlbumIndexItem key={album.id} album={album} />
       );
     });
-    console.log(this.props);
 
     return (
       this.state.loading ?
@@ -30,7 +29,7 @@ class AlbumIndex extends React.Component {
       :
         <React.Fragment>
           <div className="albums-list-toolbar">
-            <a>New Album</a>
+            <Link to="/albums/create">New Album</Link>
           </div>
           <ul className="album-layout">
             {albumIndexItem}

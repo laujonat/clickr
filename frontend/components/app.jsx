@@ -16,7 +16,8 @@ import UploadNavContainer from './photos/upload_nav_container';
 import UserProfileContainer from './users/user_profile_container';
 import PhotoShowContainer from './photos/photo_show_container';
 import PhotoShowNavContainer from './photos/photo_show_nav_container';
-
+import AlbumCreateNavContainer from './albums/album_create_nav_container';
+import AlbumCreateContainer from './albums/album_create_container';
 const App = () => (
   <React.Fragment>
   <div className="app-container">
@@ -24,6 +25,7 @@ const App = () => (
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <ProtectedRoute path="/upload" component={UploadNavContainer} />
+      <ProtectedRoute path="/albums/create" component={AlbumCreateNavContainer} />
       <Route path="/photos/:photosId" component={PhotoShowNavContainer} />
       <Route path="/" component={NavBarContainer} />
     </Switch>
@@ -32,6 +34,7 @@ const App = () => (
       <ProtectedRoute path="/feed" component={FeedContainer} />
       <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
       <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
+      <ProtectedRoute path="/albums/create" component={AlbumCreateContainer} />
       <Route path="/photos/:photoId" component={PhotoShowContainer} />
       <ProtectedRoute path="/" component={FeedContainer} />
     </Switch>
