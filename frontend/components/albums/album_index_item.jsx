@@ -10,9 +10,14 @@ class AlbumIndexItem extends React.Component {
     const album_cover = this.props.album.cover_photo_url;
     return (
       <li className="row-wrap">
-        <div className="album-index-item" style={{backgroundImage: "url(" + album_cover + ")"}}>
-
-        </div>
+          <div className="album-index-item" style={{backgroundImage: "url(" + album_cover + ")"}}>
+            <div className="interaction-bar">
+              <div className="metaData">
+                <h4>{this.props.album.name}</h4>
+              </div>
+              
+            </div>
+          </div>
       </li>
     );
   }
