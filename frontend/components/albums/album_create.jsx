@@ -31,7 +31,6 @@ class AlbumCreate extends React.Component {
       newPhotoIds.push(id);
     }
     this.setState({photoIds: newPhotoIds});
-    // console.log(event.target);
     console.log(this.state);
   }
 
