@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import UploadForm from './upload_form';
 import { createPhoto } from '../../actions/photo_actions';
 
@@ -10,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
   upload: photo => dispatch(createPhoto(photo))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(UploadForm);
+)(UploadForm));
