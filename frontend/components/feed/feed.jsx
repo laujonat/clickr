@@ -15,10 +15,15 @@ class Feed extends React.Component {
   }
 
   render() {
+    const Panes = [
+      {title: 'All Activity', content: <PhotoIndexContainer />},
+      {title: 'People', content: <h1>TBD</h1>},
+    ];
+
+
     return (
       <React.Fragment>
-        <FeedNav />
-        <PhotoIndexContainer />
+        <FeedNav panes={Panes}/>
       </React.Fragment>
     );
   }
