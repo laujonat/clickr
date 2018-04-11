@@ -9,7 +9,8 @@ class AlbumCreate extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      active: false
+      active: false,
+      photoIds: []
     };
   }
 
