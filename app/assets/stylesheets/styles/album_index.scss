@@ -12,6 +12,8 @@
 }
 
 .album-layout {
+  width: 100%;
+  justify-content: center;
   box-sizing: border-box;
   min-width: 800px;
   max-width: 80%;
@@ -21,19 +23,32 @@
   padding-left: 130px;
   padding-right: 130px;
   height: auto;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: row;
   padding: 0;
   min-height: 0;
-  height: 400px;
-  align-items: flex-start;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // align-items: flex-start;
   background-color: red;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+
+  .album-index-item {
+    width: 260px;
+    height: 260px;
+    transform: translate(0px, 8px);
+    background-position: 50%;
+    background-size: cover;
+    transition: opacity 1s linear;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.placeholderbox {
-  width: 80px;
-  height: 80px;
-  background-color: green;
+.row-wrap {
+  justify-content: center;
+  padding: 20px;
+
 }
