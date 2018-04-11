@@ -47,7 +47,7 @@ class SignupForm extends React.Component {
             <div className="session-box">
               <h2><p>Sign up</p></h2>
                 <form className="signup-form-challenge" onSubmit={this.handleSubmit}>
-                  <fieldset className="f-l-name-container">
+                  <div className="f-l-name-container">
                     <div className="row-1-contain">
                       <input
                         id="row-1-input"
@@ -59,14 +59,14 @@ class SignupForm extends React.Component {
                     </div>
                     <div className="row-1-2-contain">
                       <input
-                        id="row-1-input row2"
+                        id="row-1-2-input"
                         type="text"
                         placeholder="Last name"
                         value={this.state.lname}
                         onChange={this.handleChange('lname')}
                       />
                     </div>
-                  </fieldset>
+                  </div>
                   <div className="row-email-contain">
                     <input
                       id="row-2-input"
