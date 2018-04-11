@@ -4,6 +4,7 @@ import { fetchAllPhotos } from '../../actions/photo_actions';
 import { photoSelector } from '../../selectors/photo_selector';
 import { userSelector } from '../../selectors/user_selector';
 import { fetchUser } from '../../actions/user_actions';
+import { fetchAllAlbums } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
@@ -13,7 +14,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   getPhotos: id => dispatch(fetchAllPhotos(id)),
-  getUser: id => dispatch(fetchUser(id))
+  getUser: id => dispatch(fetchUser(id)),
+  fetchAlbums: id => dispatch(fetchAllAlbums(id))
 });
 
 export default connect(

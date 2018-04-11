@@ -2,6 +2,7 @@ import React from 'react';
 import UserProfileHeader from './user_profile_header';
 import UserProfileNav from './user_profile_nav';
 import UserPhotostream from './user_photostream';
+import AlbumIndexContainer from '../albums/albums_index_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class UserProfile extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getPhotos(this.props.match.params.userId);
     this.props.getUser(this.props.match.params.userId)
       .then(() => this.setState({loading: false}));
@@ -20,8 +21,10 @@ class UserProfile extends React.Component {
 
   render() {
     const Panes = [
+      {title: 'Albums', content: <AlbumIndexContainer
+                                    user={this.props.user}
+                                    currentUser={this.props.currentUser} />},
       {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
-      {title: 'Albums', content: <h1>ajdjkha</h1>},
     ];
     return (
       this.state.loading ?
@@ -41,6 +44,3 @@ class UserProfile extends React.Component {
 }
 
 export default UserProfile;
-
-
-/*<div className="magic-tools-bar"></div>*/
