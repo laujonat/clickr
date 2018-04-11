@@ -19,6 +19,10 @@ class UserProfile extends React.Component {
   }
 
   render() {
+    const Panes = [
+      {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
+      {title: 'Albums', content: <h1>ajdjkha</h1>},
+    ];
     return (
       this.state.loading ?
         <div>Loading ....</div>
@@ -29,9 +33,8 @@ class UserProfile extends React.Component {
             userPhotos={this.props.userPhotos}
             user={this.props.user}
           />
-          <UserProfileNav />
+          <UserProfileNav panes={Panes}/>
 
-          <UserPhotostream photos={this.props.userPhotos}/>
         </div>
     );
   }

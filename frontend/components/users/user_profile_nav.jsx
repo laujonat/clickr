@@ -1,15 +1,64 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
+class Headers extends React.Component {
+  render() {
+    let selected = this.props.selectedPane;
+    let headers = this.props.panes.map((pane, index) => {
+      let title = pane.title;
+      let klass = "";
+      if (index === selected) {
+        klass = "current";
+      }
+
+      return (
+        <li
+          key={index}
+          className={klass}
+          onClick={this.props.onTabChosen.bind(null, index)}>
+          {title}{' '}
+        </li>
+      );
+    });
+    return (
+
+      <ul className="user-profile-nav-link">
+        {headers}
+      </ul>
+
+    );
+ }
+}
 
 class UserProfileNav extends React.Component {
+  constructor(props) {
+    super(props);
+     this.state = {
+       selectedPane: 0
+     };
+     this.selectTab = this.selectTab.bind(this);
+    }
+
+   selectTab(num) {
+     this.setState({selectedPane: num});
+   }
+
   render() {
+    let pane = this.props.panes[this.state.selectedPane];
+
     return (
       <div className="user-profile-nav">
-        <ul className="user-profile-nav-link">
-          <li className="prof-link one">Photostream</li>
-          <li className="prof-link two">Albums</li>
-        </ul>
+        <Headers
+         selectedPane={this.state.selectedPane}
+         onTabChosen={this.selectTab}
+         panes={this.props.panes}>
+       </Headers>
+       {pane.content}
       </div>
     );
   }
 }
 export default UserProfileNav;
+
+// <li className="prof-link one">Photostream</li>
+// <li className="prof-link two">Albums</li>

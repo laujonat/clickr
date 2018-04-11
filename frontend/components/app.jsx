@@ -23,7 +23,7 @@ const App = () => (
     <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
-      <Route path="/upload" component={UploadNavContainer} />
+      <ProtectedRoute path="/upload" component={UploadNavContainer} />
       <Route path="/photos/:photosId" component={PhotoShowNavContainer} />
       <Route path="/" component={NavBarContainer} />
     </Switch>

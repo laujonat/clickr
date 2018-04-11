@@ -30,7 +30,12 @@
   margin-top: 14px;
 }
 
-.prof-link:hover {
+.current:hover {
   font-weight: 400;
+  border-bottom: 3px solid #0091dc;
+}
+
+.current{
+
   border-bottom: 3px solid #0091dc;
 }
