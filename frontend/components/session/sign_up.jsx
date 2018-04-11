@@ -12,8 +12,8 @@ class SignupForm extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLoginCredentials = {username: "Demo_", email: "demo_@clickr.com", fname: "Demo_", lname: "Human_", password: "democlickr123"};
-    this.demoLogin = this.demoLogin.bind(this);
+    // this.demoLoginCredentials = {username: "Demo_", email: "demo_@clickr.com", fname: "Demo_", lname: "Human_", password: "democlickr123"};
+    // this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleChange(field) {
@@ -29,9 +29,12 @@ class SignupForm extends React.Component {
   }
 
   demoLogin() {
-    this.setState(this.demoLoginCredentials,
-      () => this.props.signup(this.state)
-    );
+    const demoLoginCredentials = {email: "demo@clickr.com", password: "democlickr123"};
+    this.props.login(demoLoginCredentials);
+
+    // this.setState(this.demoLoginCredentials,
+    //   () => this.props.signup(this.state)
+    // );
   }
 
   render() {
@@ -98,7 +101,9 @@ class SignupForm extends React.Component {
                     <p className="policy-item">By clicking "Continue", you agree to the Terms and Privacy Policy</p>
                   </div>
                  <input className="signUpButton" id="signup" type="submit" value="Sign Up"/>
-                 <div className="demo-sign-up" ></div>
+                 <div className="demo-sign-up" >
+                   <button onClick={this.demoLogin.bind(this)}>Demo Me!</button>
+                 </div>
                  <div className="row-sign-in">Already have an acccount? <Link to="/login"><p id="log-in-link">Sign in</p></Link></div>
                 </form>
               </div>
