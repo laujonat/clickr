@@ -8,14 +8,28 @@ class AlbumForm extends React.Component {
       name: "",
       description: "",
       user_id: this.props.currentUser.id,
+      coverPhoto: null,
+      coverPhotoUrl: null
     };
-
+    this.updateFile = this.updateFile.bind(this);
   }
 
   updateInput(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  updateFile(e) {
+    const file = e.currentTarget.files[0];
+    this.filename = file.name;
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      return this.setState({coverPhotoUrl: fileReader.result, coverPhoto: file});
+    };
+    if(file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
   handleSubmit(e) {
@@ -30,6 +44,7 @@ class AlbumForm extends React.Component {
   render() {
     return (
       <form className="album-upload-form">
+        <img src={this.state.coverPhotoUrl} />
         <input
           className="album-name"
           type="text"
@@ -43,6 +58,11 @@ class AlbumForm extends React.Component {
           value={this.state.description}
         />
       <button className="album-save-button" onClick={this.handleSubmit}>SAVE</button>
+      <input
+        type="file"
+        placeholder="Album cover photo"
+        onChange={this.updateFile}
+      />
       </form>
   );
   }
