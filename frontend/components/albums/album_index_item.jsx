@@ -7,11 +7,13 @@ class AlbumIndexItem extends React.Component {
   }
 
   render() {
+    const album_cover = this.props.album.cover_photo_url;
     return (
-      <div className="placeholderbox">
+      <li className="row-wrap">
+        <div className="album-index-item" style={{backgroundImage: "url(" + album_cover + ")"}}>
 
-
-      </div>
+        </div>
+      </li>
     );
   }
 

@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410212541) do
+ActiveRecord::Schema.define(version: 20180411024028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "albums", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "description"
+    t.text "description"
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "cover_photo_file_name"
-    t.string "cover_photo_content_type"
-    t.integer "cover_photo_file_size"
-    t.datetime "cover_photo_updated_at"
+    t.string "cover_img_file_name"
+    t.string "cover_img_content_type"
+    t.integer "cover_img_file_size"
+    t.datetime "cover_img_updated_at"
     t.index ["user_id", "name"], name: "index_albums_on_user_id_and_name", unique: true
   end
 
