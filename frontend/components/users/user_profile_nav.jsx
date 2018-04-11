@@ -20,12 +20,11 @@ class Headers extends React.Component {
         </li>
       );
     });
-    return (
 
+    return (
       <ul className="user-profile-nav-link">
         {headers}
       </ul>
-
     );
  }
 }
@@ -59,6 +58,3 @@ class UserProfileNav extends React.Component {
   }
 }
 export default UserProfileNav;
-
-// <li className="prof-link one">Photostream</li>
-// <li className="prof-link two">Albums</li>
