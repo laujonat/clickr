@@ -48,3 +48,48 @@
   color: gray;
   margin-left: 300px;
 }
+
+.album-upload-form {
+  margin-left: 16px;
+  margin-right: 16px;
+
+}
+
+.album-upload-form textarea {
+  width: 272px;
+  height: 461px;
+  margin: 0 0 10px;
+  font-size: 12px;
+  background-color: #ffffd3;
+  border: 1px inset #e9e9ae;
+}
+
+.album-save-button {
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: bolder;
+  background: #0063dc;
+  color: white;
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+.album-save-button:hover {
+  background-color: #0054bd;
+}
+
+.album-name {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 3px;
+  background-color: #ffffd3;
+  border: 1px inset #e9e9ae;
+}
+
+.album-upload-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

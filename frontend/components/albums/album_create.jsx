@@ -1,6 +1,7 @@
 import React from 'react';
 import AlbumCreateNav from './album_create_nav';
 import AlbumPhotoTile from './album_photo_tile';
+import AlbumFormContainer from './album_form_container';
 
 class AlbumCreate extends React.Component {
 
@@ -49,7 +50,9 @@ class AlbumCreate extends React.Component {
           </div>
           <div className="mat-content">
             <div className="left-form-wrapper">
-
+              <div className="album-upload-container">
+                <AlbumFormContainer />
+              </div>
             </div>
             <div className="photo-index-render-wrapper">
               <ul className="album-photo-layout">
