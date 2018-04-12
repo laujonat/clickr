@@ -23,6 +23,10 @@ class AlbumShow extends React.Component {
     this.props.removeAlbum(id);
   }
 
+  editAlbum() {
+    this.props.history.push(`/albums/${this.props.album.id}/edit`);
+  }
+
   render() {
     const ourPhotos = this.props.album.photo_ids.map( id => this.props.photos[id]); // array of photos from photo_ids
     const columns = this.divideCol(ourPhotos);
@@ -83,20 +87,20 @@ class AlbumShow extends React.Component {
     let editBtn;
     if(this.props.currentUser.id === this.props.album.user_id) {
       deleteBtn = <button onClick={() => this.removeAlbum(this.props.album.id)} className="delete-album-button">Delete</button>;
-      editBtn = <button className="edit-album-button">Edit</button>;
+      editBtn = <button onClick={() => this.editAlbum()} className="edit-album-button">Edit</button>;
     }
 
     return (
       <React.Fragment>
         <div className="album-header">
-          <div className="album-title-desc">
-            <p className="album-show-title">{this.props.album.name}</p>
-            <p className="album-show-desc">{this.props.album.description}</p>
-          </div>
           <div className="edit-delete-album-wrap">
             {deleteBtn}
             {editBtn}
           </div>
+        </div>
+        <div className="album-title-desc">
+          <p className="album-show-title">{this.props.album.name}</p>
+          <p className="album-show-desc">{this.props.album.description}</p>
         </div>
       <ul className="photo-album-layout">
         <div className="photostream-column one">

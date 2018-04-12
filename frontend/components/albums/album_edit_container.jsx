@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import AlbumEdit from './abum_edit';
 import { updateAlbum } from '../../actions/album_actions';
+import AlbumEdit from './album_edit';
 
 
 const mapStateToProps = (state, ownProps) => ({
-  // currentUser: state.session.currentUser,
+  currentUser: state.session.currentUser,
   album: state.entities.albums[ownProps.albumId],
   photos: state.entities.photos
 });

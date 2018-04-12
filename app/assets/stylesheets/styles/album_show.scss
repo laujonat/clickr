@@ -2,8 +2,6 @@
     box-sizing: border-box;
     min-width: 800px;
     max-width: 80%;
-    // margin-top: 50px;
-    // margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
@@ -22,6 +20,8 @@
 .album-title-desc {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   .album-show-title {
     align-items: center;
@@ -30,15 +30,13 @@
     color: #737b80;
     text-decoration: none;
     box-sizing: border-box;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
   }
 
   .album-show-desc {
     font-size: 12px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    float: right;
     color: #737b80;
     text-decoration: none;
     box-sizing: border-box;
@@ -48,9 +46,7 @@
 }
 
 .album-header {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+  float: right;
   margin-top: 20px;
 }
 
