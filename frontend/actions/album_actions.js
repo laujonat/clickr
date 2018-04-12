@@ -64,7 +64,7 @@ export const createAlbum = (album, photoIdArray) => dispatch => (
 );
 
 export const deleteAlbum = id => dispatch => (
-  APIAlbum.removeAlbum(id)
+  APIAlbum.deleteAlbum(id)
     .then(album => (dispatch(removeAlbum(album))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))

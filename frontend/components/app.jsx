@@ -18,6 +18,8 @@ import PhotoShowContainer from './photos/photo_show_container';
 import PhotoShowNavContainer from './photos/photo_show_nav_container';
 import AlbumCreateNavContainer from './albums/album_create_nav_container';
 import AlbumCreateContainer from './albums/album_create_container';
+import AlbumEditContainer from './albums/album_edit_container';
+
 const App = () => (
   <React.Fragment>
   <div className="app-container">
@@ -35,6 +37,7 @@ const App = () => (
       <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
       <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
       <ProtectedRoute path="/albums/create" component={AlbumCreateContainer} />
+      <ProtectedRoute path="/albums/:albumId/edit" component={AlbumEditContainer} />
       <Route path="/photos/:photoId" component={PhotoShowContainer} />
       <ProtectedRoute path="/" component={FeedContainer} />
     </Switch>

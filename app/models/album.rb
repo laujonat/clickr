@@ -9,6 +9,6 @@ class Album < ApplicationRecord
 
   has_many :photos,
   through: :album_photos,
-  source: :photo
-
+  source: :photo,
+  dependent: :destroy
 end

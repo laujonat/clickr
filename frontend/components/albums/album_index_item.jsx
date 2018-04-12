@@ -9,7 +9,7 @@ class AlbumIndexItem extends React.Component {
   render() {
     const album_cover = this.props.album.cover_photo_url;
     return (
-      <li className="row-wrap">
+      <li onClick={() => this.props.flipState(this.props.album.id)} className="row-wrap">
           <div className="album-index-item" style={{backgroundImage: "url(" + album_cover + ")"}}>
             <div className="interaction-bar">
               <div className="metaData">
