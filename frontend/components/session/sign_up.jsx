@@ -29,7 +29,7 @@ class SignupForm extends React.Component {
   }
 
   demoLogin() {
-    const demoLoginCredentials = {email: "demo@clickr.com", password: "democlickr123"};
+    const demoLoginCredentials = {email: "demo@clickr.com", password: "123456"};
     this.props.login(demoLoginCredentials);
 
     // this.setState(this.demoLoginCredentials,

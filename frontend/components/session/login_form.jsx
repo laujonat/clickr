@@ -9,7 +9,7 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLoginCredentials = {email: "demo@clickr.com", password: "democlickr123"};
+    this.demoLoginCredentials = {email: "demo@clickr.com", password: "123456"};
     this.demoLogin = this.demoLogin.bind(this);
   }
 
