@@ -18,6 +18,7 @@ export const updateAlbum = album => (
   })
 );
 
+// ignore photoIds, array placed in FormData
 export const createAlbum = (album, photoIds) => (
   $.ajax('api/albums', {
     method: "post",
