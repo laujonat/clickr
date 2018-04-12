@@ -1,0 +1,84 @@
+.photo-album-layout {
+    box-sizing: border-box;
+    min-width: 800px;
+    max-width: 80%;
+    // margin-top: 50px;
+    // margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding-bottom: 200px;
+    padding-left: 130px;
+    padding-right: 130px;
+    height: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    min-height: 0;
+    align-items: flex-start;
+}
+
+.album-title-desc {
+  display: flex;
+  flex-direction: column;
+
+  .album-show-title {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #737b80;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .album-show-desc {
+    font-size: 12px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #737b80;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.album-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.edit-delete-album-wrap {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  .edit-album-button {
+    cursor: pointer;
+    padding: 5px 5px;
+    color: white;
+    font-size: 12px;
+    width: 100px;
+    background-color: #57a8f9;
+    text-align: center;
+    border-radius: 2px;
+    margin-right: 5px;
+  }
+
+  .delete-album-button {
+    cursor: pointer;
+    padding: 5px 5px;
+    color: white;
+    font-size: 12px;
+    width: 100px;
+    background-color: #f96a54;
+    text-align: center;
+    border-radius: 2px;
+  }
+}

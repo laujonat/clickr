@@ -29,7 +29,7 @@ export const createAlbum = (album, photoIds) => (
 );
 
 export const deleteAlbum = id => (
-  $.ajax(`api/albums${id}`, {
+  $.ajax(`api/albums/${id}`, {
     method: "delete"
   })
 );
