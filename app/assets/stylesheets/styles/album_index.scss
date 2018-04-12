@@ -85,10 +85,11 @@
 
 .album-index-item:hover {
   cursor: pointer;
+    border-top: 3px solid gray;
 }
 
 .album-index-item:hover .metaData {
-  top: -80px;
+  top: -50px;
 }
 
 .row-wrap {

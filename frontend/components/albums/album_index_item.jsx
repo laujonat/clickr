@@ -15,7 +15,7 @@ class AlbumIndexItem extends React.Component {
               <div className="metaData">
                 <h4>{this.props.album.name}</h4>
               </div>
-              
+
             </div>
           </div>
       </li>

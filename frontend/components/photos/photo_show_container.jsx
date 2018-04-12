@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PhotoShow from './photo_show';
-import { fetchPhoto, deletePhoto } from '../../actions/photo_actions';
+import { fetchPhoto, deletePhoto, updatePhoto } from '../../actions/photo_actions';
 // import { fetchAllComments } from '../../actions/comment_actions';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -11,8 +11,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   getPhoto: id => dispatch(fetchPhoto(id)),
-  removePhoto: id => dispatch(deletePhoto(id))
-  // fetchComments: id => dispatch(fetchAllComments(id))
+  removePhoto: id => dispatch(deletePhoto(id)),
+  updatePhoto: (photo, id) => dispatch(updatePhoto(photo, id))
 });
 
 export default withRouter(connect(

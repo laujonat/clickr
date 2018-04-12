@@ -57,8 +57,8 @@ export const deletePhoto = id => dispatch => (
   ))
 );
 
-export const updatePhoto = photo => dispatch => (
-  APIPhoto.updatePhoto(photo)
+export const updatePhoto = (photo, id) => dispatch => (
+  APIPhoto.updatePhoto(photo, id)
     .then(newPhoto => (dispatch(receivePhoto(newPhoto))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
