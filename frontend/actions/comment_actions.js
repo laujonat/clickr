@@ -50,7 +50,7 @@ export const createComment = comment => dispatch => (
 );
 
 export const deleteComment = id => dispatch => (
-  APIComment.removeComment(id)
+  APIComment.deleteComment(id)
     .then(comment => (dispatch(removeComment(comment))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))

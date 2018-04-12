@@ -164,6 +164,8 @@
     // margin-top: 13px;
     float: left;
     width: 223px;
+    display: flex;
+    flex-direction: column;
   }
 
   .right-stats-view-container {
@@ -173,6 +175,20 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.delete-show-button {
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 5px 5px;
+  color: white;
+  font-size: 12px;
+  width: 100px;
+  background-color: #f96a54;
+  text-align: center;
+  border-radius: 2px;
 }
 
 .right-stats-view-container span{

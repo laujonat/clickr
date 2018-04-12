@@ -5,6 +5,7 @@ import {
   REMOVE_PHOTO,
   RECEIEVE_ERRORS
 } from '../actions/photo_actions';
+import { RECEIEVE_ALBUM_PAYLOAD } from '../actions/album_actions';
 
 const photoReducer = (state = {}, action) => {
   let newState = {};
@@ -16,6 +17,8 @@ const photoReducer = (state = {}, action) => {
         newState = merge({}, state);
         newState[action.photo.id] = action.photo;
         return newState;
+      case RECEIEVE_ALBUM_PAYLOAD:
+        return merge({}, action.payload.photos);
       case REMOVE_PHOTO:
         newState = merge({},state);
         delete newState[action.photoId];

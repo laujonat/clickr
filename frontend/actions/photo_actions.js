@@ -50,7 +50,7 @@ export const createPhoto = photo => dispatch => (
 );
 
 export const deletePhoto = id => dispatch => (
-  APIPhoto.removePhoto(id)
+  APIPhoto.deletePhoto(id)
     .then(photo => (dispatch(removePhoto(photo))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
