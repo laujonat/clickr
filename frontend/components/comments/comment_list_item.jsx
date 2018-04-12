@@ -10,9 +10,11 @@ class CommentListItem extends React.Component {
     let id = this.props.comment.id;
     let options;
     if(this.props.currentUser.id === this.props.comment.user_id) {
-      options = <div className="flex-edit-delete"><p>edit</p>&nbsp;<p onClick={() => this.props.deleteComment(id).then(() => this.props.fetchComments(this.props.comment.photo_id))}>delete</p></div>; 
+      options =
+      <div className="flex-edit-delete">
+        <p>edit</p>&nbsp;<p onClick={() => this.props.deleteComment(id).then(() => this.props.fetchComments(this.props.comment.photo_id))}>delete</p>
+      </div>;
     }
-
     return (
       <li className="comment-container">
         <img className="comment-circle-icon" src={`${this.props.comment.user_avatar}`} />
