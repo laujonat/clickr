@@ -19,17 +19,23 @@ class CommentList extends React.Component {
     } else {
       this.setState({currentUser:false});
     }
+  }
 
+  deleteComment() {
+    this.props.deleteComment();
   }
 
   render() {
-    console.log("comment show");
-
+    const { deleteComment, fetchComments } = this.props;
     const commentListItem = this.props.comments.map(comment => {
       return (
         <CommentListItem
           key={comment.id}
           comment={comment}
+          currentUser={this.props.currentUser}
+          deleteComment={deleteComment}
+          fetchComments={fetchComments}
+          history={this.props.history}
         />
       );
     });

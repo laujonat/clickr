@@ -31,7 +31,6 @@ class AlbumCreate extends React.Component {
       newPhotoIds.push(id);
     }
     this.setState({photoIds: newPhotoIds});
-    console.log(this.state);
   }
 
   render() {
@@ -75,8 +74,3 @@ class AlbumCreate extends React.Component {
 }
 
 export default AlbumCreate;
-
-// <AlbumPhotoTile
-//   key={photo.id}
-//   photo={photo}
-// />

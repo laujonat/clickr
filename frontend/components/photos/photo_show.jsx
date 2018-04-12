@@ -14,6 +14,12 @@ class PhotoShow extends React.Component {
       .then( () => this.setState({loading: false}));
   }
 
+  removePhoto() {
+    console.log(this.props);
+    this.props.removePhoto(this.props.photo.id)
+      .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
+  }
+
   render() {
     const date = new Date(this.props.photo.created_at);
     const month = date.getMonth();
@@ -22,7 +28,10 @@ class PhotoShow extends React.Component {
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
-
+    let deleteBtn;
+    if(this.props.currentUser.id === this.props.photo.user_id) {
+      deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;
+    }
     return(
       this.state.loading ?
         <div>Loading...</div>
@@ -34,6 +43,7 @@ class PhotoShow extends React.Component {
           </div>
           <div className="photo-view-actions-container">
           </div>
+          {deleteBtn}
         </div>
         <div className="sub-photo-view-container">
           <div className="sub-photo-center-content">
@@ -44,7 +54,6 @@ class PhotoShow extends React.Component {
                 <div className="attribution-info">
                   <a>{this.props.photo.photo_artist_fname} {this.props.photo.photo_artist_lname}</a>
                   <a className="attr-info-title">{this.props.photo.title}</a>
-
                   <div className="field-photo-desc">
                     <p>{this.props.photo.description}description heredescription heredescription heredescription heredescription heredescription heredescription heredescription </p>
                   </div>

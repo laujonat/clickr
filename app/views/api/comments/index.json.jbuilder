@@ -1,6 +1,7 @@
 @comments.each do |comment|
   json.set! comment.id do
     json.partial! 'api/comments/comment', comment: comment
+    json.user_id comment.user.id
     json.user_fname comment.user.fname
     json.user_lname comment.user.lname
     json.username comment.user.username

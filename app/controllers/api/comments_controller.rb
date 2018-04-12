@@ -33,7 +33,6 @@ class Api::CommentsController < ApplicationController
     @comment = current_user.comments.find_by(id: params[:id])
     if @comment
       @comment.destroy
-      render :index
     else
       render json: ["Invalid comment id"], status: 404
     end

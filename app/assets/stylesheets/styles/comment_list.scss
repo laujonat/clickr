@@ -54,6 +54,25 @@
     font-size: 14px;
     margin-top: -5px;
   }
+}
 
+// *************TEMPORARY**********
+// REMOVE AND UPDATE AFTER MVP LIST IS CHECKED OFF.
+.flex-comment-edit-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.flex-comment-edit-bar .flex-edit-delete p {
+  font-size: 10px;
+}
+
+.flex-edit-delete {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-edit-delete p {
+  cursor: pointer;
 }
