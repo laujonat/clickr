@@ -34,7 +34,6 @@ class AlbumCreate extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let userPhotoItems;
     if(!this.state.loading) {
       userPhotoItems = this.props.photos.map(photo => {
