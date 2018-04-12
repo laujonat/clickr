@@ -7,8 +7,9 @@ class userProfileHeader extends React.Component {
   }
 
   render() {
+    const cover_photo = this.props.user.profile_cover_photo;
     return (
-      <div className="cover-photo-gradient">
+      <div className="cover-photo-gradient" style={{backgroundImage: "url(" + cover_photo + ")"}}>
         <div className="cover-content-container">
           <div className="title-block-content">
             <img className="user-avatar" src={`${this.props.user.user_profile_img}`} />

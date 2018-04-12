@@ -17,7 +17,7 @@ class Feed extends React.Component {
   render() {
     const Panes = [
       {title: 'All Activity', content: <PhotoIndexContainer />},
-      {title: 'People', content: <h1>TBD</h1>},
+      {title: 'People', content: <div>Tbd...</div>},
     ];
 
 
