@@ -1,12 +1,16 @@
 import React from 'react';
 import PhotoShowNav from './photo_show_nav';
 import CommentListContainer from '../comments/comment_list_container';
+import PhotoEditForm from './photo_edit_form';
+
 class PhotoShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: true,
+      hideForm: true
     };
+    this.toggleForm = this.toggleForm.bind(this);
   }
 
   componentDidMount() {
@@ -15,12 +19,16 @@ class PhotoShow extends React.Component {
   }
 
   removePhoto() {
-    console.log(this.props);
     this.props.removePhoto(this.props.photo.id)
       .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
   }
 
+  toggleForm() {
+    this.setState({hideForm: !this.state.hideForm});
+  }
+
   render() {
+    const { updatePhoto } = this.props;
     const date = new Date(this.props.photo.created_at);
     const month = date.getMonth();
     const day = date.getDate();
@@ -28,10 +36,12 @@ class PhotoShow extends React.Component {
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
-    let deleteBtn;
+    let deleteBtn, editBtn;
     if(this.props.currentUser.id === this.props.photo.user_id) {
       deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;
+      editBtn = <button className="photo-edit-btn" onClick={this.toggleForm}>edit</button>;
     }
+    console.log(this.state.hideForm);
     return(
       this.state.loading ?
         <div>Loading...</div>
@@ -44,6 +54,7 @@ class PhotoShow extends React.Component {
           <div className="photo-view-actions-container">
           </div>
           {deleteBtn}
+          {editBtn}
         </div>
         <div className="sub-photo-view-container">
           <div className="sub-photo-center-content">
@@ -51,11 +62,25 @@ class PhotoShow extends React.Component {
               <div className="photo-attribution">
 
                 <img className="photo-credit-avatar" src={`${this.props.photo.user_avatar}`} />
+
                 <div className="attribution-info">
-                  <a>{this.props.photo.photo_artist_fname} {this.props.photo.photo_artist_lname}</a>
-                  <a className="attr-info-title">{this.props.photo.title}</a>
+
+                    <a>{this.props.photo.user_fname} {this.props.photo.user_lname}</a>
+
+
+                    <a className="attr-info-title">{this.props.photo.title}</a>
+
+                    {this.state.hideForm ?
+                      null
+                      : <PhotoEditForm
+                          title={this.props.photo.title}
+                          description={this.props.photo.description}
+                          updatePhoto={updatePhoto}
+                          photoId={this.props.photo.id}
+                          />}
+
                   <div className="field-photo-desc">
-                    <p>{this.props.photo.description}description heredescription heredescription heredescription heredescription heredescription heredescription heredescription </p>
+                    <p>{this.props.photo.description}</p>
                   </div>
 
                   <div className="likes-count-section"></div>
@@ -66,7 +91,7 @@ class PhotoShow extends React.Component {
             <div className="sub-right-view">
               <div className="sub-right-view-row1">
                 <div className="left-stats-view-container">
-                  <span>All stolen photos</span>
+                  <span>clickr</span>
                 </div>
                 <div className="right-stats-view-container">
                   <span>Taken on {monthNames[month]} {day}, {year}</span>
