@@ -20,6 +20,11 @@ class UserProfile extends React.Component {
   }
 
   render() {
+    // create album stream component
+    //// state: isIndex boolean: true
+    // if this.state.isIndex => render Index => each have onClick => this.state.isIndex
+    // // if this.state.isIndex
+
     const Panes = [
       {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
       {title: 'Albums', content: <AlbumIndexContainer
