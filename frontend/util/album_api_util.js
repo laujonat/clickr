@@ -21,7 +21,9 @@ export const updateAlbum = album => (
 export const createAlbum = (album, photoIds) => (
   $.ajax('api/albums', {
     method: "post",
-    data: { album, photoIds } ,
+    processData: false,
+    contentType: false,
+    data: album
   })
 );
 

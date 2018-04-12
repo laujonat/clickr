@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   createAlbum: album => dispatch(createAlbum(album)),
-  fetchUserPhotos: id =>dispatch(fetchAllPhotos(id))
+  fetchUserPhotos: id => dispatch(fetchAllPhotos(id))
 });
 
 export default connect(

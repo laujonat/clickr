@@ -33,10 +33,10 @@ class Api::PhotosController < ApplicationController
   def index
     @photos = (
       if params[:user_id]
-        Photo.where(user_id: params[:user_id]).order(created_at: :desc)
+        Photo.where(user_id: params[:user_id])
 
       else
-        Photo.all.order(created_at: :desc)
+        Photo.all
       end
     )
   end

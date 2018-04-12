@@ -14,4 +14,10 @@ class Photo < ApplicationRecord
   foreign_key: :comment_id,
   class_name: :Comment
 
+  has_many :album_photos
+
+  has_many :albums,
+  through: :album_photos,
+  source: :album
+
 end
