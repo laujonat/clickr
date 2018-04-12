@@ -40,6 +40,7 @@ class AlbumForm extends React.Component {
     formData.append("album[description]", this.state.description);
     formData.append("album[user_id]", this.state.user_id);
     formData.append("photo_ids", JSON.stringify(this.props.photoIds));
+    // this.props.photoIds ignored in ajax call. Handled in formData
     this.props.createAlbum(formData, this.props.photoIds);
   }
 

@@ -15,7 +15,7 @@ const PhotoIndexItem = ({photo}) => {
             </li>
           </ul>
         </div>
-        <img className="photo-index-item" src={`${photo.photo_url}`} />
+        <Link to={`/photos/${photo.id}`}><img className="photo-index-item" src={`${photo.photo_url}`} /></Link>
         <div className="photo-index-footer">
           <p>{photo.title}</p>
         </div>
