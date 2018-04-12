@@ -15,41 +15,46 @@ class AlbumEdit extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUserPhotos(this.props.currentUser.id)
-      .then(() => this.setState({loading: false}));
+    // this.props.fetchUserPhotos(this.props.currentUser.id)
+    //   .then(() => this.setState({loading: false}));
+      // this.setState({loading: false});
   }
 
   clickImage(event, id) {
-    const newPhotoIds = this.state.photoIds;
-
-    if(this.state.photoIds.includes(id)) {
-      event.target.classList.remove('album-selected-border');
-      const index = newPhotoIds.indexOf(id);
-      newPhotoIds.splice(index,1);
-    } else {
-      event.target.classList.add('album-selected-border');
-      newPhotoIds.push(id);
-    }
-    this.setState({photoIds: newPhotoIds});
+  //   const newPhotoIds = this.state.photoIds;
+  //
+  //   if(this.state.photoIds.includes(id)) {
+  //     event.target.classList.remove('album-selected-border');
+  //     const index = newPhotoIds.indexOf(id);
+  //     newPhotoIds.splice(index,1);
+  //   } else {
+  //     event.target.classList.add('album-selected-border');
+  //     newPhotoIds.push(id);
+  //   }
+  //   this.setState({photoIds: newPhotoIds});
+  // }
   }
 
   render() {
-    console.log(this.props);
-    let userPhotoItems;
-    if(!this.state.loading) {
-      userPhotoItems = this.props.photos.map(photo => {
-          let border;
-          if(this.state.photoIds.includes(photo.id)) {
-            border = "album-selected-border";
-          }
 
-          return (
-          <li key={photo.id} className={`album-row-wrap ${border}`}>
-            <img onClick={(e) => this.clickImage(e, photo.id)} className="album-photo-item" src={`${photo.photo_url}`} />
-          </li>
-          );
-        });
-    }
+    const albumPhotos = this.props.album.photo_ids.map( id => this.props.photos[id]);
+    console.log(albumPhotos);
+    // this.setState({photoId: albumPhotos})
+    let userPhotoItems;
+    // if(!this.state.loading) {
+    //   userPhotoItems = albumPhotos.map(photo => {
+    //       let border;
+    //       if(this.state.photoIds.includes(photo.id)) {
+    //         border = "album-selected-border";
+    //       }
+    //
+    //       return (
+    //       <li key={photo.id} className={`album-row-wrap ${border}`}>
+    //         <img onClick={(e) => this.clickImage(e, photo.id)} className="album-photo-item" src={`${photo.photo_url}`} />
+    //       </li>
+    //       );
+    //     });
+    // }
 
     return (
       this.state.loading ?
@@ -58,17 +63,17 @@ class AlbumEdit extends React.Component {
       <React.Fragment>
         <div className="album-create-wrapper">
           <div className="album-top-spacer">
-            <p>New Album</p>
+            <p>Edit Album</p>
           </div>
           <div className="mat-content">
             <div className="left-form-wrapper">
               <div className="album-upload-container">
-                
+
               </div>
             </div>
             <div className="photo-index-render-wrapper">
               <ul className="album-photo-layout">
-                {userPhotoItems}
+
               </ul>
             </div>
           </div>
@@ -78,4 +83,4 @@ class AlbumEdit extends React.Component {
   }
 }
 
-export default AlbumCreate;
+export default AlbumEdit;

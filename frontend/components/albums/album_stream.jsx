@@ -16,8 +16,6 @@ class AlbumStream extends React.Component {
     this.setState({isIndex: !this.state.isIndex, albumId: albumId});
   }
 
-
-
   render() {
     let component;
     this.state.isIndex ?
