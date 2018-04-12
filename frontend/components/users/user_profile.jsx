@@ -21,10 +21,10 @@ class UserProfile extends React.Component {
 
   render() {
     const Panes = [
+      {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
       {title: 'Albums', content: <AlbumIndexContainer
                                     user={this.props.user}
                                     currentUser={this.props.currentUser} />},
-      {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
     ];
     return (
       this.state.loading ?

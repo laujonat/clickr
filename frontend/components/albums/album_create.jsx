@@ -15,7 +15,7 @@ class AlbumCreate extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUserPhotos(this.props.currentUserId)
+    this.props.fetchUserPhotos(this.props.currentUser.id)
       .then(() => this.setState({loading: false}));
   }
 
@@ -35,8 +35,7 @@ class AlbumCreate extends React.Component {
   }
 
   render() {
-    let active = (this.state.active ? ' active': '');
-
+    console.log(this.props);
     let userPhotoItems;
     if(!this.state.loading) {
       userPhotoItems = this.props.photos.map(photo => {
@@ -60,7 +59,7 @@ class AlbumCreate extends React.Component {
           <div className="mat-content">
             <div className="left-form-wrapper">
               <div className="album-upload-container">
-                <AlbumFormContainer />
+                <AlbumFormContainer photoIds={this.state.photoIds}/>
               </div>
             </div>
             <div className="photo-index-render-wrapper">

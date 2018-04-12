@@ -12,6 +12,7 @@ class AlbumForm extends React.Component {
       coverPhotoUrl: null
     };
     this.updateFile = this.updateFile.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateInput(field) {
@@ -34,11 +35,12 @@ class AlbumForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // const formData = new FormData();
-    // formData.append("album[name]", this.state.title);
-    // formData.append("album[description]", this.state.description);
-    // formData.append("album[user_id]", this.state.user_id);
-    // this.props.createAlbum(formData);
+    const formData = new FormData();
+    formData.append("album[name]", this.state.name);
+    formData.append("album[description]", this.state.description);
+    formData.append("album[user_id]", this.state.user_id);
+    formData.append("photo_ids", JSON.stringify(this.props.photoIds));
+    this.props.createAlbum(formData, this.props.photoIds);
   }
 
   render() {

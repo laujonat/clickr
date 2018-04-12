@@ -41,8 +41,8 @@ export const fetchAlbum = id => dispatch => (
   ))
 );
 
-export const createAlbum = album => dispatch => (
-  APIAlbum.createAlbum(album)
+export const createAlbum = (album, photoIdArray) => dispatch => (
+  APIAlbum.createAlbum(album, photoIdArray)
     .then(newAlbum => (dispatch(receiveAlbum(newAlbum))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
