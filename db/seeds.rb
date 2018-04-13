@@ -229,21 +229,6 @@ users.each do |user|
 end
 
 
-# def create
-#   # debugger
-#   @album = Album.new(album_params)
-#   @album.user_id = current_user.id
-#   photo_ids = JSON.parse(params[:photo_ids])
-#   if photo_ids && !photo_ids.empty? && @album.save
-#     photo_ids.each do |id|
-#       AlbumPhoto.create(album_id: @album.id, photo_id: id)
-#     end
-#     render :show
-#   else
-#     render json: ["Creating album error"], status: 422
-#   end
-# end
-
 
 
 
