@@ -1,0 +1,60 @@
+.albums-photo-show-section {
+  // background-color: blue;
+  clear: both;
+  height: 170px;
+  // margin-top: 160px;
+
+}
+
+.sub-tags-add-people-section-container {
+  clear: both;
+  border-top: 1px solid #cfd6d9;
+  border-bottom: 1px solid #cfd6d9;
+  width: 500px;
+  padding-top: 23px;
+  // background-color: yellow;
+  position: relative;
+  height: 500px;
+
+  .photo-tags-view-container {
+    background-color: indigo;
+    height: 400px;
+    float: left;
+    width: 225px;
+    margin-right: 30px;
+    position: absolute;
+
+    .photo-tags-menu {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}
+
+.tags-list {
+  clear: both;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+  margin-top: 5px;
+  margin-top: 20px;
+  color: #212124;
+}
+
+
+.photo-tags-menu #tag-link{
+  font-weight: 400;
+  font-size: 16px;
+  float: right;
+  letter-spacing: 0.4px;
+  // margin-top: 5px;
+  color: #006dac;
+  line-height: 26px;
+}
+
+.photo-tags-menu p:last-child {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #006dac;
+}

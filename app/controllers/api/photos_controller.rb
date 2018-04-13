@@ -33,7 +33,7 @@ class Api::PhotosController < ApplicationController
   def index
     @photos = (
       if params[:user_id]
-        Photo.where(user_id: params[:user_id])
+        Photo.where(user_id: params[:user_id]).includes(:tags)
 
       else
         Photo.all

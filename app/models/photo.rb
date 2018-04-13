@@ -20,5 +20,10 @@ class Photo < ApplicationRecord
   through: :album_photos,
   source: :album
 
+  has_many :tags,
+  primary_key: :id,
+  foreign_key: :tag_id,
+  class_name: :Tag
+
 
 end
