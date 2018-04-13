@@ -52,7 +52,6 @@ class Api::AlbumsController < ApplicationController
 
     photo_ids = JSON.parse(params[:photo_ids])
     if photo_ids && !photo_ids.empty? && @album
-
       photo_ids.each do |id|
         unless AlbumPhoto.where(album_id: @album.id, photo_id: id)
           AlbumPhoto.update(album_id: @album.id, photo_id: id)
