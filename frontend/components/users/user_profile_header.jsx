@@ -3,7 +3,6 @@ import React from 'react';
 class userProfileHeader extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.user.created_at.slice(0, 4));
   }
 
   render() {

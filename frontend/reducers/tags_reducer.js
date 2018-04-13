@@ -15,14 +15,14 @@ const tagReducer = (state = {}, action) => {
         return merge({}, action.tags);
       case RECEIVE_TAG:
         newState = merge({}, state);
-        newState[action.comment.id] = action.comment;
+        newState[action.tag.id] = action.tag;
         return newState;
       case REMOVE_TAG:
         newState = merge({},state);
         delete newState[action.tagId];
         return newState;
-      case RECEIEVE_ERRORS: // set error to action's errors
-        return Object.assign([], action.errors);
+      // case RECEIEVE_ERRORS: // set error to action's errors
+      //   return Object.assign([], action.errors);
       default:
         return state;
     }

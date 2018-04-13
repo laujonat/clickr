@@ -10,6 +10,10 @@
 # User.create(username: "jonathan", password: "123456", email: "jon@jon.com", fname:'Jonathan', lname: "Great")
 User.destroy_all
 Photo.destroy_all
+Album.destroy_all
+Comment.destroy_all
+Tag.destroy_all
+Album.destroy_all
 usernames = ["AnakinyourKin", "ReyOhYey", "KyloIsBad", "HanSoSolo", "DemoAccount", ]
 emails = ["anakin@gmail.com", "Rey@yahoo.com", "Kylo@yahoo.com", "Han@msn.com", "demo@clickr.com"]
 fnames = ["Anakin", "Rey", "Kylo", "Han", "Woods"]
@@ -71,6 +75,21 @@ photoseed18 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/se
 photoseed19 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed19-min.jpg'))
 photoseed20 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed20-min.jpg'))
 
+
+photoseed21 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed21-min.jpg'))
+photoseed22 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed22-min.jpg'))
+photoseed23 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed23-min.jpg'))
+photoseed24 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed24-min.jpg'))
+photoseed25 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed25-min.jpg'))
+photoseed26 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed26-min.jpg'))
+photoseed27 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed27-min.jpg'))
+photoseed28 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed28-min.jpg'))
+photoseed29 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed29-min.jpg'))
+photoseed30 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed30-min.jpg'))
+photoseed31 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed31-min.jpg'))
+photoseed32 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed32-min.jpg'))
+photoseed33 = File.open(File.join(Rails.root, 'app/assets/images/seeds/photos/seed33-min.jpg'))
+
 users = User.all
 id1 = users[0].id
 id2 = users[1].id
@@ -80,28 +99,116 @@ id5 = users[4].id
 
 Photo.create(user_id: id2, title: "Everyday", description: "Looking puzzled, in a daze.", photo_url: photoseed5)
 Photo.create(user_id: id5, title: "Yes", description: "Can't you see?", photo_url: photoseed20)
+Photo.create(user_id: id1, title: "Wood Everywhere", description: "One more time", photo_url: photoseed31)
+Photo.create(user_id: id2, title: "Would Wood", description: "And I said baby, baby", photo_url: photoseed32)
+Photo.create(user_id: id3, title: "Woody Can", description: "Oh No, oh yeah.", photo_url: photoseed33)
 Photo.create(user_id: id4, title: "Thickional", description: "It's like a journey.", photo_url: photoseed15)
 Photo.create(user_id: id3, title: "Musk of Man", description: "Life is amazing.", photo_url: photoseed11)
 
 Photo.create(user_id: id4, title: "Through Thick", description: "If I could slide.", photo_url: photoseed14)
 Photo.create(user_id: id2, title: "Hustle", description: "We have no control.", photo_url: photoseed6)
 Photo.create(user_id: id2, title: "All Day", description: "What is art?", photo_url: photoseed7)
+Photo.create(user_id: id2, title: "Wood Chuck", description: "Bobby bobby yeah", photo_url: photoseed27)
+Photo.create(user_id: id3, title: "Woody Woody", description: "Where in the wood is woody", photo_url: photoseed28)
+Photo.create(user_id: id4, title: "Woods of Man", description: "Can you woody?", photo_url: photoseed29)
+Photo.create(user_id: id5, title: "Man of Wood", description: "Woody like the woods.", photo_url: photoseed30)
 Photo.create(user_id: id1, title: "Feelings", description: "Amazing times.", photo_url: photoseed2)
 
 Photo.create(user_id: id1, title: "Detach", description: "Photography brings joy to life.", photo_url: photoseed1)
 Photo.create(user_id: id3, title: "Into the Musk", description: "Through it all.", photo_url: photoseed10)
 Photo.create(user_id: id1, title: "Music", description: "In your prayers.", photo_url: photoseed3)
+Photo.create(user_id: id4, title: "Chucking the Light", description: "Full stacks are life", photo_url: photoseed24)
+Photo.create(user_id: id5, title: "Light Wood", description: "You're hot and you're cold", photo_url: photoseed25)
+Photo.create(user_id: id1, title: "Can you Woody?", description: "You say yes and then no", photo_url: photoseed26)
 Photo.create(user_id: id3, title: "Musking through Things", description: "May the wolves bring howls.", photo_url: photoseed12)
 
 Photo.create(user_id: id4, title: "Taken by Storm ", description: "Howling through today.", photo_url: photoseed13)
 Photo.create(user_id: id5, title: "Taken Back", description: "Back to the start.", photo_url: photoseed18)
 Photo.create(user_id: id4, title: "The Wards of Begin", description: "Far and thin.", photo_url: photoseed16)
+Photo.create(user_id: id1, title: "Woods of Life", description: "Can you see.", photo_url: photoseed21)
+Photo.create(user_id: id2, title: "Wood can Feel", description: "Sometimes I can believe.", photo_url: photoseed22)
+Photo.create(user_id: id3, title: "Can the Wood Chuck", description: "In a haze. I am boss", photo_url: photoseed23)
 Photo.create(user_id: id2, title: "Dreams", description: "Once more, I open the door.", photo_url: photoseed8)
 
 Photo.create(user_id: id5, title: "Backwards", description: "It begins here.", photo_url: photoseed17)
 Photo.create(user_id: id5, title: "Once", description: "Change of pace.", photo_url: photoseed19)
 Photo.create(user_id: id3, title: "Words of Woody", description: "I believe the one", photo_url: photoseed9)
 Photo.create(user_id: id1, title: "Touch", description: "Enjoy today.", photo_url: photoseed4)
+
+
+photos = Photo.all
+# photo_id1 = photos[0].id
+# photo_id2 = photos[1].id
+# photo_id3 = photos[2].id
+# photo_id4 = photos[3].id
+# photo_id5 = photos[4].id
+# photo_id6 = photos[5].id
+# photo_id7 = photos[6].id
+# photo_id8 = photos[7].id
+# photo_id9 = photos[8].id
+# photo_id10 = photos[9].id
+# photo_id11 = photos[10].id
+# photo_id12 = photos[11].id
+# photo_id13 = photos[12].id
+# photo_id14 = photos[13].id
+# photo_id15 = photos[14].id
+# photo_id16 = photos[15].id
+# photo_id17 = photos[16].id
+# photo_id18 = photos[17].id
+# photo_id19 = photos[18].id
+# photo_id20 = photos[19].id
+# photo_id21 = photos[20].id
+# photo_id22 = photos[21].id
+# photo_id23 = photos[22].id
+# photo_id24 = photos[23].id
+# photo_id25 = photos[24].id
+# photo_id26 = photos[26].id
+# photo_id27 = photos[27].id
+# photo_id28 = photos[28].id
+# photo_id29 = photos[29].id
+# photo_id30 = photos[30].id
+# photo_id31 = photos[31].id
+# photo_id32 = photos[32].id
+# photo_id33 = photos[33].id
+
+
+tags_arr = ["love", "blue", "abstract", "ocean", "tech", "sf", "eye", "cool", "nature", "bokeh",
+"flora", "eos", "friends", "lady", "d750", "printemps", "florida", "mist", "circles", "tamron", "maitreya", "brown",
+"opaque", "water", "sky", "sunset", "beach", "red", "flower", "tree", "white", "green", "yellow", "purple",
+"orange", "yes", "never", "back", "bliss", "wonderful", "beautiful", "beauty", "temp", "mes", "nice", "best",
+"price", "sweet", "canon", "nikon", "leica"]
+
+photos.each do |photo|
+  tags_arr.each do |tag|
+    sample_photo = Photo.all.sample
+    sample_user = User.all.sample
+    sample_tag = tags_arr.sample
+    Tag.create(
+      photo_id: sample_photo.id,
+      user_id: sample_user.id,
+      body: sample_tag
+    )
+  end
+end
+
+comment_arr = ["This is amazing!", "Love this shot", "I could look at this forever.", "This is mesmerizing.", "This is great!",
+"Teach me!", "Wow, look at your.", "Nice shot!", "Amazeballs!", "Yes!", "I love this. Reminds me of Woody.", "Woody is woody.",
+"Yes, Woody!", "I see Woody!", "I see the Woody!!", "!!!!", "Woody is in the forest!", "I love this so much!", "Brings me back!",
+"Good job!", "You've got talent!"]
+
+users.each do |user|
+  comment_arr.each do |comment|
+    2.times do
+      sample_photo = Photo.all.sample
+      Comment.create!(
+        photo_id: sample_photo.id,
+        user_id: user.id,
+        body: comment
+      )
+    end
+  end
+end
+
 
 
 

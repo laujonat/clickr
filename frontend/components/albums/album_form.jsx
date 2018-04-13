@@ -45,7 +45,6 @@ class AlbumForm extends React.Component {
     formData.append("photo_ids", JSON.stringify(this.props.photoIds));
     // this.props.photoIds ignored in ajax call. Handled in formData
     if(this.props.isEdit){
-      console.log(this.props.albumId);
       this.props.updateAlbum(formData, this.props.albumId)
       .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
     } else {

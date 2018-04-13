@@ -23,8 +23,8 @@ const albumReducer = (state = {}, action) => {
         newState = merge({},state);
         delete newState[action.albumId];
         return newState;
-      case RECEIEVE_ERRORS: // set error to action's errors
-        return Object.assign([], action.errors);
+      // case RECEIEVE_ERRORS: // set error to action's errors
+      //   return Object.assign([], action.errors);
       default:
         return state;
     }

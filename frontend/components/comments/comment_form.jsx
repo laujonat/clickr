@@ -55,7 +55,6 @@ class CommentForm extends React.Component {
   }
 
   render() {
-    console.log('comment form class');
     return (
       <React.Fragment>
         {this.renderForm()}

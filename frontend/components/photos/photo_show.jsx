@@ -38,10 +38,10 @@ class PhotoShow extends React.Component {
 
   handleKeyPress(event) {
     if(event.key == 'Enter') {
-      let parse = this.state.tagBody.substr(0,this.state.tagBody.indexOf(' '));
+
 
       const tag = {
-        body: parse,
+        body: this.state.tagBody,
         user_id: this.props.currentUser.id,
         photo_id: this.props.match.params.photoId
       };
