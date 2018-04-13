@@ -13,14 +13,14 @@ Photo.destroy_all
 usernames = ["AnakinyourKin", "ReyOhYey", "KyloIsBad", "HanSoSolo", "DemoAccount", ]
 emails = ["anakin@gmail.com", "Rey@yahoo.com", "Kylo@yahoo.com", "Han@msn.com", "demo@clickr.com"]
 fnames = ["Anakin", "Rey", "Kylo", "Han", "Obi-Wan"]
-lnames = ["Skywalker", "Lei", "Ren",  "Solo", "Kenobi"]
+lnames = ["Skywalker", "Lei", "Ren",  "Solo", "Woody"]
 passwords = ["123456", "123456", "123456", "123456", "123456"]
 
 user1_avatar = File.open(File.join(Rails.root, 'app/assets/images/seeds/avatars/anakin.png'))
 user2_avatar = File.open(File.join(Rails.root, 'app/assets/images/seeds/avatars/ren.png'))
 user3_avatar = File.open(File.join(Rails.root, 'app/assets/images/seeds/avatars/kylo.png'))
 user4_avatar = File.open(File.join(Rails.root, 'app/assets/images/seeds/avatars/dennis.png'))
-user5_avatar = File.open(File.join(Rails.root, 'app/assets/images/seeds/avatars/me_avatar.png'))
+user5_avatar = File.open(File.join(Rails.root, 'app/assets/images/seeds/avatars/woody.png'))
 
 user1_cover = File.open(File.join(Rails.root, 'app/assets/images/seeds/cover_photos/2_cover.png'))
 user2_cover = File.open(File.join(Rails.root, 'app/assets/images/seeds/cover_photos/3_cover.png'))
