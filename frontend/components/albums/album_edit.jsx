@@ -16,8 +16,6 @@ class AlbumEdit extends React.Component {
       desc: null,
       albumId: null
     };
-
-    // this.clickImage = this.clickImage.bind(this);
   }
 
   componentDidMount() {
