@@ -3,7 +3,8 @@ import UploadPhoto from './upload_photo';
 import { createPhoto } from '../../actions/photo_actions';
 
 const mapStateToProps = state => ({
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({

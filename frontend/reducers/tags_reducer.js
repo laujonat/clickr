@@ -3,7 +3,7 @@ import {
   RECEIVE_TAG,
   RECEIVE_ALL_TAGS,
   REMOVE_TAG,
-  RECEIEVE_ERRORS
+  RECEIVE_ERRORS
 } from '../actions/tag_actions';
 
 

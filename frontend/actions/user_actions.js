@@ -2,7 +2,7 @@ import * as APIUser from "../util/user_api_util";
 
 export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIEVE_ALL_USERS = "RECEIVE_ALL_USERS";
-export const RECEIEVE_ERRORS = "RECEIEVE_ERRORS";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 export const receiveUser = user => ({
   type: RECEIVE_USER,
@@ -15,7 +15,7 @@ export const receieveAllUsers = users => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIEVE_ERRORS,
+  type: RECEIVE_ERRORS,
   errors
 });
 

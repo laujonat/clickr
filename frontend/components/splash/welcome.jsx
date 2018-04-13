@@ -8,7 +8,7 @@ class Welcome extends React.Component {
       <div className="welcome-text">
         <h1 id="welcome-h1">A Flickr remake.</h1>
         <h3 id="welcome-h3">
-          Where really beautifully cheesy photos exist. Join us. 
+          Find your inspiration. A React remake of Flickr. 
         </h3>
         <div className="welcome-btn"><Link to="/signup">Sign up</Link></div>
 

@@ -55,6 +55,7 @@ class CommentForm extends React.Component {
               onChange={this.updateInput("body")}
               value={this.state.body}
             />
+          {this.renderErrors()}
           <button className="comment-button" onClick={this.handleSubmit}>Comment</button>
           </div>
         </form>

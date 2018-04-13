@@ -32,9 +32,22 @@ class SignupForm extends React.Component {
     const demoLoginCredentials = {email: "demo@clickr.com", password: "123456"};
     this.props.login(demoLoginCredentials);
 
-    // this.setState(this.demoLoginCredentials,
-    //   () => this.props.signup(this.state)
-    // );
+  }
+
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <ul className="errors_render">
+          {this.props.errors.map((error, i) => (
+            <li key={`${i}`}>{error}</li>)
+          )}
+        </ul>
+      );
+    }
+  }
+
+  linkHome() {
+    this.props.history.push('/');
   }
 
   render() {
@@ -42,7 +55,7 @@ class SignupForm extends React.Component {
       <div>
         <header className="session-new-header">
           <div className="header-logo-contain">
-            <img className="top-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
+            <img onClick={() => this.linkHome()} className="top-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
           </div>
         </header>
         <div className="signup-position-container">
@@ -98,6 +111,7 @@ class SignupForm extends React.Component {
                       />
                   </div>
                   <div className="policy-contain">
+                    {this.renderErrors()}
                     <p className="policy-item">By clicking "Continue", you agree to the Terms and Privacy Policy</p>
                   </div>
                  <input className="signUpButton" id="signup" type="submit" value="Sign Up"/>

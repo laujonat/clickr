@@ -3,7 +3,7 @@ import * as APIPhoto from "../util/photo_api_util";
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
 export const REMOVE_PHOTO = "REMOVE_PHOTO";
-export const RECEIEVE_ERRORS = "RECEIEVE_ERRORS";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 export const receivePhoto = photo => ({
   type: RECEIVE_PHOTO,
@@ -21,7 +21,7 @@ export const removePhoto = photoId => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIEVE_ERRORS,
+  type: RECEIVE_ERRORS,
   errors
 });
 
