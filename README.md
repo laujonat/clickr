@@ -7,7 +7,7 @@
 - [Introduction](#Introduction)
 - [Features](#Features)
 - [Technologies](#Technologies)
-- [Site Breakdown](#Site Breakdown)
+- [Site Breakdown](#Site-Breakdown)
 - [Future Directions](#future-directions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
