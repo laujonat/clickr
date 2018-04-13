@@ -26,7 +26,7 @@ class CommentList extends React.Component {
   }
 
   render() {
-    const { deleteComment, fetchComments } = this.props;
+    const { deleteComment, fetchComments, updateComment } = this.props;
     const commentListItem = this.props.comments.map(comment => {
       return (
         <CommentListItem
@@ -35,6 +35,7 @@ class CommentList extends React.Component {
           currentUser={this.props.currentUser}
           deleteComment={deleteComment}
           fetchComments={fetchComments}
+          updateComment={updateComment}
           history={this.props.history}
         />
       );

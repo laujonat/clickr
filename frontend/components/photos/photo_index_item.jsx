@@ -20,7 +20,7 @@ const PhotoIndexItem = ({photo}) => {
           <p>{photo.title}</p>
         </div>
         <div className="photo-index-stats">
-          <span>clickr clickr clickr</span>
+          <span>comments</span>
         </div>
       </div>
     </li>
