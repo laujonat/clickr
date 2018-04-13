@@ -20,7 +20,6 @@ class TagsIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props.errors);
     const { currentUser, deleteTag, fetchTags } = this.props;
     const tagsList = this.props.tags.map(tag => {
       return (
