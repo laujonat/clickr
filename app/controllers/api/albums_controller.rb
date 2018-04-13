@@ -52,7 +52,6 @@ class Api::AlbumsController < ApplicationController
 
     photo_ids = JSON.parse(params[:photo_ids])
     if photo_ids && !photo_ids.empty? && @album
-      @album.photo_ids = @album.photo_ids.concat(photo_ids)
 
       photo_ids.each do |id|
         unless AlbumPhoto.where(album_id: @album.id, photo_id: id)

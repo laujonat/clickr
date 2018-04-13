@@ -20,7 +20,7 @@ class AlbumShow extends React.Component {
   }
 
   removeAlbum(id) {
-    this.props.removeAlbum(id);
+    this.props.removeAlbum(id).then(() => this.forceUpdate());
   }
 
   editAlbum() {

@@ -57,8 +57,8 @@ export const deleteComment = id => dispatch => (
   ))
 );
 
-export const updateComment = comment => dispatch => (
-  APIComment.updateComment(comment)
+export const updateComment = (comment, id) => dispatch => (
+  APIComment.updateComment(comment, id)
     .then(newComment => (dispatch(receiveComment(newComment))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
