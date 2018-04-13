@@ -26,7 +26,7 @@ class UserPhotostream extends React.Component {
     const columns = this.divideCol(this.props.photos);
     const column1 = columns[0].map(photo => {
       return (
-        <div className="layout-panel">
+        <li key={photo.id} className="layout-panel">
         <Link to={`/photos/${photo.id}`}>
           <div className="panel-content">
             <img className="panel-content-img aa" src={`${photo.photo_url}`} />
@@ -38,13 +38,13 @@ class UserPhotostream extends React.Component {
               </div>
           </div>
         </Link>
-        </div>
+      </li>
       );
     });
 
     const column2 = columns[1].map(photo => {
       return (
-        <div className="layout-panel">
+        <li key={photo.id} className="layout-panel">
         <Link to={`/photos/${photo.id}`}>
           <div className="panel-content">
             <img className="panel-content-img ab" src={`${photo.photo_url}`} />
@@ -56,13 +56,13 @@ class UserPhotostream extends React.Component {
               </div>
           </div>
         </Link>
-        </div>
+        </li>
       );
     });
 
     const column3 = columns[2].map(photo => {
       return (
-        <div className="layout-panel">
+        <li key={photo.id} className="layout-panel">
         <Link to={`/photos/${photo.id}`}>
           <div className="panel-content">
             <img className="panel-content-img ac" src={`${photo.photo_url}`} />
@@ -74,13 +74,13 @@ class UserPhotostream extends React.Component {
               </div>
           </div>
         </Link>
-        </div>
+      </li>
       );
     });
 
     return (
       <React.Fragment>
-        <div className="photostream-layout">
+        <ul className="photostream-layout">
           <div className="photostream-column one">
             {column1}
           </div>
@@ -90,7 +90,7 @@ class UserPhotostream extends React.Component {
           <div className="photostream-column three">
             {column3}
           </div>
-        </div>
+        </ul>
       </React.Fragment>
     );
   }
