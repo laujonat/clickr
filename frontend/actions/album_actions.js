@@ -71,8 +71,8 @@ export const deleteAlbum = id => dispatch => (
   ))
 );
 
-export const updateAlbum = album => dispatch => (
-  APIAlbum.updateAlbum(album)
+export const updateAlbum = (album, id) => dispatch => (
+  APIAlbum.updateAlbum(album, id)
     .then(newAlbum => (dispatch(receiveAlbum(newAlbum))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))

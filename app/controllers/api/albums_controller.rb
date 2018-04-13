@@ -25,7 +25,6 @@ class Api::AlbumsController < ApplicationController
     @album = Album.new(album_params)
     @album.user_id = current_user.id
     photo_ids = JSON.parse(params[:photo_ids])
-
     if photo_ids && !photo_ids.empty? && @album.save
       photo_ids.each do |id|
         AlbumPhoto.create(album_id: @album.id, photo_id: id)
@@ -45,6 +44,16 @@ class Api::AlbumsController < ApplicationController
       render json: ["Error deleting album."], status: 404
     end
 
+  end
+
+  def update
+    @album = Album.find(params[:id])
+    if @album
+      @album.update(album_params)
+      render :show
+    else
+      render json: ["Invalid album id"], status: 404
+    end
   end
 
   private

@@ -1,6 +1,7 @@
 import React from 'react';
 import AlbumCreateNav from './album_create_nav';
 import AlbumPhotoTile from './album_photo_tile';
+import AlbumFormContainer from './album_form_container';
 
 
 class AlbumEdit extends React.Component {
@@ -9,23 +10,25 @@ class AlbumEdit extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      photoIds: []
+      photoIds: [],
+      isEdit: true
     };
 
-    this.clickImage = this.clickImage.bind(this);
+    // this.clickImage = this.clickImage.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchAlbum(this.props.match.params.albumId)
       .then(() => this.props.fetchAllPhotos(this.props.currentUser.id)
-      .then(() => this.setState({loading: false})));
+      .then(() => this.setState({loading: false, photoIds: this.props.album[0].photo_ids})));
   }
 
   clickImage(event, id) {
     const newPhotoIds = this.state.photoIds;
 
     if(this.state.photoIds.includes(id)) {
-      event.target.classList.remove('album-selected-border');
+      event.target.classList.toggle('album-selected-border');
+      this.setState({photoIds: newPhotoIds});
       const index = newPhotoIds.indexOf(id);
       newPhotoIds.splice(index,1);
     } else {
@@ -38,10 +41,8 @@ class AlbumEdit extends React.Component {
   render() {
     let albumPhotos;
     let userPhotoItems;
-
     if(!this.state.loading) {
-      albumPhotos = this.props.album[0].photo_ids.map( id => this.props.photos[id]);
-      userPhotoItems = albumPhotos.map(photo => {
+      userPhotoItems = this.props.photos.map(photo => {
         let border;
         if(this.state.photoIds.includes(photo.id)) {
           border = "album-selected-border";
@@ -49,7 +50,7 @@ class AlbumEdit extends React.Component {
         return (
           <li key={photo.id} className="album-row-wrap">
             <img onClick={(e) => this.clickImage(e, photo.id)} className={`album-photo-item ${border}`} src={`${photo.photo_url}`} />
-          </li>
+        </li>
         );
       });
     }
@@ -66,7 +67,13 @@ class AlbumEdit extends React.Component {
           <div className="mat-content">
             <div className="left-form-wrapper">
               <div className="album-upload-container">
-
+                <AlbumFormContainer
+                  isEdit={this.state.isEdit}
+                  photoIds={this.state.photoIds}
+                  title={this.props.album[0].name}
+                  desc={this.props.album[0].description}
+                  albumId={this.props.album[0].id}
+                />
               </div>
             </div>
             <div className="photo-index-render-wrapper">
