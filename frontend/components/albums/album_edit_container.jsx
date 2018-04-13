@@ -3,13 +3,14 @@ import { withRouter } from 'react-router';
 import { fetchAlbum, updateAlbum } from '../../actions/album_actions';
 import { fetchAllPhotos } from '../../actions/photo_actions';
 import { albumSelector } from "../../selectors/album_selector";
+import { photoSelector } from "../../selectors/photo_selector";
 import AlbumEdit from './album_edit';
 
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   album: albumSelector(state),
-  photos: state.entities.photos
+  photos: photoSelector(state)
 });
 
 const mapDispatchToProps = dispatch => ({

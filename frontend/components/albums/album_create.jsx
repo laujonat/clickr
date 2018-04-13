@@ -9,7 +9,8 @@ class AlbumCreate extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      photoIds: []
+      photoIds: [],
+      isEdit: false
     };
     this.clickImage = this.clickImage.bind(this);
   }

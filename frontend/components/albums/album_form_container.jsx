@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import AlbumForm from './album_form';
-import { createAlbum } from '../../actions/album_actions';
+import { createAlbum, updateAlbum } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-  createAlbum: album => dispatch(createAlbum(album))
+  createAlbum: album => dispatch(createAlbum(album)),
+  updateAlbum: (album, id) => dispatch(updateAlbum(album, id))
 });
 
 export default withRouter(connect(

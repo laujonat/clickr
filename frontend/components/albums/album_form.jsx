@@ -42,11 +42,26 @@ class AlbumForm extends React.Component {
     formData.append("album[cover_img]", this.state.coverPhoto);
     formData.append("photo_ids", JSON.stringify(this.props.photoIds));
     // this.props.photoIds ignored in ajax call. Handled in formData
-    this.props.createAlbum(formData, this.props.photoIds)
+    if(this.props.isEdit){
+      this.props.updateAlbum(formData, this.props.albumId)
       .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
+
+    } else {
+      this.props.createAlbum(formData, this.props.photoIds)
+        .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
+    }
   }
 
   render() {
+    let name, desc;
+    if (this.props.isEdit) {
+      name = this.props.title;
+      desc = this.props.desc;
+    } else {
+      name = "new album";
+      desc = "";
+    }
+
     return (
       <form className="album-upload-form">
         <img src={this.state.coverPhotoUrl} />
@@ -54,12 +69,13 @@ class AlbumForm extends React.Component {
           className="album-name"
           type="text"
           onChange={this.updateInput("name")}
-          placeholder="new album"
+          placeholder={name}
           value={this.state.name}
         />
         <textarea
           type="text"
           onChange={this.updateInput("description")}
+          placeholder={desc}
           value={this.state.description}
         />
       <button className="album-save-button" onClick={this.handleSubmit}>SAVE</button>
