@@ -4,9 +4,23 @@ import TagIndexItem from './tag_index_item';
 class TagsIndex extends React.Component {
   constructor(props) {
     super(props);
+    // this.renderErrors = this.renderErrors.bind(this);
+  }
+
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <ul className="errors_render">
+          {this.props.errors.map((error, i) => (
+            <li key={`${i}`}>{error}</li>)
+          )}
+        </ul>
+      );
+    }
   }
 
   render() {
+    console.log(this.props.errors);
     const { currentUser, deleteTag, fetchTags } = this.props;
     const tagsList = this.props.tags.map(tag => {
       return (
@@ -14,9 +28,12 @@ class TagsIndex extends React.Component {
       );
     });
     return (
+      <React.Fragment>
       <ul className="tags-list-container">
         {tagsList}
       </ul>
+      {this.renderErrors()}
+      </React.Fragment>
     );
   }
 }

@@ -16,7 +16,7 @@ class Api::TagsController < ApplicationController
     if @tag.save
       render :show
     else
-      render json: ["Upload photo error"], status: 422
+      render json: ["Cannot create tag."], status: 422
     end
   end
 
