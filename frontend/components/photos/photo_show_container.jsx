@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PhotoShow from './photo_show';
 import { fetchPhoto, deletePhoto, updatePhoto } from '../../actions/photo_actions';
-import { fetchAllTags } from '../../actions/tag_actions';
+import { fetchAllTags,createTag, deleteTag } from '../../actions/tag_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
@@ -14,7 +14,9 @@ const mapDispatchToProps = dispatch => ({
   getPhoto: id => dispatch(fetchPhoto(id)),
   removePhoto: id => dispatch(deletePhoto(id)),
   updatePhoto: (photo, id) => dispatch(updatePhoto(photo, id)),
-  fetchTags: id => dispatch(fetchAllTags(id))
+  fetchTags: id => dispatch(fetchAllTags(id)),
+  createTag: tag => dispatch(createTag(tag)),
+  deleteTag: id => dispatch(deleteTag(id))
 });
 
 export default withRouter(connect(

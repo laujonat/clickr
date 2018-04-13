@@ -7,7 +7,7 @@ export const fetchTag = id => (
 export const fetchAllTags = id => (
   $.ajax('api/tags', {
     method: "get",
-    data: { user_id: id }
+    data: { photo_id: id }
   })
 );
 
