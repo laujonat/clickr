@@ -7,7 +7,8 @@ import { fetchAllTags,createTag, deleteTag } from '../../actions/tag_actions';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   photo: state.entities.photos[ownProps.match.params.photoId] || {},
-  tags: Object.values(state.entities.tags)
+  tags: Object.values(state.entities.tags),
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
