@@ -19,7 +19,7 @@ class PhotoEditForm extends React.Component {
         description: this.state.description
       },
       this.props.photoId
-    );
+    ).then(() => this.props.toggleForm());
   }
 
   updateInput(field) {

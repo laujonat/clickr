@@ -117,6 +117,7 @@ class PhotoShow extends React.Component {
                           description={this.props.photo.description}
                           updatePhoto={updatePhoto}
                           photoId={this.props.photo.id}
+                          toggleForm={this.toggleForm}
                           />}
 
                   <div className="field-photo-desc">
