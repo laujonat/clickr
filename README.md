@@ -16,7 +16,7 @@
 
 ## Demo
 <center>
-[captr live](clickr-photo.herokuapp.com)
+[Live site!](clickr-photo.herokuapp.com)
 
 <center><img src="https://i.imgur.com/D9pIkAs.jpg" height="400"></center>
 
