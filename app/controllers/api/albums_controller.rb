@@ -48,9 +48,19 @@ class Api::AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    if @album
+    # @album.user_id = current_user.id
+
+    photo_ids = JSON.parse(params[:photo_ids])
+    if photo_ids && !photo_ids.empty? && @album
+      @album.photo_ids = @album.photo_ids.concat(photo_ids)
+
+      photo_ids.each do |id|
+        unless AlbumPhoto.where(album_id: @album.id, photo_id: id)
+          AlbumPhoto.update(album_id: @album.id, photo_id: id)
+        end
+      end
       @album.update(album_params)
-      render :show
+      render json: ["Update Success"], status: 200
     else
       render json: ["Invalid album id"], status: 404
     end

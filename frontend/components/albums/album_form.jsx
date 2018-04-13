@@ -39,13 +39,15 @@ class AlbumForm extends React.Component {
     formData.append("album[name]", this.state.name);
     formData.append("album[description]", this.state.description);
     formData.append("album[user_id]", this.state.user_id);
-    formData.append("album[cover_img]", this.state.coverPhoto);
+    if(this.state.coverPhoto !== null) {
+      formData.append("album[cover_img]", this.state.coverPhoto);
+    }
     formData.append("photo_ids", JSON.stringify(this.props.photoIds));
     // this.props.photoIds ignored in ajax call. Handled in formData
     if(this.props.isEdit){
+      console.log(this.props.albumId);
       this.props.updateAlbum(formData, this.props.albumId)
       .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
-
     } else {
       this.props.createAlbum(formData, this.props.photoIds)
         .then(() => this.props.history.push(`/user/${this.props.currentUser.id}`));
@@ -55,7 +57,7 @@ class AlbumForm extends React.Component {
   render() {
     let name, desc;
     if (this.props.isEdit) {
-      name = this.props.title;
+      name = this.props.name;
       desc = this.props.desc;
     } else {
       name = "new album";
