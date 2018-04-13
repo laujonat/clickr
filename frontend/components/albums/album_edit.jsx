@@ -11,7 +11,10 @@ class AlbumEdit extends React.Component {
     this.state = {
       loading: true,
       photoIds: [],
-      isEdit: true
+      isEdit: true,
+      name: null,
+      desc: null,
+      albumId: null
     };
 
     // this.clickImage = this.clickImage.bind(this);
@@ -20,7 +23,12 @@ class AlbumEdit extends React.Component {
   componentDidMount() {
     this.props.fetchAlbum(this.props.match.params.albumId)
       .then(() => this.props.fetchAllPhotos(this.props.currentUser.id)
-      .then(() => this.setState({loading: false, photoIds: this.props.album[0].photo_ids})));
+      .then(() => this.setState({
+        loading: false,
+        photoIds: this.props.album[0].photo_ids,
+        name: this.props.album[0].name,
+        desc: this.props.album[0].description,
+        albumId: this.props.album[0].id})));
   }
 
   clickImage(event, id) {
@@ -70,9 +78,9 @@ class AlbumEdit extends React.Component {
                 <AlbumFormContainer
                   isEdit={this.state.isEdit}
                   photoIds={this.state.photoIds}
-                  title={this.props.album[0].name}
-                  desc={this.props.album[0].description}
-                  albumId={this.props.album[0].id}
+                  name={this.state.name}
+                  desc={this.state.desc}
+                  albumId={this.state.albumId}
                 />
               </div>
             </div>

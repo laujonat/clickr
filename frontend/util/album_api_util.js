@@ -14,7 +14,9 @@ export const fetchAllAlbums = id => (
 export const updateAlbum = (album, id) => (
   $.ajax(`api/albums/${id}`, {
     method: "patch",
-    data: { album }
+    processData: false,
+    contentType: false,
+    data: album 
   })
 );
 

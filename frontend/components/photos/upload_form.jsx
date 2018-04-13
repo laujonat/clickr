@@ -44,6 +44,7 @@ class UploadForm extends React.Component {
       fileReader.readAsDataURL(file);
     }
   }
+  
   render() {
     return (
       <React.Fragment>
