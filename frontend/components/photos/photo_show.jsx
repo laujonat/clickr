@@ -2,6 +2,7 @@ import React from 'react';
 import PhotoShowNav from './photo_show_nav';
 import CommentListContainer from '../comments/comment_list_container';
 import PhotoEditForm from './photo_edit_form';
+import TagIndexContainer from '../tags/tags_index_container';
 
 class PhotoShow extends React.Component {
   constructor(props) {
@@ -41,7 +42,12 @@ class PhotoShow extends React.Component {
       deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;
       editBtn = <button className="photo-edit-btn" onClick={this.toggleForm}>edit</button>;
     }
-    console.log(this.state.hideForm);
+
+    const tagsList = this.props.tags.map(tag => {
+      return (
+        <TagIndexItem key={tag.id} tag={tag} />
+      );
+    });
     return(
       this.state.loading ?
         <div>Loading...</div>
@@ -98,10 +104,31 @@ class PhotoShow extends React.Component {
                   <span>No rights reserved.</span>
                 </div>
               </div>
+
+              <div className="albums-photo-show-section">
+
+
+              </div>
+              <div className="sub-tags-add-people-section-container">
+                <div className="photo-tags-view-container">
+                  <div className="photo-tags-menu">
+                    <p id="tag-link">Tags ©</p>
+                    <p>Add tags</p>
+                  </div>
+
+                  <ul className="tags-list-container">
+                    {tagsList}
+                  </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+
+
+
+
           </div>
         </div>
-      </div>
     );
   }
 }

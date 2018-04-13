@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411235709) do
+ActiveRecord::Schema.define(version: 20180413072030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,15 @@ ActiveRecord::Schema.define(version: 20180411235709) do
     t.string "photo_url_content_type"
     t.integer "photo_url_file_size"
     t.datetime "photo_url_updated_at"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "photo_id", null: false
+    t.string "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id", "body"], name: "index_tags_on_photo_id_and_body", unique: true
   end
 
   create_table "users", force: :cascade do |t|

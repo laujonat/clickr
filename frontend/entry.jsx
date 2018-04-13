@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 // import { signup, login, logout } from './actions/session_actions';
 // import { fetchAllPhotos } from './actions/photo_actions';
-import { fetchAllComments } from './actions/comment_actions';
+import { fetchAllTags } from './actions/tag_actions';
 // import * as PHOTOUtil from './util/photo_api_util';
 
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.fetchAllComments = fetchAllComments;
+  window.fetchAllTags = fetchAllTags;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
