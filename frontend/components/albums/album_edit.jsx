@@ -44,6 +44,18 @@ class AlbumEdit extends React.Component {
     this.setState({photoIds: newPhotoIds});
   }
 
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <ul className="errors_render">
+          {this.props.errors.map((error, i) => (
+            <li key={`${i}`}>{error}</li>)
+          )}
+        </ul>
+      );
+    }
+  }
+
   render() {
     let albumPhotos;
     let userPhotoItems;
@@ -60,7 +72,6 @@ class AlbumEdit extends React.Component {
         );
       });
     }
-
     return (
       this.state.loading ?
         <div>Loading...</div>
@@ -89,6 +100,7 @@ class AlbumEdit extends React.Component {
             </div>
           </div>
         </div>
+        {this.renderErrors()}
       </React.Fragment>
     );
   }

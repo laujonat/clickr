@@ -33,12 +33,25 @@ class UploadPhoto extends React.Component {
     }
   }
 
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <ul className="errors_render">
+          {this.props.errors.map((error, i) => (
+            <li key={`${i}`}>{error}</li>)
+          )}
+        </ul>
+      );
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className="upload-header"></div>
         <div className="upload-body">
           {this.toggleDisplay()}
+          {this.renderErrors()}
         </div>
       </React.Fragment>
     );

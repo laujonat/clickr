@@ -31,18 +31,34 @@ class LoginForm extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <ul className="errors_render">
+          {this.props.errors.map((error, i) => (
+            <li key={`${i}`}>{error}</li>)
+          )}
+        </ul>
+      );
+    }
+  }
+
+  linkHome() {
+    this.props.history.push('/');
+  }
+
   render() {
     return(
       <div>
         <header className="session-new-header">
           <div className="header-logo-contain">
-            <img className="top-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
+            <img onClick={() => this.linkHome()} className="top-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
           </div>
         </header>
         <div className="login-position-container">
           <div className="session-box-body">
             <div className="session-box">
-              <img className="login-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
+              <img onClick={() => this.linkHome()}className="login-logo" alt="logo-img" src="https://s.yimg.com/rz/d/yahoo_en-US_f_p_bestfit_2x.png" />
               <h2><p>Sign in</p></h2>
               <form className="login-form-challenge" onSubmit={this.handleSubmit}>
               <div className="login-input-field-box">
@@ -63,6 +79,7 @@ class LoginForm extends React.Component {
                   onChange={this.handleChange('password')}
                 />
               </div>
+              {this.renderErrors()}
               <input className="signInButton" id="login-sigin" type="submit" name="signin" value="Sign in"/>
               <div className="demo-sign-up" onClick={this.demoLogin}>Demo Login</div>
               <div className="row-sign-up">Don't have an acccount? <Link to="/signup"><p id="sign-up-link">Sign up</p></Link></div>

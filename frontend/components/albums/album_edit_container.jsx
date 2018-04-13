@@ -10,7 +10,8 @@ import AlbumEdit from './album_edit';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   album: albumSelector(state),
-  photos: photoSelector(state)
+  photos: photoSelector(state),
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({

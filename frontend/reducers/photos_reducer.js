@@ -3,7 +3,7 @@ import {
   RECEIVE_PHOTO,
   RECEIVE_ALL_PHOTOS,
   REMOVE_PHOTO,
-  RECEIEVE_ERRORS
+  RECEIVE_ERRORS
 } from '../actions/photo_actions';
 import { RECEIEVE_ALBUM_PAYLOAD } from '../actions/album_actions';
 

@@ -30,6 +30,7 @@ class AlbumShow extends React.Component {
   render() {
     const ourPhotos = this.props.album.photo_ids.map( id => this.props.photos[id]); // array of photos from photo_ids
     const columns = this.divideCol(ourPhotos);
+
     const column1 = columns[0].map(photo => {
       return (
         <li key={photo.id} className="layout-panel">

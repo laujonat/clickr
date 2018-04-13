@@ -3,7 +3,7 @@ import {
   RECEIVE_COMMENT,
   RECEIVE_ALL_COMMENTS,
   REMOVE_COMMENT,
-  RECEIEVE_ERRORS
+  RECEIVE_ERRORS
 } from '../actions/comment_actions';
 
 const commentReducer = (state = {}, action) => {

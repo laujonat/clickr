@@ -169,7 +169,6 @@ photos = Photo.all
 # photo_id30 = photos[30].id
 # photo_id31 = photos[31].id
 # photo_id32 = photos[32].id
-# photo_id33 = photos[33].id
 
 
 tags_arr = ["love", "blue", "abstract", "ocean", "tech", "sf", "eye", "cool", "nature", "bokeh",
@@ -209,6 +208,40 @@ users.each do |user|
   end
 end
 
+description_arr = ["Vacation abroad"]
+name_arr = ["Vacation", "Artsy Photos"]
+
+users.each do |user|
+  5.times do
+    name = name_arr.sample
+    album = Album.create(user_id: user.id,  name: name, description: description_arr.sample) unless user.albums.find_by(name: name)
+    album_photo_ids = []
+    10.times do
+      album_photo_id = user.photos.sample.id
+      album_photo_ids.push(album_photo_id) unless album_photo_ids.include?(album_photo_id)
+    end
+
+    album_photo_ids.each do |id|
+      AlbumPhoto.create(album_id: album.id, photo_id: id) if album
+    end
+  end
+end
+
+
+# def create
+#   # debugger
+#   @album = Album.new(album_params)
+#   @album.user_id = current_user.id
+#   photo_ids = JSON.parse(params[:photo_ids])
+#   if photo_ids && !photo_ids.empty? && @album.save
+#     photo_ids.each do |id|
+#       AlbumPhoto.create(album_id: @album.id, photo_id: id)
+#     end
+#     render :show
+#   else
+#     render json: ["Creating album error"], status: 422
+#   end
+# end
 
 
 
