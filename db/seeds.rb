@@ -214,7 +214,8 @@ name_arr = ["Vacation", "Artsy Photos"]
 users.each do |user|
   5.times do
     name = name_arr.sample
-    album = Album.create(user_id: user.id,  name: name, description: description_arr.sample) unless user.albums.find_by(name: name)
+    cover_img_sample = photos.sample.photo_url
+    album = Album.create(user_id: user.id,  name: name, description: description_arr.sample, cover_img: cover_img_sample) unless user.albums.find_by(name: name)
     album_photo_ids = []
     10.times do
       album_photo_id = user.photos.sample.id
