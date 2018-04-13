@@ -11,7 +11,7 @@ class Api::TagsController < ApplicationController
 
   def create
     @tag = Tag.new(tag_params)
-    # @tag.user_id = current_user.id
+    @tag.user_id = current_user.id
 
     if @tag.save
       render :show

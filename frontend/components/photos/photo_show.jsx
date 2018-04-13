@@ -9,9 +9,12 @@ class PhotoShow extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      hideForm: true
+      hideForm: true,
+      showTagInput: false,
+      tagBody: "",
     };
     this.toggleForm = this.toggleForm.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   componentDidMount() {
@@ -29,8 +32,34 @@ class PhotoShow extends React.Component {
     this.setState({hideForm: !this.state.hideForm});
   }
 
+  showTagslistForm() {
+    this.setState({showTagInput: true});
+  }
+
+  handleKeyPress(event) {
+    if(event.key == 'Enter') {
+      let parse = this.state.tagBody.substr(0,this.state.tagBody.indexOf(' '));
+
+      const tag = {
+        body: parse,
+        user_id: this.props.currentUser.id,
+        photo_id: this.props.match.params.photoId
+      };
+
+      this.props.createTag(tag).then((res) => {
+        this.setState({tagBody: ""});
+      });
+    }
+  }
+
+  updateInput(field) {
+    return (e) => {
+      this.setState({ [field]: e.target.value });
+    };
+  }
+
   render() {
-    const { updatePhoto } = this.props;
+    const { updatePhoto, deleteTag, fetchTags } = this.props;
     const date = new Date(this.props.photo.created_at);
     const month = date.getMonth();
     const day = date.getDate();
@@ -43,6 +72,14 @@ class PhotoShow extends React.Component {
       deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;
       editBtn = <button className="photo-edit-btn" onClick={this.toggleForm}>edit</button>;
     }
+
+    const tagInput = this.state.showTagInput
+    ? <input type="text"
+              className="tag-input"
+              onChange={this.updateInput("tagBody")}
+              placeholder="Add a tag"
+              onKeyPress={this.handleKeyPress}
+              value={this.state.tagBody}/> : "";
 
 
     return(
@@ -110,10 +147,10 @@ class PhotoShow extends React.Component {
                 <div className="photo-tags-view-container">
                   <div className="photo-tags-menu">
                     <p id="tag-link">Tags ©</p>
-                    <p>Add tags</p>
+                    <p id="add-tag-link" onClick={() => this.showTagslistForm()}>Add tags</p>
                   </div>
-
-                  <TagIndexContainer tags={this.props.tags}/>
+                  {tagInput}
+                  <TagIndexContainer deleteTag={deleteTag} fetchTags={fetchTags} currentUser={this.props.currentUser} tags={this.props.tags}/>
                   </div>
                 </div>
               </div>

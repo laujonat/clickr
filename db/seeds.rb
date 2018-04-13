@@ -12,7 +12,7 @@ User.destroy_all
 Photo.destroy_all
 usernames = ["AnakinyourKin", "ReyOhYey", "KyloIsBad", "HanSoSolo", "DemoAccount", ]
 emails = ["anakin@gmail.com", "Rey@yahoo.com", "Kylo@yahoo.com", "Han@msn.com", "demo@clickr.com"]
-fnames = ["Anakin", "Rey", "Kylo", "Han", "Obi-Wan"]
+fnames = ["Anakin", "Rey", "Kylo", "Han", "Woods"]
 lnames = ["Skywalker", "Lei", "Ren",  "Solo", "Woody"]
 passwords = ["123456", "123456", "123456", "123456", "123456"]
 
