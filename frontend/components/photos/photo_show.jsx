@@ -16,7 +16,8 @@ class PhotoShow extends React.Component {
 
   componentDidMount() {
     this.props.getPhoto(this.props.match.params.photoId)
-      .then( () => this.setState({loading: false}));
+      .then(() => this.props.fetchTags(this.props.match.params.photoId))
+      .then(() => this.setState({loading: false}));
   }
 
   removePhoto() {
@@ -43,11 +44,7 @@ class PhotoShow extends React.Component {
       editBtn = <button className="photo-edit-btn" onClick={this.toggleForm}>edit</button>;
     }
 
-    const tagsList = this.props.tags.map(tag => {
-      return (
-        <TagIndexItem key={tag.id} tag={tag} />
-      );
-    });
+
     return(
       this.state.loading ?
         <div>Loading...</div>
@@ -116,9 +113,7 @@ class PhotoShow extends React.Component {
                     <p>Add tags</p>
                   </div>
 
-                  <ul className="tags-list-container">
-                    {tagsList}
-                  </ul>
+                  <TagIndexContainer tags={this.props.tags}/>
                   </div>
                 </div>
               </div>

@@ -6,13 +6,14 @@ class TagsIndexItem extends React.Component {
   }
 
   render() {
+  
     console.log("tag index item ");
     return (
-      <li>
-        
+      <li className="tag">
+        <p>{this.props.tag.body}</p>
       </li>
     );
   }
 }
 
-export default TagIndexItem;
+export default TagsIndexItem;

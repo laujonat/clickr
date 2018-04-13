@@ -3,13 +3,13 @@ import TagIndex from './tags_index';
 import { fetchAllTags } from '../../actions/tag_actions';
 
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
-  tags: state.entities.tags
+  tags: ownProps.tags
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchTags: (id) => dispatch(fetchAllTags(id))
+  // fetchTags: (id) => dispatch(fetchAllTags(id))
 });
 
 export default connect(

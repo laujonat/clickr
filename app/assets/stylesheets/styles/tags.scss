@@ -6,18 +6,49 @@
 
 }
 
+.tag {
+  float: left;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  margin: 0 5px 5px 0;
+  background-color: #cfd6d9;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: all .15s ease-in-out;
+}
+
+.tag p {
+  padding: 0 10px;
+  line-height: 21px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  font-weight: 400;
+  color: #212124;
+}
+
+.tag:hover {
+  cursor: pointer;
+  background-color: #868d91;
+}
+
+.tag p:hover {
+  color: #fff;
+}
+
 .sub-tags-add-people-section-container {
   clear: both;
   border-top: 1px solid #cfd6d9;
   border-bottom: 1px solid #cfd6d9;
   width: 500px;
   padding-top: 23px;
-  // background-color: yellow;
   position: relative;
   height: 500px;
 
   .photo-tags-view-container {
-    background-color: indigo;
     height: 400px;
     float: left;
     width: 225px;
