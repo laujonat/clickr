@@ -36,6 +36,26 @@ that will be added into the code base over time.
 + Create, edit, and delete photo album content
 + Members have access to create tags and comment on other user content
 
+### Responsive Photo Layout ###
+[Flickr](flickr.com) currently uses a mosaic layout to lay out photos in the activity feed as well as user profile photostreams.  Mimicking this behavior proved to be a challenge due to the collapsing behavior of images when placed into a row.  Solutions such as `display: flex` would suffice in laying out most core features of the site, but to create a moasic layout as seen on the user activity feed required a column solution.  
+Firstly, after returning an array of photos from `state`, the solution was to divide the array into three equal portions, or leaving the remainder in the last column.
+```javascript
+divideCol(photos) {
+  const firstHalf = Math.ceil(photos.length / 3);
+  const secondHalf = Math.ceil(2 * photos.length /  3);
+
+  const col1 = photos.slice(0, firstHalf);
+  const col2 = photos.slice(firstHalf, secondHalf);
+  const col3 = photos.slice(secondHalf, photos.length);
+  return (
+    [col1, col2, col3]
+  );
+}
+
+const columns = this.divideCol(this.props.photos);
+```
+Creating three separate flex columns with a `width: 33.33%` did the trick keeping the dimensions of evenly spaced on both the user activity page and the user profile. Enjoy!
+
 
 
 # Technologies
