@@ -17,7 +17,6 @@ class Feed extends React.Component {
   render() {
     const Panes = [
       {title: 'All Activity', content: <PhotoIndexContainer />},
-      {title: 'People', content: <div>Tbd...</div>},
     ];
 
 
@@ -30,3 +29,5 @@ class Feed extends React.Component {
 }
 
 export default Feed;
+
+// {title: 'People', content: <div>Tbd...</div>},
