@@ -7,7 +7,7 @@ import { commentSelector } from '../../selectors/comments_selector';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   comments: commentSelector(state) || {},
-  errors: state.errors
+  errors: state.errors.comment
 });
 
 const mapDispatchToProps = dispatch => ({
