@@ -1,20 +1,11 @@
 // reducer to keep track of error messages
-import {
-    RECEIVE_CURRENT_USER,
-    RECEIVE_ERRORS
-  } from '../actions/session_actions';
+import { combineReducers } from 'redux';
+import sessionErrorsReducer from './session_errors_reducer';
+import commentErrorsReducer from './comment_errors_reducer';
+import tagErrorsReducer from './tag_errors_reducer';
 
-const errorsReducer = (state=[], action) => {
-  Object.freeze(state);
-
-  switch (action.type) {
-    case RECEIVE_CURRENT_USER:
-      return [];
-    case RECEIVE_ERRORS:
-      return Object.assign([], action.errors);
-    default:
-      return state;
-  }
-};
-
-export default errorsReducer;
+export default combineReducers({
+  login: sessionErrorsReducer,
+  comment: commentErrorsReducer,
+  tag: tagErrorsReducer
+});

@@ -6,7 +6,7 @@ import { fetchAllTags } from '../../actions/tag_actions';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   tags: ownProps.tags,
-  errors: state.errors
+  errors: state.errors.tag
 });
 
 const mapDispatchToProps = dispatch => ({
