@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import PhotoShow from './photo_show';
 import { fetchPhoto, deletePhoto, updatePhoto } from '../../actions/photo_actions';
 import { fetchAllTags,createTag, deleteTag } from '../../actions/tag_actions';
+import { routeChanged } from '../../actions/app_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
@@ -17,7 +18,8 @@ const mapDispatchToProps = dispatch => ({
   updatePhoto: (photo, id) => dispatch(updatePhoto(photo, id)),
   fetchTags: id => dispatch(fetchAllTags(id)),
   createTag: tag => dispatch(createTag(tag)),
-  deleteTag: id => dispatch(deleteTag(id))
+  deleteTag: id => dispatch(deleteTag(id)),
+  routeChanged: () => dispatch(routeChanged())
 });
 
 export default withRouter(connect(

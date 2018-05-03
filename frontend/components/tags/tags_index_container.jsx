@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // fetchTags: (id) => dispatch(fetchAllTags(id))
   routeChanged: () => dispatch(routeChanged())
 });
 

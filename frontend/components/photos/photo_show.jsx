@@ -37,17 +37,20 @@ class PhotoShow extends React.Component {
   }
 
   handleKeyPress(event) {
-    if(event.key == 'Enter') {
-
+    if(event.key === 'Enter') {
+      let parsed = this.state.tagBody.split(" ").length > 1 ?
+        this.state.tagBody.substr(0, this.state.tagBody.indexOf(' '))
+        : this.state.tagBody;
 
       const tag = {
-        body: this.state.tagBody,
+        body: parsed,
         user_id: this.props.currentUser.id,
         photo_id: this.props.match.params.photoId
       };
 
       this.props.createTag(tag).then((res) => {
         this.setState({tagBody: ""});
+        this.props.routeChanged();
       });
     }
   }
@@ -139,10 +142,7 @@ class PhotoShow extends React.Component {
                   <span>No rights reserved.</span>
                 </div>
               </div>
-
               <div className="albums-photo-show-section">
-
-
               </div>
               <div className="sub-tags-add-people-section-container">
                 <div className="photo-tags-view-container">
@@ -151,14 +151,15 @@ class PhotoShow extends React.Component {
                     <p id="add-tag-link" onClick={() => this.showTagslistForm()}>Add tags</p>
                   </div>
                   {tagInput}
-                  <TagIndexContainer deleteTag={deleteTag} fetchTags={fetchTags} currentUser={this.props.currentUser} tags={this.props.tags}/>
+                  <TagIndexContainer
+                    deleteTag={deleteTag}
+                    fetchTags={fetchTags}
+                    currentUser={this.props.currentUser}
+                    tags={this.props.tags}/>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
 
           </div>
         </div>

@@ -4,7 +4,6 @@ import TagIndexItem from './tag_index_item';
 class TagsIndex extends React.Component {
   constructor(props) {
     super(props);
-    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +26,13 @@ class TagsIndex extends React.Component {
     const { currentUser, deleteTag, fetchTags } = this.props;
     const tagsList = this.props.tags.map(tag => {
       return (
-        <TagIndexItem deleteTag={deleteTag} fetchTags={fetchTags} currentUser={currentUser} key={tag.id} tag={tag} />
+        <TagIndexItem
+          key={tag.id}
+          tag={tag}
+          deleteTag={deleteTag}
+          fetchTags={fetchTags}
+          currentUser={currentUser} 
+        />
       );
     });
     return (
