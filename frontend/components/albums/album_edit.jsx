@@ -18,6 +18,7 @@ class AlbumEdit extends React.Component {
   }
 
   componentDidMount() {
+    this.props.routeChanged();
     this.props.fetchAlbum(this.props.match.params.albumId)
       .then(() => this.props.fetchAllPhotos(this.props.currentUser.id)
       .then(() => this.setState({

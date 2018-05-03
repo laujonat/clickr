@@ -20,30 +20,38 @@ import AlbumCreateNavContainer from './albums/album_create_nav_container';
 import AlbumCreateContainer from './albums/album_create_container';
 import AlbumEditContainer from './albums/album_edit_container';
 
-const App = () => (
-  <React.Fragment>
-  <div className="app-container">
-    <Switch>
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute path="/login" component={LoginFormContainer} />
-      <ProtectedRoute path="/upload" component={UploadNavContainer} />
-      <ProtectedRoute path="/albums/create" component={AlbumCreateNavContainer} />
-      <Route path="/photos/:photosId" component={PhotoShowNavContainer} />
-      <Route path="/" component={NavBarContainer} />
-    </Switch>
 
-    <Switch>
-      <ProtectedRoute path="/feed" component={FeedContainer} />
-      <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
-      <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
-      <ProtectedRoute path="/albums/create" component={AlbumCreateContainer} />
-      <ProtectedRoute path="/albums/:albumId/edit" component={AlbumEditContainer} />
-      <Route path="/photos/:photoId" component={PhotoShowContainer} />
-      <ProtectedRoute path="/" component={FeedContainer} />
-    </Switch>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  </div>
-  </React.Fragment>
-);
+  render() {
+    return (
+      <React.Fragment>
+      <div className="app-container">
+        <Switch>
+          <AuthRoute path="/signup" component={SignupFormContainer} />
+          <AuthRoute path="/login" component={LoginFormContainer} />
+          <ProtectedRoute path="/upload" component={UploadNavContainer} />
+          <ProtectedRoute path="/albums/create" component={AlbumCreateNavContainer} />
+          <Route path="/photos/:photosId" component={PhotoShowNavContainer} />
+          <Route path="/" component={NavBarContainer} />
+        </Switch>
+
+        <Switch>
+          <ProtectedRoute path="/feed" component={FeedContainer} />
+          <ProtectedRoute path="/upload" component={UploadPhotoContainer} />
+          <ProtectedRoute path="/user/:userId" component={UserProfileContainer} />
+          <ProtectedRoute path="/albums/create" component={AlbumCreateContainer} />
+          <ProtectedRoute path="/albums/:albumId/edit" component={AlbumEditContainer} />
+          <Route path="/photos/:photoId" component={PhotoShowContainer} />
+          <ProtectedRoute path="/" component={FeedContainer} />
+        </Switch>
+      </div>
+      </React.Fragment>
+    );
+  }
+}
 
 export default App;

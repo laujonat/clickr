@@ -5,7 +5,6 @@ import { deleteAlbum, fetchAllAlbums } from '../../actions/album_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
-  // currentUser: state.session.currentUser,
   album: state.entities.albums[ownProps.albumId],
   photos: state.entities.photos
 });
