@@ -7,7 +7,6 @@ const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   name: ownProps.name,
   desc: ownProps.desc,
-  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
