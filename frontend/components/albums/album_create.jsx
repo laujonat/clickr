@@ -15,6 +15,7 @@ class AlbumCreate extends React.Component {
   }
 
   componentDidMount() {
+    this.props.routeChanged();
     this.props.fetchUserPhotos(this.props.currentUser.id)
       .then(() => this.setState({loading: false}));
   }

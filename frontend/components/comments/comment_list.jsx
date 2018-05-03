@@ -24,20 +24,7 @@ class CommentList extends React.Component {
   deleteComment() {
     this.props.deleteComment();
   }
-
-  // renderErrors() {
-  //   console.log("SHOULD BE RENDERING");
-  //   if(this.props.errors) {
-  //     return (
-  //       <ul className="errors_render">
-  //         {this.props.errors.map((error, i) => (
-  //           <li key={`${i}`}>{error}</li>)
-  //         )}
-  //       </ul>
-  //     );
-  //   }
-  // }
-
+  
   render() {
     const { deleteComment, fetchComments, updateComment } = this.props;
     const commentListItem = this.props.comments.map(comment => {

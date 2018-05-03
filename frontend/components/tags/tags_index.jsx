@@ -7,6 +7,10 @@ class TagsIndex extends React.Component {
     // this.renderErrors = this.renderErrors.bind(this);
   }
 
+  componentDidMount() {
+    this.props.routeChanged();
+  }
+
   renderErrors() {
     if(this.props.errors) {
       return (
