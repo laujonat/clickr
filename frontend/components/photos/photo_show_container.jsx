@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   photo: state.entities.photos[ownProps.match.params.photoId] || {},
   tags: Object.values(state.entities.tags),
-  errors: state.errors
+  errors: state.errors.photo
 });
 
 const mapDispatchToProps = dispatch => ({

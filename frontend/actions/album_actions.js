@@ -3,8 +3,8 @@ import * as APIAlbum from '../util/album_api_util';
 export const RECEIVE_ALBUM = "RECEIVE_ALBUM";
 export const RECEIVE_ALL_ALBUMS = "RECEIVE_ALL_ALBUMS";
 export const REMOVE_ALBUM = "REMOVE_ALBUM";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
-export const RECEIVE_ALBUM_PAYLOAD = RECEIVE_ALBUM_PAYLOAD;
+export const RECEIVE_ALBUM_ERRORS = "RECEIVE_ALBUM_ERRORS";
+export const RECEIVE_ALBUM_PAYLOAD = "RECEIVE_ALBUM_PAYLOAD";
 
 export const receiveAlbum = album => ({
   type: RECEIVE_ALBUM,
@@ -27,7 +27,7 @@ export const removeAlbum = albumId => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_ALBUM_ERRORS,
   errors
 });
 
@@ -77,4 +77,8 @@ export const updateAlbum = (album, id) => dispatch => (
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
   ))
+);
+
+export const clearErrors = () => dispatch => (
+  dispatch(receiveErrors([]))
 );

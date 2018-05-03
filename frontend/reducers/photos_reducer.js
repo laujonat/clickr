@@ -2,8 +2,7 @@ import merge from 'lodash/merge';
 import {
   RECEIVE_PHOTO,
   RECEIVE_ALL_PHOTOS,
-  REMOVE_PHOTO,
-  RECEIVE_ERRORS
+  REMOVE_PHOTO
 } from '../actions/photo_actions';
 import { RECEIEVE_ALBUM_PAYLOAD } from '../actions/album_actions';
 

@@ -7,7 +7,7 @@ import { photoSelector } from '../../selectors/photo_selector';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   photos: photoSelector(state),
-  errors: state.errors
+  errors: state.errors.album
 });
 
 const mapDispatchToProps = dispatch => ({
