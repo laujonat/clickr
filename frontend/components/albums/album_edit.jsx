@@ -1,6 +1,5 @@
 import React from 'react';
 import AlbumCreateNav from './album_create_nav';
-import AlbumPhotoTile from './album_photo_tile';
 import AlbumFormContainer from './album_form_container';
 
 
@@ -19,6 +18,7 @@ class AlbumEdit extends React.Component {
   }
 
   componentDidMount() {
+    this.props.routeChanged();
     this.props.fetchAlbum(this.props.match.params.albumId)
       .then(() => this.props.fetchAllPhotos(this.props.currentUser.id)
       .then(() => this.setState({

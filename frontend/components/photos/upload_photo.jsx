@@ -13,6 +13,10 @@ class UploadPhoto extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
 
+  componentDidMount() {
+    this.props.routeChanged();
+  }
+
   onClick(e) {
     e.preventDefault();
     this.setState({showForm: !this.state.showForm});

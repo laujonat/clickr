@@ -44,7 +44,19 @@ class UploadForm extends React.Component {
       fileReader.readAsDataURL(file);
     }
   }
-  
+
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <ul className="errors_render">
+          {this.props.errors.map((error, i) => (
+            <li key={`${i}`}>{error}</li>)
+          )}
+        </ul>
+      );
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -70,6 +82,7 @@ class UploadForm extends React.Component {
         <button onClick={this.handleSubmit}>Upload</button>
         <img className="upload-single-img-result" src={this.state.photoUrl} />
         </form>
+        
       </React.Fragment>
     );
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import AlbumCreateNav from './album_create_nav';
-import AlbumPhotoTile from './album_photo_tile';
 import AlbumFormContainer from './album_form_container';
 
 class AlbumCreate extends React.Component {
@@ -16,6 +15,7 @@ class AlbumCreate extends React.Component {
   }
 
   componentDidMount() {
+    this.props.routeChanged();
     this.props.fetchUserPhotos(this.props.currentUser.id)
       .then(() => this.setState({loading: false}));
   }

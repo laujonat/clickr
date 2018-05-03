@@ -3,7 +3,7 @@ import * as APITag from '../util/tag_api_util';
 export const RECEIVE_TAG = "RECEIVE_TAG";
 export const RECEIVE_ALL_TAGS = "RECEIVE_ALL_TAGS";
 export const REMOVE_TAG = "REMOVE_TAG";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_TAG_ERRORS = "RECEIVE_TAG_ERRORS";
 
 export const receiveTag = tag => ({
   type: RECEIVE_TAG,
@@ -21,7 +21,7 @@ export const removeTag = tagId => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_TAG_ERRORS,
   errors
 });
 
@@ -55,4 +55,8 @@ export const deleteTag = id => dispatch => (
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
   ))
+);
+
+export const clearErrors = () => dispatch => (
+  dispatch(receiveErrors([]))
 );
