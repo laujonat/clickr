@@ -80,17 +80,19 @@ class UserPhotostream extends React.Component {
 
     return (
       <React.Fragment>
-        <ul className="photostream-layout">
-          <div className="photostream-column one">
-            {column1}
-          </div>
-          <div className="photostream-column two">
-            {column2}
-          </div>
-          <div className="photostream-column three">
-            {column3}
-          </div>
-        </ul>
+        <div className="photostream-layout-wrapper">
+          <ul className="photostream-layout">
+            <div className="photostream-column one">
+              {column1}
+            </div>
+            <div className="photostream-column two">
+              {column2}
+            </div>
+            <div className="photostream-column three">
+              {column3}
+            </div>
+          </ul>
+        </div>
       </React.Fragment>
     );
   }

@@ -19,7 +19,7 @@ class UserProfile extends React.Component {
     this.props.getUser(this.props.match.params.userId)
       .then(() => this.setState({loading: false}));
   }
-  
+
   render() {
 
     const Panes = [
@@ -39,7 +39,6 @@ class UserProfile extends React.Component {
             user={this.props.user}
           />
           <UserProfileNav panes={Panes}/>
-
         </div>
     );
   }

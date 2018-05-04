@@ -46,14 +46,16 @@ class UserProfileNav extends React.Component {
     let pane = this.props.panes[this.state.selectedPane];
 
     return (
+      <React.Fragment>
       <div className="user-profile-nav">
         <Headers
          selectedPane={this.state.selectedPane}
          onTabChosen={this.selectTab}
          panes={this.props.panes}>
        </Headers>
-       {pane.content}
       </div>
+      {pane.content}
+      </React.Fragment>
     );
   }
 }
