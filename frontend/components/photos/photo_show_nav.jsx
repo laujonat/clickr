@@ -9,8 +9,6 @@ class PhotoShowNav extends React.Component {
   }
 
   render() {
-    // need logic to show avatar only if currentUser exists
-    // Otherwise show sign up button
     let makeYouLink;
     let imgAvatar;
     if (this.props.currentUser) {
