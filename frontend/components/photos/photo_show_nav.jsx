@@ -23,7 +23,7 @@ class PhotoShowNav extends React.Component {
         <div className="session-inner-container">
           <ul className="session-left-btn-list">
             <li className="session-logo-img"><Link to="/feed">clickr</Link></li>
-            {makeYouLink}
+            <li className="nav-you-link"><Link to={`/user/${this.props.currentUser.id}`}>You</Link></li>
           </ul>
           <ul className="session-right-btn-list">
             <Link to='/upload'>
@@ -32,12 +32,22 @@ class PhotoShowNav extends React.Component {
             <li>
               <Dropdown>
                 <DropdownTrigger>
-                  {imgAvatar}
+                  <img className="session-avatar" src={this.props.currentUser.user_profile_img}/>
                 </DropdownTrigger>
                 <DropdownContent>
-                  <ul>
+                  <section>
+                    <p>
+                      Thank you for visting clickr, a Flickr clone! This project was made entirely using React/Redux on the front end,
+                      with Ruby on Rails with a PostgreSQL database on the back end.
+                    </p>
+                  </section>
+                  <ul className="dropdown-logout">
                     <li>
-                      <a href="/#">Log Out</a>
+                      <a href="http://github.com/laujonat"><img className="github-img" src="https://i.imgur.com/J37akex.png"/></a>
+                      <a href="http://linkedin.com/in/jonathanhlau"><img className="linkedin-img" src="https://i.imgur.com/o7Boarq.png"/></a>
+                    </li>
+                    <li>
+                      <button className="logout-dropdown-btn" onClick={this.props.logout}>Log Out</button>
                     </li>
                   </ul>
                 </DropdownContent>

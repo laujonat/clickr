@@ -5,8 +5,8 @@
 .dropdown__content {
   display: none;
   position: absolute;
-  width: 100px;
-  height: 10px;
+  width: 320px;
+  height: 195px;
   // padding: 12px;
   min-height: 20px;
   // max-height: 258px;
@@ -16,11 +16,49 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,.3), 0 1px 4px 0 rgba(0,0,0,.2);
   background-color: #fff;
   // left: 1365.09px;
+  // margin-top: 20px;
+  left: 71%;
+}
+
+.dropdown-logout {
   margin-top: 20px;
-  left: 85%;
+  bottom: 0;
+  text-align: center;
+}
+
+.dropdown-logout li:first-child {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.github-img {
+  width: 100px;
+  height: 38px;
+}
+
+.linkedin-img {
+  width: 82px;
+  height: 25px;
 }
 
 .dropdown--active .dropdown__content {
     display: block;
     text-align: center;
+}
+
+.dropdown__content section {
+  margin: 15px 6px 6px 3px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.logout-dropdown-btn {
+  margin-top: 30px;
+  color: white;
+  background-color: #57a8f9;
+  padding: 5px 0;
+  width: 100%;
+  border-radius: 2px;
+  bottom: 0;
 }
