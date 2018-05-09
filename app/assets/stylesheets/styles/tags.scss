@@ -1,9 +1,6 @@
 .albums-photo-show-section {
-  // background-color: blue;
   clear: both;
   height: 170px;
-  // margin-top: 160px;
-
 }
 
 .tag {
@@ -21,7 +18,8 @@
 .delete-tag {
   width: 10px;
   margin-left: 20px;
-  padding: 3px 5px 0 0;
+  margin-top: 3px;
+  padding: 3px 10px 0 0;
   position: absolute;
   right: 0;
   text-align: end;
@@ -43,8 +41,9 @@
 }
 
 .tag:hover {
-  padding-right: 15px;
+  color: white;
 }
+
 
 .tag p {
   padding: 0 10px;
@@ -58,8 +57,6 @@
   color: #212124;
   font-size: 16px;
 }
-
-
 
 .tag-input {
   width: 90%;

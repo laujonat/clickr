@@ -14,6 +14,8 @@ class TagsIndexItem extends React.Component {
     let deleteBtn;
     if(this.props.currentUser.id === this.props.tag.user_id) {
       deleteBtn = <p onClick={() => this.deleteTag()} className="delete-tag">x</p>;
+    } else {
+      deleteBtn = "";
     }
     return (
       <li className="tag">
