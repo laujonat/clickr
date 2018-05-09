@@ -2,11 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-// import { signup, login, logout } from './actions/session_actions';
-// import { fetchAllPhotos } from './actions/photo_actions';
 import { fetchAllTags } from './actions/tag_actions';
-// import * as PHOTOUtil from './util/photo_api_util';
-
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

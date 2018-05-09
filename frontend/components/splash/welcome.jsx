@@ -12,6 +12,9 @@ class Welcome extends React.Component {
           Find your inspiration. A React remake of Flickr.
         </h3>
         <div className="welcome-btn"><Link to="/signup">Sign up</Link></div>
+
+        <p id="signature">Jonathan Lau</p>
+
       </div>
       <div className="welcome-footer">
         <ul className="welcome-footer-list">
