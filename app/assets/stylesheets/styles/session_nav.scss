@@ -64,9 +64,10 @@ $nav-color: #fff;
 }
 
 .session-avatar {
-  background-color: inherit;
-  width: 30px;
-  height: 30px;
-  padding-top: 10px;
+  margin-top: 10px;
+  width: 31px;
+  height: 31px;
+  padding: 0;
   border-radius: 50%;
+  cursor: pointer;
 }

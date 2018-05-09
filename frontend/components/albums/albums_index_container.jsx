@@ -6,7 +6,6 @@ import { fetchAllAlbums } from '../../actions/album_actions';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   albums: albumSelector(state),
-  // user: state.entities.users[ownProps.match.params.userId]
 });
 
 const mapDispatchToProps = dispatch => ({

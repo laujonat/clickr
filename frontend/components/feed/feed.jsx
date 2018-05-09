@@ -29,5 +29,3 @@ class Feed extends React.Component {
 }
 
 export default Feed;
-
-// {title: 'People', content: <div>Tbd...</div>},
