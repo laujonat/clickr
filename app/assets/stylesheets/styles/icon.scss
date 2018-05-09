@@ -15,9 +15,6 @@
   color: white;
 }
 
-// .icon-upload:hover {
-//   background-image: url(asset_path("upload_icon_active.png"));
-//   background-position: 15 -15px;
-//   width: 40px;
-//   height: 30px;
-// }
+.icon-upload:hover {
+  opacity: 0.7;
+}

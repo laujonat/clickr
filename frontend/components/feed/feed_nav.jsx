@@ -29,8 +29,6 @@ class Headers extends React.Component {
  }
 }
 
-
-
 class FeedNav extends React.Component {
   constructor(props) {
     super(props);
@@ -55,21 +53,9 @@ class FeedNav extends React.Component {
          panes={this.props.panes}>
        </Headers>
      </div>
-     
     {pane.content}
-
-
     </React.Fragment>
-
-
     );
   }
 }
-
 export default FeedNav;
-// <div className="feed-nav">
-//   <ul className="feed-nav-link">
-//     <li className="nav-link one"><Link to="/feed">All Activity</Link></li>
-//     <li className="nav-link two"><Link to="/feed">People</Link></li>
-//   </ul>
-// </div>
