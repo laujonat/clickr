@@ -105,23 +105,19 @@ class PhotoShow extends React.Component {
               <div className="photo-attribution">
 
                 <img className="photo-credit-avatar" src={`${this.props.photo.user_avatar}`} />
-
                 <div className="attribution-info">
+                  <a>{this.props.photo.user_fname} {this.props.photo.user_lname}</a>
+                  <a className="attr-info-title">{this.props.photo.title}</a>
 
-                    <a>{this.props.photo.user_fname} {this.props.photo.user_lname}</a>
-
-
-                    <a className="attr-info-title">{this.props.photo.title}</a>
-
-                    {this.state.hideForm ?
-                      null
-                      : <PhotoEditForm
+                  {this.state.hideForm
+                    ? null
+                    : <PhotoEditForm
                           title={this.props.photo.title}
                           description={this.props.photo.description}
                           updatePhoto={updatePhoto}
                           photoId={this.props.photo.id}
                           toggleForm={this.toggleForm}
-                          />}
+                      />}
 
                   <div className="field-photo-desc">
                     <p>{this.props.photo.description}</p>

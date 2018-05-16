@@ -4,12 +4,10 @@
     }
   }
   .comments-view-container {
-    // margin-left: 18px;
     top: 0;
     clear: both;
     border-top: 1px solid transparent;
     margin-bottom: 20px;
-    // background-color: purple;
     height: 700px;
     width: 100%;
 
@@ -21,7 +19,6 @@
   padding: 5px 0 5px 40px;
   min-height: 50px;
   position: relative;
-  // background-color: pink;
   width: 100%;
   transition: background-color .15s ease-in-out;
   overflow: auto;

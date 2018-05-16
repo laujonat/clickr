@@ -37,7 +37,6 @@
   right: 0;
   bottom: 0;
   height: 50px;
-  // background-color: orange;
 }
 
 .edit-title-input {
@@ -100,14 +99,13 @@
 
 .sub-photo-view-container {
   width: 100%;
-  // background-color: #f3f5f6;
   height: 100%;
+  margin-bottom: 100px;
 
   .sub-photo-center-content {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    // background-color: purple;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -118,10 +116,7 @@
       width: 500px;
       height: 400px;
       float: left;
-      // background-color: orange;
-
       .photo-attribution {
-        // background-color: blue;
         padding: 0;
         position: relative;
         display: flex;
@@ -136,7 +131,6 @@
       margin-top: 1em;
       margin-bottom: 120px;
       float: left;
-      // background-color: pink;
     }
   }
 }
@@ -159,7 +153,6 @@
   border-radius: 100%;
 }
 
-// photo title description block
 .attribution-info {
   margin-top: 30px;
   margin-left: 13px;
@@ -270,7 +263,7 @@
   }
 
   .comment-form-field {
-    margin: 0 9px 0 61px;
+    margin: 0 9px 100px 61px;
     height: 100px;
     .new-comment-text {
       position: relative;
