@@ -2,7 +2,6 @@ import React from 'react';
 import UserProfileHeader from './user_profile_header';
 import UserProfileNav from './user_profile_nav';
 import UserPhotostream from './user_photostream';
-// import AlbumIndexContainer from '../albums/albums_index_container';
 import AlbumsStreamContainer from '../albums/albums_stream_container';
 
 class UserProfile extends React.Component {
