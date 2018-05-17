@@ -50,8 +50,8 @@ class FeedNav extends React.Component {
         <Headers
          selectedPane={this.state.selectedPane}
          onTabChosen={this.selectTab}
-         panes={this.props.panes}>
-       </Headers>
+         panes={this.props.panes}
+        />
      </div>
     {pane.content}
     </React.Fragment>

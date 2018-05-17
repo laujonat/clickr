@@ -70,7 +70,6 @@ class CommentListItem extends React.Component {
   }
 
   render() {
-
     const { updateComment } = this.props;
     let id = this.props.comment.id;
     let options;
@@ -88,7 +87,7 @@ class CommentListItem extends React.Component {
       <li className="comment-container">
         <img className="comment-circle-icon" src={`${this.props.comment.user_avatar}`} />
         <div className="flex-comment-edit-bar">
-          <p className="comment-author">{this.props.comment.user_fname} {this.props.comment.user_lname}</p>
+          <Link className="comment-author" to={`/user/${this.props.comment.user_id}`}>{this.props.comment.user_fname} {this.props.comment.user_lname}</Link>
           {options}
         </div>
         {form}

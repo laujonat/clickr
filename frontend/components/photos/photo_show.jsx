@@ -103,7 +103,6 @@ class PhotoShow extends React.Component {
           <div className="sub-photo-center-content">
             <div className="sub-left-view">
               <div className="photo-attribution">
-
                 <img className="photo-credit-avatar" src={`${this.props.photo.user_avatar}`} />
                 <div className="attribution-info">
                   <a>{this.props.photo.user_fname} {this.props.photo.user_lname}</a>
