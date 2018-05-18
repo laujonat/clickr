@@ -7,7 +7,6 @@ class UserPhotostream extends React.Component {
   constructor(props) {
     super(props);
     this.divideCol = this.divideCol.bind(this);
-
   }
 
   divideCol(photos) {

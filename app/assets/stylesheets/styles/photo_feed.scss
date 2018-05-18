@@ -1,41 +1,61 @@
-.feed-container {
+.feed-container-wrapper {
   width: 1680px;
-  position: relative;
+  // position: relative;
   padding-bottom: 100px;
   box-sizing: border-box;
   padding-top: 120px;
-  height: 100%;
+  height: 100vh;
   margin: auto;
   color: #212124;
   overflow-y: scroll;
   z-index: -1;
-  display: flex;
 
-  .photo-index-container {
+
+  background-color: blue;
+  // display: flex;
+  // justify-content: space-between;
+
+  .feed-layout {
     margin: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    position: absolute;
-    align-content: flex-start;
+    // position: absolute;
 
-    .feed-activity-card {
-      float: left;
-      left: 0px;
-      top: 120px;
-      background: #fff;
-      width: 480px;
-      margin-top: 0;
-      margin-bottom: 120px;
-      transition: box-shadow .2s;
-      border-radius: 4px;
-
-      .photo-index-item {
-        width: 480px;
-      }
+    .feed-column {
+      justify-content: space-between;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      max-width: 480px;
+      margin-bottom: 100px;
     }
   }
 }
+
+
+// .feed-panel {
+//   display: flex;
+//   margin-top: 100px;
+// }
+
+.feed-activity-card {
+  // float: left;
+  // left: 0px;
+  top: 120px;
+  background-color: #fff;
+  width: 480px;
+  margin-top: 0;
+  margin-bottom: 120px;
+  transition: box-shadow .2s;
+  border-radius: 4px;
+
+  .photo-index-item {
+    width: 480px;
+  }
+
+}
+
 
 .feed-activity-card:hover {
   box-shadow: 0 16px 32px 0 rgba(0,0,0,.1);
