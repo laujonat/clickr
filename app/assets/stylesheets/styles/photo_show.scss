@@ -170,7 +170,7 @@
     font-weight: 400;
     word-wrap: break-word;
     border-bottom: 1px solid #cfd6d9;
-    
+
   }
 
   .likes-count-section {
@@ -192,6 +192,13 @@
   max-width: 250px;
   width: auto;
 }
+
+.attribution-info a#photo-show-profile-link:hover {
+  text-decoration: underline;
+  color: #006dac;
+  transition: color .15s ease-in-out;
+}
+
 .attribution-info .attr-info-title {
   font-size: 16px;
   padding-top: 10px;

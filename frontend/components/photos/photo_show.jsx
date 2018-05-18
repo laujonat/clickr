@@ -3,6 +3,7 @@ import PhotoShowNav from './photo_show_nav';
 import CommentListContainer from '../comments/comment_list_container';
 import PhotoEditForm from './photo_edit_form';
 import TagIndexContainer from '../tags/tags_index_container';
+import { Link } from 'react-router-dom';
 
 class PhotoShow extends React.Component {
   constructor(props) {
@@ -105,7 +106,7 @@ class PhotoShow extends React.Component {
               <div className="photo-attribution">
                 <img className="photo-credit-avatar" src={`${this.props.photo.user_avatar}`} />
                 <div className="attribution-info">
-                  <a>{this.props.photo.user_fname} {this.props.photo.user_lname}</a>
+                  <Link id="photo-show-profile-link" to={`/user/${this.props.photo.user_id}`}>{this.props.photo.user_fname} {this.props.photo.user_lname}</Link>
                   <a className="attr-info-title">{this.props.photo.title}</a>
 
                   {this.state.hideForm
