@@ -56,18 +56,20 @@ class PhotoIndex extends React.Component {
     });
 
     return (
-      <div className="feed-container-wrapper">
-        <ul className="feed-layout">
-          <div className="feed-column one">
-            {column1}
-          </div>
-          <div className="feed-column two">
-            {column2}
-          </div>
-          <div className="feed-column three">
-            {column3}
-          </div>
-        </ul>
+      <div className="feed-scroll-wrapper">
+        <div className="feed-container-wrapper">
+          <ul className="feed-layout">
+            <div className="feed-column one">
+              {column1}
+            </div>
+            <div className="feed-column two">
+              {column2}
+            </div>
+            <div className="feed-column three">
+              {column3}
+            </div>
+          </ul>
+        </div>
       </div>
     );
   }
