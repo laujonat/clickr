@@ -35,7 +35,7 @@ class App extends React.Component {
           <AuthRoute path="/login" component={LoginFormContainer} />
           <ProtectedRoute path="/upload" component={UploadNavContainer} />
           <ProtectedRoute path="/albums/create" component={AlbumCreateNavContainer} />
-          <Route path="/photos/:photosId" component={PhotoShowNavContainer} />
+          <ProtectedRoute path="/photos/:photosId" component={PhotoShowNavContainer} />
           <Route path="/" component={NavBarContainer} />
         </Switch>
 

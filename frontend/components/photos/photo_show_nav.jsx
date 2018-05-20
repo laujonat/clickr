@@ -13,7 +13,10 @@ class PhotoShowNav extends React.Component {
     let imgAvatar;
     if (this.props.currentUser) {
       makeYouLink = <li className="nav-you-link"><Link to={`/user/${this.props.currentUser.id}`}>You</Link></li>;
-        imgAvatar = <img className="session-avatar" src={this.props.currentUser.user_profile_img}/>;
+      imgAvatar = <img className="session-avatar" src={this.props.currentUser.user_profile_img}/>;
+    } else {
+      makeYouLink = "";
+      imgAvatar = "";
     }
 
     return (
@@ -21,7 +24,7 @@ class PhotoShowNav extends React.Component {
         <div className="session-inner-container">
           <ul className="session-left-btn-list">
             <li className="session-logo-img"><Link to="/feed">clickr</Link></li>
-            <li className="nav-you-link"><Link to={`/user/${this.props.currentUser.id}`}>You</Link></li>
+            {makeYouLink}
           </ul>
           <ul className="session-right-btn-list">
             <Link to='/upload'>
@@ -30,7 +33,7 @@ class PhotoShowNav extends React.Component {
             <li>
               <Dropdown>
                 <DropdownTrigger>
-                  <img className="session-avatar" src={this.props.currentUser.user_profile_img}/>
+                  {imgAvatar}
                 </DropdownTrigger>
                 <DropdownContent>
                   <section>

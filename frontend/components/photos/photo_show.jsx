@@ -1,5 +1,4 @@
 import React from 'react';
-import PhotoShowNav from './photo_show_nav';
 import CommentListContainer from '../comments/comment_list_container';
 import PhotoEditForm from './photo_edit_form';
 import TagIndexContainer from '../tags/tags_index_container';
@@ -72,6 +71,7 @@ class PhotoShow extends React.Component {
       "July", "August", "September", "October", "November", "December"
     ];
     let deleteBtn, editBtn;
+
     if(this.props.currentUser.id === this.props.photo.user_id) {
       deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;
       editBtn = <button className="photo-edit-btn" onClick={this.toggleForm}>edit</button>;
@@ -108,7 +108,6 @@ class PhotoShow extends React.Component {
                 <div className="attribution-info">
                   <Link id="photo-show-profile-link" to={`/user/${this.props.photo.user_id}`}>{this.props.photo.user_fname} {this.props.photo.user_lname}</Link>
                   <a className="attr-info-title">{this.props.photo.title}</a>
-
                   {this.state.hideForm
                     ? null
                     : <PhotoEditForm
