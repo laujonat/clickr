@@ -31,7 +31,7 @@ class UploadPhoto extends React.Component {
       return (
         <div className="upload-center-text">
           <h3>Upload your photos here</h3>
-          <button className="upload-btn" onClick={this.onClick}>Click me!</button>
+          <button className="upload-btn" onClick={this.onClick}>Choose photos to upload</button>
         </div>
       );
     }

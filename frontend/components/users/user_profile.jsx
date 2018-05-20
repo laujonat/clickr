@@ -7,7 +7,6 @@ import AlbumsStreamContainer from '../albums/albums_stream_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       loading: true
     };
@@ -20,7 +19,6 @@ class UserProfile extends React.Component {
   }
 
   render() {
-
     const Panes = [
       {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
       {title: 'Albums', content: <AlbumsStreamContainer

@@ -18,13 +18,18 @@ class UploadForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("photo[title]", this.state.title);
-    formData.append("photo[description]", this.state.description);
-    formData.append("photo[photo_url]", this.state.photo);
-    formData.append("photo[user_id]", this.state.user_id);
-    this.props.upload(formData)
-      .then(() => this.props.history.push(`/user/${this.state.user_id}`));
+    if(!this.state.photoUrl) {
+      alert("Invalid photo selected.");
+    } else {
+      const formData = new FormData();
+      formData.append("photo[title]", this.state.title);
+      formData.append("photo[description]", this.state.description);
+      formData.append("photo[photo_url]", this.state.photo);
+      formData.append("photo[user_id]", this.state.user_id);
+      this.props.upload(formData)
+        .then(() => this.props.history.push(`/user/${this.state.user_id}`));
+    }
+
   }
 
   updateInput(field) {
@@ -79,10 +84,11 @@ class UploadForm extends React.Component {
             type="file"
             onChange={this.updateFile}
           />
-        <button onClick={this.handleSubmit}>Upload</button>
+        <button
+          className="upload-form-btn"
+          onClick={this.handleSubmit}>Upload</button>
         <img className="upload-single-img-result" src={this.state.photoUrl} />
         </form>
-        
       </React.Fragment>
     );
   }

@@ -11,7 +11,19 @@
   border-radius: 2px;
   display: flex;
   flex-direction: column;
-  border: solid 1px rgba(220,220,220,0.2)
+  border: solid 1px rgba(220,220,220,0.2);
+
+  .upload-form-btn {
+    text-align: center;
+    background-color: #0063dc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+  }
+
+  .upload-form-btn:hover {
+    background-color: #0b4791;
+  }
 }
 
 .upload-form-box input {
@@ -75,27 +87,27 @@
   letter-spacing: 0.1px;
   display: flex;
   justify-content: space-between;
-}
 
-.logo-img-upload {
-  color: blue;
-  font-size: 32px;
-  letter-spacing: -0.7px;
-  font-weight: bolder;
-  cursor: pointer;
-}
+  .left-upload-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    color: #666;
+    font-weight: bolder;
 
-.left-upload-content {
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  color: #666;
-  font-weight: bolder;
-}
+    .logo-img-upload {
+      color: blue;
+      font-size: 32px;
+      letter-spacing: -0.7px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
 
-.right-upload-content {
-  margin-right: 10px;
-  margin-top: 10px;
+  .right-upload-content {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
 }
 
 .left-upload-content li {
@@ -123,6 +135,10 @@
   background: blue;
   background-color: #0063dc;
   border-radius: 3px;
+}
+
+button.upload-btn:hover {
+  background-color: #0b4791;
 }
 
 .upload-center-text {
