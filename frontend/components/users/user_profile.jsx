@@ -8,7 +8,8 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: true,
+      user: this.props.match.params.userId
     };
   }
 
@@ -18,7 +19,13 @@ class UserProfile extends React.Component {
       .then(() => this.setState({loading: false}));
   }
 
-  render() {
+
+  render() {    
+    if(this.state.user !== this.props.match.params.userId) {
+      this.props.getPhotos(this.props.match.params.userId)
+        .then(() =>this.setState({user: this.props.match.params.userId}));
+    }
+
     const Panes = [
       {title: 'Photostream', content: <UserPhotostream photos={this.props.userPhotos}/>},
       {title: 'Albums', content: <AlbumsStreamContainer
@@ -27,7 +34,7 @@ class UserProfile extends React.Component {
     ];
     return (
       this.state.loading ?
-        <div>Loading ....</div>
+      <div>Loading....</div>
       :
         <div className="user-profile-wrapper">
           <UserProfileHeader
