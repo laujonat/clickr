@@ -30,12 +30,11 @@
   margin-top: 14px;
 }
 
-.current:hover {
+.user-profile-nav-link li:hover {
   font-weight: 400;
-  border-bottom: 3px solid #0091dc;
 }
 
-.current{
-
+.current {
+  font-weight: bold;
   border-bottom: 3px solid #0091dc;
 }
