@@ -40,6 +40,10 @@
   .welcome-footer-list li {
     margin-top: 10px;
   }
+
+  .welcome-footer-list li:hover {
+    text-decoration: underline;
+  }
 }
 
 .welcome-text {
@@ -79,6 +83,10 @@
     padding: 0 20px;
     margin: 0 auto;
     vertical-align: top;
+  }
+
+  .welcome-btn:hover {
+    color: #404040;
   }
 
   #signature {
