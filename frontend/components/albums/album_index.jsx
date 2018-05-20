@@ -19,7 +19,7 @@ class AlbumIndex extends React.Component {
   render() {
     let link;
     if(this.props.currentUser.id === this.props.user.id)  {
-        link = <Link to="/albums/create">New Album</Link>;
+        link = <Link className="new-album-btn" to="/albums/create">New Album</Link>;
     }
     const albumIndexItem = this.props.albums.map(album => {
       return (
