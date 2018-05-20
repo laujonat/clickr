@@ -20,7 +20,7 @@ class UserProfile extends React.Component {
   }
 
 
-  render() {    
+  render() {
     if(this.state.user !== this.props.match.params.userId) {
       this.props.getPhotos(this.props.match.params.userId)
         .then(() =>this.setState({user: this.props.match.params.userId}));
