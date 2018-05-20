@@ -16,7 +16,7 @@ class UploadNav extends React.Component {
           <li><Link to={`/user/${this.props.currentUser.id}`}>Your Photostream</Link></li>
         </ul>
         <ul className="right-upload-content">
-          <li><img style={{width: '27px', height: '27px'}} src={this.props.currentUser.image_url}/></li>
+          <li><img style={{width: '27px', height: '27px'}} src={this.props.currentUser.user_profile_img}/></li>
         </ul>
       </div>
     );
