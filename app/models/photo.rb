@@ -12,7 +12,7 @@ class Photo < ApplicationRecord
 
   has_many :comments,
   primary_key: :id,
-  foreign_key: :comment_id,
+  foreign_key: :photo_id,
   class_name: :Comment
 
   has_many :album_photos, dependent: :destroy, inverse_of: :photo

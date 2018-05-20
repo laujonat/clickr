@@ -75,11 +75,4 @@ class PhotoIndex extends React.Component {
   }
 }
 
-// <div className="feed-container">
-//   <ul className="photo-index-container">
-//     {photoIndexItem}
-//   </ul>
-// </div>
-
-
 export default PhotoIndex;

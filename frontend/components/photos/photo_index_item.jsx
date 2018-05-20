@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PhotoIndexItem = ({photo}) => {
+
+  const commentCount = photo.comments ? photo.comments.length : "";
+
   return (
     <div className="feed-activity-card">
       <div className="photo-index-header">
@@ -19,7 +22,7 @@ const PhotoIndexItem = ({photo}) => {
         <p>{photo.title}</p>
       </div>
       <div className="photo-index-stats">
-        <span>comments</span>
+        <span>{commentCount} comments</span>
       </div>
     </div>
   );
