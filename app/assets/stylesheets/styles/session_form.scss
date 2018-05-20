@@ -1,4 +1,15 @@
-/********* LOG IN FORM ********/
+/*
+  If anyone is looking at this CSS for the Yahoo login page,
+  I highly recommend you do not use this as reference.  At the time I was still
+  experimenting with CSS to try and understand how it works.
+
+  This stylesheet needs major refactoring as well as the .jsx file itself.
+  A lot of attributes are not being rendered correctly as they often overlap each
+  other.
+
+  DO NOT USE! It's terrible code. You're only hurting yourself! :)
+  Cheers - Jonathan
+*/
 h1 {
   font-weight: 800 bolder;
   font-size: 150px;
@@ -70,6 +81,10 @@ html {
   color: #188fff;
   display: inline;
 }
+
+ #sign-up-link:hover {
+   text-decoration: underline;
+ }
 // button elements
 .signInButton {
   margin: 30px 0;
@@ -83,6 +98,11 @@ html {
   vertical-align: middle;
   line-height: 1;
 }
+
+.signInButton:hover {
+  opacity: 0.9;
+}
+
 #login-sigin {
   font-size: .94118em;
   color: #fff;
@@ -266,6 +286,11 @@ html {
   vertical-align: middle;
   line-height: 1;
 }
+
+.signUpButton:hover {
+    opacity: 0.9;
+}
+
  #signup {
    font-size: .94118em;
    color: #fff;
@@ -298,6 +323,10 @@ html {
 .row-sign-in #log-in-link {
   color: #188fff;
   display: inline;
+}
+
+.row-sign-in #log-in-link:hover {
+  text-decoration: underline;
 }
 
 /********* SESSION HEADER ********/
@@ -338,4 +367,8 @@ html {
   cursor: pointer;
   font-size: .82353em;
   margin-top: 30px;
+}
+
+#signup-demo-link:hover {
+  text-decoration: underline;
 }

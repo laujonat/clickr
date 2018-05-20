@@ -113,7 +113,7 @@ class SignupForm extends React.Component {
                   </div>
                  <input className="signUpButton" id="signup" type="submit" value="Sign Up"/>
                  <div className="demo-sign-up" >
-                   <button onClick={this.demoLogin.bind(this)}>Demo Me!</button>
+                   <p id="signup-demo-link" onClick={this.demoLogin.bind(this)}>Demo Me!</p>
                  </div>
                  <div className="row-sign-in">Already have an acccount? <Link to="/login"><p id="log-in-link">Sign in</p></Link></div>
                 </form>

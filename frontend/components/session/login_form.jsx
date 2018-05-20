@@ -81,7 +81,7 @@ class LoginForm extends React.Component {
               </div>
               {this.renderErrors()}
               <input className="signInButton" id="login-sigin" type="submit" name="signin" value="Sign in"/>
-              <div className="demo-sign-up" onClick={this.demoLogin}>Demo Login</div>
+              <p className="demo-sign-up" id="signup-demo-link" onClick={this.demoLogin}>Demo Me!</p>
               <div className="row-sign-up">Don't have an acccount? <Link to="/signup"><p id="sign-up-link">Sign up</p></Link></div>
             </form>
             </div>
