@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Welcome from './welcome';
+import WelcomeContainer from './welcome_container';
 import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
 
 class NavBar extends React.Component {
@@ -61,7 +61,7 @@ class NavBar extends React.Component {
             <li className="signup-btn"><Link to='/signup'>Sign Up</Link></li>
           </ul>
         </div>
-        <Welcome />
+        <WelcomeContainer />
       </div>
       );
     }

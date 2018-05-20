@@ -12,8 +12,6 @@ class SignupForm extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.demoLoginCredentials = {username: "Demo_", email: "demo_@clickr.com", fname: "Demo_", lname: "Human_", password: "democlickr123"};
-    // this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleChange(field) {
@@ -31,7 +29,6 @@ class SignupForm extends React.Component {
   demoLogin() {
     const demoLoginCredentials = {email: "demo@clickr.com", password: "123456"};
     this.props.login(demoLoginCredentials);
-
   }
 
   renderErrors() {
