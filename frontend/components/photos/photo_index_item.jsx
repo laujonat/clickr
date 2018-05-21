@@ -7,24 +7,31 @@ class PhotoIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggle: false
+      toggle: false,
+      commentCount: this.props.photo.comments.length
     };
 
     this.toggleForm = this.toggleForm.bind(this);
+    this.incrementCount = this.incrementCount.bind(this);
   }
 
   toggleForm() {
     this.setState({toggle: !this.state.toggle});
   }
 
+  incrementCount() {
+    this.setState({commentCount: this.state.commentCount += 1});
+  }
+
   render() {
-    const commentCount = this.props.photo.comments ? this.props.photo.comments.length : "";
+    const commentCount = this.props.photo.comments ? this.state.commentCount : "";
 
     const commentForm = this.state.toggle
     ? <div className="photo-index-comment-wrap">
         <CommentFormContainer
           photoId={this.props.photo.id}
-          toggle={this.toggleForm}/>
+          toggle={this.toggleForm}
+          incrementCount={this.incrementCount}/>
       </div>
     : "";
 

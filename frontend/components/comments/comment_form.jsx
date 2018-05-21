@@ -32,6 +32,7 @@ class CommentForm extends React.Component {
       .then((res) => {
         this.setState({body: ""});
         this.props.toggle();
+        this.props.incrementCount();
       });
   }
 
