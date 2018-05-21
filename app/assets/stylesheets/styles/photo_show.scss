@@ -216,11 +216,26 @@
     font-size: 20px;
     line-height: 18px;
     margin-right: 30px;
-    // margin-top: 13px;
     float: left;
     width: 223px;
     display: flex;
     flex-direction: column;
+
+    .comment-count {
+      font-weight: 400;
+      font-size: 17px;
+      letter-spacing: -.5px;
+      display: flex;
+      flex-direction: column;
+      color: #212124;
+
+      #stats-label {
+        font-size: 14px;
+        font-weight: 400;
+        color: #898989;
+      }
+    }
+
   }
 
   .right-stats-view-container {

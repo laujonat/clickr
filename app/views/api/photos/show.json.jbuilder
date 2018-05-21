@@ -5,3 +5,4 @@ json.user_id @photo.user.id
 json.user_avatar asset_path(@photo.user.avatar.url(:original))
 json.user_fname @photo.user.fname
 json.user_lname @photo.user.lname
+json.comments @photo.comments.pluck(:id)

@@ -72,6 +72,8 @@ class PhotoShow extends React.Component {
     ];
     let deleteBtn, editBtn;
 
+    let commentCount = this.props.photo.comments ? this.props.photo.comments.length : "";
+
     if(this.props.currentUser.id === this.props.photo.user_id) {
       deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;
       editBtn = <button className="photo-edit-btn" onClick={this.toggleForm}>edit</button>;
@@ -130,7 +132,10 @@ class PhotoShow extends React.Component {
             <div className="sub-right-view">
               <div className="sub-right-view-row1">
                 <div className="left-stats-view-container">
-                  <span>clickr</span>
+                  <div className="comment-count">
+                    <span>{commentCount}</span>
+                    <span id="stats-label">comments</span>
+                  </div>
                 </div>
                 <div className="right-stats-view-container">
                   <span>Taken on {monthNames[month]} {day}, {year}</span>
