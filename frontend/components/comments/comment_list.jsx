@@ -8,7 +8,9 @@ class CommentList extends React.Component {
     this.state = {
       loading: true,
       currentUser: false,
+      toggle: false
     };
+    this.toggleForm = this.toggleForm.bind(this);
   }
 
   componentDidMount() {
@@ -19,6 +21,10 @@ class CommentList extends React.Component {
     } else {
       this.setState({currentUser:false});
     }
+  }
+
+  toggleForm() {
+    this.setState({toggle: !this.state.toggle});
   }
 
   deleteComment() {
@@ -49,7 +55,9 @@ class CommentList extends React.Component {
         <ul className="comments-list">
           {commentListItem}
         </ul>
-        <CommentFormContainer photoId={this.props.photoId}/>
+        <CommentFormContainer
+          photoId={this.props.photoId}
+          toggle={this.toggleForm}/>
       </div>
     );
   }

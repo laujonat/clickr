@@ -66,6 +66,8 @@
   height: 48px;
   border-top: 1px solid rgba(0,0,0,.15);
   border-radius: 0 0 4px 4px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .photo-index-stats span {
@@ -73,4 +75,15 @@
   font-size: 12px;
   font-weight: 400;
   margin-left: 20px;
+  padding-top: 12px;
+}
+
+.photo-index-stats i {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.photo-index-stats i:hover {
+  color: black;
+  cursor: pointer;
 }
