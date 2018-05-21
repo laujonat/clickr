@@ -71,8 +71,7 @@ class PhotoShow extends React.Component {
       "July", "August", "September", "October", "November", "December"
     ];
     let deleteBtn, editBtn;
-
-    let commentCount = this.props.photo.comments ? this.props.photo.comments.length : "";
+    let commentCount = this.props.comments ? this.props.comments.length : "";
 
     if(this.props.currentUser.id === this.props.photo.user_id) {
       deleteBtn = <p onClick={this.removePhoto.bind(this)} className="delete-show-button">Delete</p>;

@@ -24,7 +24,7 @@ class CommentList extends React.Component {
   deleteComment() {
     this.props.deleteComment();
   }
-  
+
   render() {
     const { deleteComment, fetchComments, updateComment } = this.props;
     const commentListItem = this.props.comments.map(comment => {
@@ -43,7 +43,7 @@ class CommentList extends React.Component {
 
     return (
       this.state.loading ?
-        <div>LOADING</div>
+        <div>Loading...</div>
       :
       <div className="comments-view-container">
         <ul className="comments-list">

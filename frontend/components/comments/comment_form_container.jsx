@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   createComment: comment => dispatch(createComment(comment)),
   routeChanged: () => dispatch(routeChanged())
-
 });
 
 export default connect(
