@@ -13,10 +13,6 @@ class PhotoIndexItem extends React.Component {
     this.toggleForm = this.toggleForm.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-
-  }
-
   toggleForm() {
     this.setState({toggle: !this.state.toggle});
   }

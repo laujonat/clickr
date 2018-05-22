@@ -29,6 +29,7 @@ class PhotoIndex extends React.Component {
       return (
         <li key={photo.id}>
           <PhotoIndexItem
+            getPhoto={this.props.getPhoto}
             photo={photo}
           />
         </li>
@@ -39,6 +40,7 @@ class PhotoIndex extends React.Component {
       return (
         <li key={photo.id}>
           <PhotoIndexItem
+            getPhoto={this.props.getPhoto}
             photo={photo}
           />
         </li>
@@ -49,6 +51,7 @@ class PhotoIndex extends React.Component {
       return (
         <li key={photo.id}>
           <PhotoIndexItem
+            getPhoto={this.props.getPhoto}
             photo={photo}
           />
         </li>

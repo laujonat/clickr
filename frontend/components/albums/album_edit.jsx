@@ -4,7 +4,6 @@ import AlbumFormContainer from './album_form_container';
 
 
 class AlbumEdit extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
