@@ -31,8 +31,10 @@ class Api::CommentsController < ApplicationController
 
   def destroy
     @comment = current_user.comments.find_by(id: params[:id])
+    # @photo = @comment.photo
     if @comment
       @comment.destroy
+      # render "api/photos/show"
     else
       render json: ["Invalid comment id"], status: 404
     end

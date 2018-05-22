@@ -9,10 +9,8 @@ class CommentList extends React.Component {
       loading: true,
       currentUser: false,
       toggle: false,
-      commentCount: 0
     };
     this.toggleForm = this.toggleForm.bind(this);
-    this.incrementCount = this.incrementCount.bind(this);
   }
 
   componentDidMount() {
@@ -31,10 +29,6 @@ class CommentList extends React.Component {
 
   deleteComment() {
     this.props.deleteComment();
-  }
-
-  incrementCount() {
-    this.setState({commentCount: this.state.commentCount++});
   }
 
   render() {
@@ -64,7 +58,7 @@ class CommentList extends React.Component {
         <CommentFormContainer
           photoId={this.props.photoId}
           toggle={this.toggleForm}
-          incrementCount={this.incrementCount}/>
+        />
       </div>
     );
   }

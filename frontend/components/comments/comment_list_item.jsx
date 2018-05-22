@@ -80,7 +80,7 @@ class CommentListItem extends React.Component {
       </div>;
     }
 
-    let form = this.state.isEdit ? <EditForm toggleCommentForm={this.toggleCommentForm} comment={this.props.comment} updateComment={updateComment}/> :   <div className="comment-content">{this.props.comment.body}</div>;
+    let form = this.state.isEdit ? <EditForm toggleCommentForm={this.toggleCommentForm} comment={this.props.comment} updateComment={updateComment}/> : <div className="comment-content">{this.props.comment.body}</div>;
 
 
     return (
