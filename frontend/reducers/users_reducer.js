@@ -15,8 +15,6 @@ const userReducer = (state = {}, action) => {
         newState = merge({}, state);
         newState[action.user.id] = action.user;
         return newState;
-      // case RECEIEVE_ERRORS: // set error to action's errors
-      //   return Object.assign([], action.errors);
       default:
         return state;
     }

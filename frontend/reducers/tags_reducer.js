@@ -21,8 +21,6 @@ const tagReducer = (state = {}, action) => {
         newState = merge({},state);
         delete newState[action.tagId];
         return newState;
-      // case RECEIEVE_ERRORS: // set error to action's errors
-      //   return Object.assign([], action.errors);
       default:
         return state;
     }
