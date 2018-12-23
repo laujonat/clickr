@@ -16,17 +16,12 @@
 
 ## Demo
 <center>
-[Live site!](clickr-photo.herokuapp.com)
-
 <center><img src="https://i.imgur.com/D9pIkAs.jpg" height="400"></center>
 
-Welcome to Clickr (pronounced "clicker"), a [Flickr](flickr.com) photo sharing clone for photography enthusiasts.  
+Clickr (pronounced "clicker"), a [Flickr](flickr.com) photo sharing clone for photography enthusiasts.  
 This application was created using Ruby on Rails alongside a PostgreSQL relational database on the backend, following
 a React.js/Redux architecture on the front end.  
 
-Clickr is a project created over the course of an aggressive two week timeframe . The initial project completion date for this project was April 13, 2018.  
-There are improvements that have been identified in various areas of the project on both the front end and server side
-that will be added into the code base over time.
 </center>
 
 # Features
@@ -55,8 +50,6 @@ divideCol(photos) {
 const columns = this.divideCol(this.props.photos);
 ```
 Creating three separate flex columns with a `width: 33.33%` did the trick keeping the dimensions of evenly spaced on both the user activity page and the user profile. Enjoy!
-
-
 
 # Technologies
 + React.js/Redux architecture
@@ -91,7 +84,6 @@ Through the main user dashboard navigation, a user can navigate to an image uplo
 
 A user will not be given access permissions to another user's photos. A user only has the ability to edit and delete their own photo, and read-only permissions on other members' photos.
 
-
 ##Albums
 
 <center><img src="https://i.imgur.com/oqMqnjJ.png" height="400"></center>
@@ -118,7 +110,3 @@ Members will have the ability to add tags to their own and other members' photos
 
 From a photo show page, users can click the 'Add Tag' link in the tags section.  On click, an input field will be presented to the user where they can add tags to a photo as long as they are unique in the list of tags currently present on a photo.
 
-## Future Directions ##
-+ Code can be refactored to more DRY. Due to the time constraints, similar React components were created for various cases of state change. Payloads can be implemented to handle this situation more effectively.
-+ A search bar allowing users to search by tags, photos, or album name.
-+ Image optimization can be implemented to improve loading times.  Large image sizes affect site performance.
