@@ -1,5 +1,8 @@
 # README
 
+## THIS PROJECT WAS FOR LEARNING REACT/REDUX. 
+## OBJECTIVE: Update project, add jest/enzyme add RSpec Tests. 
+## REFACTOR TO MODERN REACT TO REFLECT CURRENT SKILLSET. 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 # Table of Contents
