@@ -1,13 +1,15 @@
 # README
 
-- THIS PROJECT WAS FOR LEARNING REACT/REDUX. 
+**Disclaimer**
+> This initial project was to learn React/Redux with RoR server.
+> My depth of these technologies have grown exponentially and in progrress of updating this project to reflect my current skill setl. 
 
 ## WIP: Update project, add jest/enzyme add RSpec Tests. 
 - Refactor to reflect current skillset with reusable react componens
 - Apply opimtization techniques(Caching, memoirzation)
 
 
-- 
+
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 # Table of Contents
