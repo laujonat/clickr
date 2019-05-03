@@ -1,5 +1,7 @@
 # README
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/laujonat/clickr.svg)](https://greenkeeper.io/)
+
 **Disclaimer**
 > This initial project was to learn React/Redux with RoR server.
 > My depth of these technologies have grown exponentially and in progrress of updating this project to reflect my current skill setl. 
